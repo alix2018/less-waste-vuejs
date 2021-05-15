@@ -1,4 +1,4 @@
-# less-wastee-vuejs
+# Less waste for the planet
 
 ## Project setup
 ```
