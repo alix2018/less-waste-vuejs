@@ -16,8 +16,13 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Lato Black';
+  src: url(./assets/fonts/Lato-Black.woff) format('woff');
+}
+
 body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lato Black', Helvetica, sans-serif;
   color: #272D2D;
   text-align: center;
   margin-top: 60px;

@@ -22,6 +22,8 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0",
     "node-sass": "^6.0.0",
-    "sass-loader": "^10.2.0"
+    "postcss": "^8.2.15",
+    "sass-loader": "^10.2.0",
+    "url-loader": "^4.1.1"
   }
 }
