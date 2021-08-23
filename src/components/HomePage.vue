@@ -4,9 +4,9 @@
     <h1>Reducing your waste</h1>
     <h2>Doesn't have to be hard</h2>
     <block>
-      <button class="transparent">Do the test
-      <img src="../assets/black-arrow.svg">
-      </button>
+      <router-link :to="{name: 'Test'}" class="btn transparent">Do the test
+        <img src="../assets/black-arrow.svg">
+      </router-link>
       <button class="full">See tips
       <img src="../assets/green-arrow.svg">
       </button>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'HomePage'
 };
 </script>
 
@@ -61,7 +61,7 @@ header {
     justify-content: center;
     margin-top: 70px;
 
-    button.transparent {
+    .btn {
       margin-right: 24px;
     }
 

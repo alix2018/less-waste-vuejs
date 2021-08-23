@@ -1,10 +1,10 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import HomePage from '../components/HomePage.vue';
 import TestPage from '../components/TestPage.vue';
 
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -14,6 +14,9 @@ export default createRouter({
       path: '/test',
       name: 'Test',
       component: TestPage,
-    },
-  ],
+    }, {
+      path: '/:catchAll(.*)',
+      redirect: '/'
+    }
+  ]
 });

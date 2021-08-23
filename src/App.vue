@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'App',
+  name: 'App'
 };
 </script>
 
@@ -49,7 +49,8 @@ body {
   min-height: 100vh;
 }
 
-button {
+button,
+.btn {
   padding: 12px;
   text-transform: uppercase;
   border-color: $color-black;
@@ -57,14 +58,17 @@ button {
   border-radius: 7px;
   font-family: 'Lato Regular', Helvetica, sans-serif;
   cursor: pointer;
+  text-decoration: none;
 }
 
-button.transparent {
+button.transparent,
+.btn.transparent {
   background-color: transparent;
   color: $color-black;
 }
 
-button.full {
+button.full,
+.btn.full {
   background-color: $color-black;
   color: $color-green;
 }
