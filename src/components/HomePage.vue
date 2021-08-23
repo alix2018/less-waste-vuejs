@@ -18,14 +18,14 @@ export default {
   data() {
     return {
       showGreenLogo: true,
-      showYellowLogo: false,
+      showYellowLogo: false
     };
   },
   mixins: [],
   computed: {
     addClassSomething() {
       return 'new-class-here';
-    },
+    }
   },
   methods: {
     consoleLogHello() {
@@ -35,11 +35,11 @@ export default {
       console.log('Change logo :)');
       this.showGreenLogo = !this.showGreenLogo;
       this.showYellowLogo = !this.showYellowLogo;
-    },
+    }
   },
   props: {
-    message: String,
-  },
+    message: String
+  }
 };
 </script>
 
