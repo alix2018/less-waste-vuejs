@@ -12,40 +12,21 @@
       </button>
     </block>
   </header>
+  <punchline></punchline>
+  <section></section>
+  <punchline></punchline>
+  <section></section>
+  <punchline></punchline>
+  <section></section>
+  <footer></footer>
 </template>
 
 <script>
 export default {
   name: 'HomePage',
-  created() {
-    console.log('Home component created');
-  },
-  mounted() {
-    console.log('Home component mounted');
-  },
-  data() {
-    return {
-      showLogo: true,
-    };
-  },
-  mixins: [],
-  computed: {
-    addClassSomething() {
-      return 'new-class-here';
-    },
-  },
-  methods: {
-    consoleLogHello() {
-      console.log('Hellooooo!');
-    },
-  },
-  props: {
-    message: String,
-  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 $color-black: #272D2D;
 

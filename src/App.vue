@@ -50,7 +50,8 @@ body {
   font-family: 'Lato Black', Helvetica, sans-serif;
   color: $color-black;
   text-align: center;
-  margin-top: 60px;
+  margin: 60px 30px;
+  min-height: 100vh;
 }
 
 button {
@@ -58,7 +59,8 @@ button {
   text-transform: uppercase;
   border-color: $color-black;
   border: 2px solid $color-black;
-  border-radius: 5px;
+  border-radius: 7px;
+  font-family: 'Lato Regular', Helvetica, sans-serif;
   cursor: pointer;
 }
 
