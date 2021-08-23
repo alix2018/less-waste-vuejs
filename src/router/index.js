@@ -9,11 +9,11 @@ export default createRouter({
     {
       path: '/',
       name: 'Home',
-      component: HomePage
+      component: HomePage,
     }, {
       path: '/test',
       name: 'Test',
-      component: TestPage
-    }
-  ]
+      component: TestPage,
+    },
+  ],
 });
