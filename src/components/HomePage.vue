@@ -1,59 +1,78 @@
 <template>
-  <div class="hello">
-    <img v-show="showGreenLogo" @click="changeLogo()" alt="Less Waste green logo" src="../assets/less-waste-logo.svg">
-    <img v-show="showYellowLogo" @click="changeLogo()" alt="Less Waste yellow logo" src="../assets/less-waste-logo-yellow.svg">
-    <h1 @click="consoleLogHello()" :class="[addClassSomething]">{{message}}</h1>
-  </div>
+  <header>
+    <img class="background" src="../assets/header.svg">
+    <h1>Reducing your waste</h1>
+    <h2>Doesn't have to be hard</h2>
+    <block>
+      <router-link :to="{name: 'Test'}" class="btn transparent">Do the test
+        <img src="../assets/black-arrow.svg">
+      </router-link>
+      <button class="full">See tips
+      <img src="../assets/green-arrow.svg">
+      </button>
+    </block>
+  </header>
+  <punchline></punchline>
+  <section></section>
+  <punchline></punchline>
+  <section></section>
+  <punchline></punchline>
+  <section></section>
+  <footer></footer>
 </template>
 
 <script>
 export default {
-  name: 'HomePage',
-  created() {
-    console.log('Home component created');
-  },
-  mounted() {
-    console.log('Home component mounted');
-  },
-  data() {
-    return {
-      showGreenLogo: true,
-      showYellowLogo: false,
-    };
-  },
-  mixins: [],
-  computed: {
-    addClassSomething() {
-      return 'new-class-here';
-    },
-  },
-  methods: {
-    consoleLogHello() {
-      console.log('Hellooooo!');
-    },
-    changeLogo() {
-      console.log('Change logo :)');
-      this.showGreenLogo = !this.showGreenLogo;
-      this.showYellowLogo = !this.showYellowLogo;
-    },
-  },
-  props: {
-    message: String,
-  },
+  name: 'HomePage'
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-div {
-  img {
-    width: 250px;
-    height: 250px;
-    cursor: pointer;
+$color-black: #272D2D;
+
+header {
+  img.background {
+    position: absolute;
+    min-width: 150%;
+    min-height: 700px;
+    height: auto;
+    left: 50%;
+    top: -35%;
+    transform: translate(-50%);
+    z-index: -1;
   }
 
-  h1 {
-    margin-top: 50px;
+  h1,
+  h2 {
+    font-family: 'Lato Black', Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 45px;
+  }
+
+  h2 {
+    font-family: 'Lato Thin', Helvetica, sans-serif;
+    font-size: 35px;
+  }
+
+  block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+
+    .btn {
+      margin-right: 24px;
+    }
+
+    button.full {
+      margin-left: 24px;
+    }
+
+    img {
+      width: 20px;
+      margin-left: 8px;
+    }
   }
 }
 </style>
