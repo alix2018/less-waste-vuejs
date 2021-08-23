@@ -1,5 +1,8 @@
 # Less waste for the planet
 
+## Demo
+Page in progress: https://lesswastefortheplanet.com
+
 ## Project setup
 ```
 npm install

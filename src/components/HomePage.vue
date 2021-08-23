@@ -23,8 +23,12 @@
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  mounted() {
+    this.$gtag.event('Home page');
+  }
 };
+
 </script>
 
 <style lang="scss" scoped>
