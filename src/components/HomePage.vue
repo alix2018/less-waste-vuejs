@@ -1,8 +1,8 @@
 <template>
   <header>
     <img class="background" src="../assets/header.svg">
-    <h1>Reducing your waste</h1>
-    <h2>Doesn't have to be hard</h2>
+    <h1>{{ $t('home.title') }}</h1>
+    <h2>{{ $t('home.subtitle') }}</h2>
     <block>
       <router-link :to="{name: 'Test'}" class="btn transparent">Do the test
         <img src="../assets/black-arrow.svg">
