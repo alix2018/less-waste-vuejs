@@ -4,10 +4,12 @@ import i18n from './i18n';
 import App from './App.vue';
 import router from './router';
 
+const gtagId = process.env.NODE_ENV === 'production' ? 'UA-147425189-3' : '';
+
 createApp(App)
   .use(router)
   .use(VueGtag, {
-    config: { id: 'UA-147425189-3' }
+    config: { id: gtagId }
   })
   .use(i18n)
   .mount('#app');
