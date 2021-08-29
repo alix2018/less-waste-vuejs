@@ -50,7 +50,8 @@ body {
 }
 
 button,
-.btn {
+.btn,
+select {
   padding: 12px;
   text-transform: uppercase;
   border-color: $color-black;
