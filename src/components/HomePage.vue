@@ -1,14 +1,17 @@
 <template>
+  <language-picker></language-picker>
   <header>
     <img class="background" src="../assets/header.svg">
     <h1>{{ $t('home.title') }}</h1>
     <h2>{{ $t('home.subtitle') }}</h2>
     <block>
-      <router-link :to="{name: 'Test'}" class="btn transparent">Do the test
+      <router-link :to="{name: 'Test'}" class="btn transparent">
+        {{ $t('home.testButton')}}
         <img src="../assets/black-arrow.svg">
       </router-link>
-      <button class="full">See tips
-      <img src="../assets/green-arrow.svg">
+      <button class="full">
+        {{ $t('home.tipsButton') }}
+        <img src="../assets/green-arrow.svg">
       </button>
     </block>
   </header>
@@ -22,8 +25,11 @@
 </template>
 
 <script>
+import LanguagePicker from './LanguagePicker.vue';
+
 export default {
   name: 'HomePage',
+  components: { LanguagePicker },
   mounted() {
     this.$gtag.event('Home page');
   }
