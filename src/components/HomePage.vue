@@ -44,7 +44,8 @@ header {
   img.background {
     position: absolute;
     min-width: 150%;
-    min-height: 700px;
+    min-height: 1000px;
+    max-height: 1000px;
     height: auto;
     left: 50%;
     top: -35%;
@@ -82,6 +83,17 @@ header {
     img {
       width: 20px;
       margin-left: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header{
+    img.background {
+      min-width: 400%;
+      min-height: 2000px;
+      max-height: 2000px;
+      top: -800px;
     }
   }
 }
