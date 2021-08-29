@@ -1,7 +1,9 @@
 # Less waste for the planet
 
 ## Demo
-Page in progress: https://lesswastefortheplanet.com
+- Page in progress: https://lesswastefortheplanet.com
+- Development environment: https://dev.lesswastefortheplanet.com
+
 
 ## Project setup
 ```
