@@ -12,9 +12,11 @@ export default {
 
 <style lang="scss">
 $color-green: #8DEAD9;
+$color-dark-green: #0A4242;
 $color-yellow: #FEF1BB;
 $color-black: #272D2D;
 $color-white: #FFF;
+$color-orange: #FC9774;
 
 @font-face {
   font-family: 'Lato Thin';
@@ -47,7 +49,7 @@ $color-white: #FFF;
 }
 
 body {
-  font-family: 'Lato Black', Helvetica, sans-serif;
+  font-family: 'Lato Regular', Helvetica, sans-serif;
   color: $color-black;
   text-align: center;
   padding: 0 100px;
@@ -86,5 +88,20 @@ h1 {
   margin-top: 100px;
   text-transform: uppercase;
   font-size: 45px;
+  line-height: 50px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'Lato Bold', Helvetica, sans-serif;
+}
+
+p {
+  font-family: 'Lato Regular', Helvetica, sans-serif;
+}
+
+a {
+  color: $color-orange;
 }
 </style>

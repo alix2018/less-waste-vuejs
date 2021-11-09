@@ -1,10 +1,9 @@
 <template>
-  <div v-html="markdownToHtml"></div>
+  <div class="markdown" v-html="markdownToHtml"></div>
 </template>
 
 <script>
 import marked from 'marked';
-// import privacyPolicyMd from './privacy-policy.md';
 
 export default {
   data() {
@@ -22,46 +21,42 @@ export default {
         .then((res) => res.text())
         .then((text) => {
           this.markdown = text;
-        })
+        });
     },
   },
   computed: {
     markdownToHtml() {
-      console.log('markdownToHtml');
-      console.log('this.markdown', this.markdown);
-      if (this.markdown) {
-        return marked(this.markdown);
-      }
-      return '';
+      return this.markdown ? marked(this.markdown) : '';
     }
   },
 };
 </script>
 
-<style lang="scss" scoped>
-  div {
-    font-family: 'Lato Regular', Helvetica, sans-serif;
+<style lang="scss">
+  .markdown {
+    padding: 50px 0;
     font-size: 16px;
     line-height: 24px;
     text-align: left;
   }
-// </style>
 
-// <style lang="scss">
-  div ::v-deep p {
-    color: red;
+  .markdown h1 {
+    margin-top: 0;
   }
 
-  div ::v-deep h2 {
-    font-family: 'Lato Bold', Helvetica, sans-serif;
-    font-weight: 300;
-    margin-top: 50px;
-    font-size: 60px;
+  .markdown h2 {
+    margin-top: 30px;
+    font-size: 40px;
+    line-height: 45px;
   }
 
-  div {
-  /deep/ p {
-    color: red;
+  .markdown h3 {
+    font-size: 25px;
+    line-height: 32px;
   }
-}
+
+  .markdown h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
 </style>
