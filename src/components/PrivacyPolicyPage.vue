@@ -19,17 +19,10 @@ export default {
   methods: {
     getMarkdownFile() {
       fetch('./privacy-policy.md')
-        .then((res) => {
-          console.log('res', res);
-          return res.text();
-        })
+        .then((res) => res.text())
         .then((text) => {
-          console.log('text', text);
           this.markdown = text;
         })
-        .catch((error) => {
-          console.log('err!', error);
-        });
     },
   },
   computed: {
