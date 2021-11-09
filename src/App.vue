@@ -32,6 +32,11 @@ $color-white: #FFF;
 }
 
 @font-face {
+  font-family: 'Lato Italic';
+  src: url(./assets/fonts/Lato-Italic.ttf) format('ttf');
+}
+
+@font-face {
   font-family: 'Lato Bold';
   src: url(./assets/fonts/Lato-Bold.woff) format('woff');
 }
@@ -45,8 +50,9 @@ body {
   font-family: 'Lato Black', Helvetica, sans-serif;
   color: $color-black;
   text-align: center;
-  margin: 60px 30px;
+  padding: 0 100px;
   min-height: 100vh;
+  font-size: 20px;
 }
 
 button,
@@ -73,7 +79,12 @@ button.full,
   background-color: $color-black;
   color: $color-green;
 }
-</style>
 
-<style scoped>
+h1 {
+  font-family: 'Lato Black', Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-size: 45px;
+}
 </style>
