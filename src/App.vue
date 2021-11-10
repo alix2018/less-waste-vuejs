@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
 };
 </script>
 
@@ -52,6 +52,7 @@ body {
   font-family: 'Lato Regular', Helvetica, sans-serif;
   color: $color-black;
   text-align: center;
+  margin: 0;
   padding: 0 100px;
   min-height: 100vh;
   font-size: 20px;
@@ -97,7 +98,8 @@ h4 {
   font-family: 'Lato Bold', Helvetica, sans-serif;
 }
 
-p {
+p,
+a {
   font-family: 'Lato Regular', Helvetica, sans-serif;
 }
 

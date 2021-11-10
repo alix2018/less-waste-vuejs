@@ -1,16 +1,12 @@
 <template>
   <header>
-    <img class="background" src="../assets/header.svg">
-    <h1>{{ $t('home.title') }}</h1>
-    <h2>{{ $t('home.subtitle') }}</h2>
-  </header>
-  <h2 class="first-article">Facile, simple et efficace.</h2>
-  <!-- <article>
-    <div class="no-image"></div>
+    <img class="background" src="../assets/header.png">
     <div>
-      <h2 class="first-article">Facile, simple et efficace.</h2>
+      <h1>{{ $t('home.title') }}</h1>
+      <h2>{{ $t('home.subtitle') }}</h2>
     </div>
-  </article> -->
+  </header>
+  <h2 class="first-article">{{ $t('home.h2_firs_section_title') }}</h2>
   <section>
     <article>
       <img src="../assets/icon-time.png" alt="clock">
@@ -33,13 +29,30 @@
         <p>{{ $t('home.article_text_environment') }}</p>
       </div>
     </article>
+    <article>
+      <img src="../assets/icon-money.png" alt="euros">
+      <div class="image">
+        <h3>{{ $t('home.article_title_money') }}</h3>
+        <p>{{ $t('home.article_text_money') }}</p>
+      </div>
+    </article>
   </section>
-  <footer></footer>
+  <Footer :privacyPolicy="showPrivacyPolicy"></Footer>
 </template>
 
 <script>
+import Footer from './Footer.vue';
+
 export default {
   name: 'HomePage',
+  components: {
+    Footer,
+  },
+  data() {
+    return {
+      showPrivacyPolicy: true,
+    };
+  },
   mounted() {
     this.$gtag.event('Home page');
   }
@@ -47,15 +60,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color-black: #272D2D;
 header {
   img.background {
     position: absolute;
-    width: 130%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: auto;
-    left: 50%;
-    top: -70%;
-    transform: translate(-50%);
+    height: 400px;
     z-index: -1;
   }
 
@@ -92,10 +104,11 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 150px;
 }
 
 h2.first-article {
-  margin-top: 300px;
+  margin-top: 250px;
   text-align: center;
 }
 
