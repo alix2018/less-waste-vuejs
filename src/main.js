@@ -3,13 +3,21 @@ import VueGtag from 'vue-gtag';
 import i18n from './i18n';
 import App from './App.vue';
 import router from './router';
-
-const gtagId = process.env.NODE_ENV === 'production' ? 'UA-147425189-3' : '';
+import store from './store';
+import config from '../config';
 
 createApp(App)
   .use(router)
+  .use(store)
   .use(VueGtag, {
-    config: { id: gtagId }
+    config: {
+      id: process.env.NODE_ENV === 'production' ? config.googleAnalyticsId : '',
+      params: {
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      }
+    }
   })
   .use(i18n)
   .mount('#app');

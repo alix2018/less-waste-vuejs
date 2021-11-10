@@ -6,15 +6,17 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
 };
 </script>
 
 <style lang="scss">
 $color-green: #8DEAD9;
+$color-dark-green: #0A4242;
 $color-yellow: #FEF1BB;
 $color-black: #272D2D;
 $color-white: #FFF;
+$color-orange: #FC9774;
 
 @font-face {
   font-family: 'Lato Thin';
@@ -32,6 +34,11 @@ $color-white: #FFF;
 }
 
 @font-face {
+  font-family: 'Lato Italic';
+  src: url(./assets/fonts/Lato-Italic.ttf) format('ttf');
+}
+
+@font-face {
   font-family: 'Lato Bold';
   src: url(./assets/fonts/Lato-Bold.woff) format('woff');
 }
@@ -42,11 +49,13 @@ $color-white: #FFF;
 }
 
 body {
-  font-family: 'Lato Black', Helvetica, sans-serif;
+  font-family: 'Lato Regular', Helvetica, sans-serif;
   color: $color-black;
   text-align: center;
-  margin: 60px 30px;
+  margin: 0;
+  padding: 0 100px;
   min-height: 100vh;
+  font-size: 20px;
 }
 
 button,
@@ -73,7 +82,28 @@ button.full,
   background-color: $color-black;
   color: $color-green;
 }
-</style>
 
-<style scoped>
+h1 {
+  font-family: 'Lato Black', Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'Lato Bold', Helvetica, sans-serif;
+}
+
+p,
+a {
+  font-family: 'Lato Regular', Helvetica, sans-serif;
+}
+
+a {
+  color: $color-orange;
+}
 </style>
