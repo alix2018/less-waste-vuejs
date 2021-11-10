@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.4.0 (2021-11-10)
+* Setup home [#6](https://github.com/alix2018/less-waste-vuejs/issues/6)
+* Setup privacy policy [#56](https://github.com/alix2018/less-waste-vuejs/issues/56)
+* Setup footer
+
 ## 0.3.0 (2021-08-29)
 * Setup language switcher [#17](https://github.com/alix2018/less-waste-vuejs/issues/17)
 
