@@ -28,11 +28,18 @@ const messages = {
       language_fr: 'Français',
       language_nl: 'Néerlandais',
       pluralExample: 'pas d\'élément | {count} élément | {count} éléments',
-
       subtitle: 'Bientôt disponible',
       testButton: 'Faire le test',
       tipsButton: 'Voir les astuces',
-      title: 'Conseils pour réduire tes déchets'
+      title: 'Conseils pour réduire tes déchets',
+
+      newsletter_coming_soon: 'Nous serons bientôt là...',
+      newsletter_inscription: 'Inscris-toi à notre newsletter pour être averti!',
+      newsletter_button_subscribe: 'S\'abonner',
+      social_in_the_meantime: 'En attendant,',
+      social_follow_us: 'suis nous et écris nous sur les réseaux sociaux!',
+      share_title: 'Ce site web est top!',
+      share_description: 'Partage le avec tes amis, ta famille et tes collègues. Partage-le avec le monde entier! Pour agir, à notre échelle, pour un monde meilleur.'
     },
     footer: {
       copyright: '© 2021. Tous droits réservés.',

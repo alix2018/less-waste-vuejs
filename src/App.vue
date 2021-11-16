@@ -17,6 +17,7 @@ $color-yellow: #FEF1BB;
 $color-black: #272D2D;
 $color-white: #FFF;
 $color-orange: #FC9774;
+$color-light-orange: #FFE7DF;
 
 @font-face {
   font-family: 'Lato Thin';
@@ -54,8 +55,8 @@ body {
   text-align: center;
   margin: 0;
   padding: 0 100px;
-  min-height: 100vh;
   font-size: 20px;
+  overflow-x: hidden;
 }
 
 button,
@@ -65,7 +66,7 @@ select {
   text-transform: uppercase;
   border-color: $color-black;
   border: 2px solid $color-black;
-  border-radius: 7px;
+  border-radius: 6px;
   font-family: 'Lato Regular', Helvetica, sans-serif;
   cursor: pointer;
   text-decoration: none;
@@ -105,5 +106,20 @@ a {
 
 a {
   color: $color-orange;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: $color-orange;
+  color: $color-white;
+  border: none;
+  font-family: 'Lato Bold', Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+flex {
+  display: flex;
+  flex-direction: row;
 }
 </style>
