@@ -145,69 +145,71 @@ export default {
 };
 </script>
 
-<style scoped>
-  #sib-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 28px;
-  }
+<style lang="scss" scoped>
+@import "@scss/_global.scss";
 
-  #sib-container input:-ms-input-placeholder {
-    text-align: left;
-    font-family: "Helvetica", sans-serif;
-    color: #c0ccda;
-  }
+#sib-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 28px;
+}
 
-  #sib-container input::placeholder {
-    text-align: left;
-    font-family: "Helvetica", sans-serif;
-    color: #c0ccda;
-  }
+#sib-container input:-ms-input-placeholder {
+  text-align: left;
+  font-family: "Helvetica", sans-serif;
+  color: #c0ccda;
+}
 
-  #sib-container textarea::placeholder {
-    text-align: left;
-    font-family: "Helvetica", sans-serif;
-    color: #c0ccda;
-  }
+#sib-container input::placeholder {
+  text-align: left;
+  font-family: "Helvetica", sans-serif;
+  color: #c0ccda;
+}
 
-  .sib-form {
-    padding: 0;
-    background-color: transparent !important;
-  }
+#sib-container textarea::placeholder {
+  text-align: left;
+  font-family: "Helvetica", sans-serif;
+  color: #c0ccda;
+}
 
-  .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.sib-form {
+  padding: 0;
+  background-color: transparent !important;
+}
 
-  div.modal.hidden {
-    display: none;
-  }
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  div.modal.block {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: block;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
+div.modal.hidden {
+  display: none;
+}
 
-  img {
-    cursor: pointer;
-  }
+div.modal.block {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
-  label {
-    font-family: 'Lato Regular', Helvetica, sans-serif;
-  }
+img {
+  cursor: pointer;
+}
 
-  button[disabled] {
-    opacity: 0.5;
-    pointer-events: none;
-  }
+label {
+  font-family: 'Lato Regular';
+}
+
+button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
 </style>

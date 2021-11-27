@@ -4,7 +4,7 @@
       <router-link class="left" to="/privacy-policy">{{ $t('footer.privacy_policy') }}</router-link>
     </div>
     <p class="right">{{ $t('footer.copyright') }}</p>
-    <img class="logo" src="../assets/logo-footer.png" alt="footer">
+    <img class="logo" src="../assets/footer-logo.png" alt="footer">
     <img class="footer" src="../assets/footer.png" alt="footer">
   </footer>
 </template>
@@ -22,16 +22,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@scss/_global.scss";
 
 footer {
   position: relative;
 }
 
 img.footer {
-  width: calc(100% + 2 * 100px);
+  // TODO: use global variable here
+  width: calc(100% + 2 * #{$body-padding-big-screen});
   height: 130px;
   margin-bottom: -20px;
-  margin-left: -100px;
+  margin-left: -$body-padding-big-screen;
 }
 
 .left,
@@ -45,7 +47,7 @@ img.footer {
   top: 55%;
   font-size: 14px;
   margin: 0;
-  color: #272D2D;
+  color: $color-black;
 }
 
 .left {

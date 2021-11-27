@@ -39,7 +39,9 @@ const messages = {
       social_in_the_meantime: 'En attendant,',
       social_follow_us: 'suis nous et écris nous sur les réseaux sociaux!',
       share_title: 'Ce site web est top!',
-      share_description: 'Partage le avec tes amis, ta famille et tes collègues. Partage-le avec le monde entier! Pour agir, à notre échelle, pour un monde meilleur.'
+      share_description: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
+      about_us_who_we_are: 'Qui sommes nous ?',
+      about_us_description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\n It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.'
     },
     footer: {
       copyright: '© 2021. Tous droits réservés.',

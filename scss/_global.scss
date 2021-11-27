@@ -1,0 +1,149 @@
+/* COLORS */
+$color-green: #8DEAD9;
+$color-dark-green: #0A4242;
+$color-yellow: #FEF1BB;
+$color-black: #272D2D;
+$color-white: #FFF;
+$color-orange: #FC9774;
+$color-light-orange: #FFE7DF;
+
+/* GLOBAL VARIABLES */
+$body-padding-big-screen: 150px;
+$body-padding-desktop: 100px;
+
+/* MIXINS */
+@mixin paragraph-text {
+  font-family: 'Lato Light';
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin image-before-after {
+  display: inline-flex;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@mixin text-banner {
+  font-size: 24px
+}
+
+/* GENERIC TAG */
+h1,
+h2,
+h3,
+h4,
+p {
+  white-space: pre-wrap;
+}
+
+h1 {
+  font-family: 'Lato Black';
+  font-weight: 900;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'Lato Bold';
+}
+
+p,
+a {
+  font-family: 'Lato Regular';
+}
+
+a {
+  color: $color-orange;
+}
+
+button,
+.btn,
+select {
+  padding: 12px;
+  text-transform: uppercase;
+  border-color: $color-black;
+  border: 2px solid $color-black;
+  border-radius: 6px;
+  font-family: 'Lato Regular';
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.transparent,
+.btn.transparent {
+  background-color: transparent;
+  color: $color-black;
+}
+
+button.full,
+.btn.full {
+  background-color: $color-black;
+  color: $color-green;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: $color-orange;
+  color: $color-white;
+  border: none;
+  font-family: 'Lato Bold';
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* TEMPLATE LOGO + TEXT */
+article.layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+  div.content {
+    max-width: 350px;
+    margin-left: 20px;
+  }
+
+  img.icon {
+    min-height: 200px;
+    min-width: 200px;
+    height: 200px;
+    width: 200px;
+  }
+
+  h3 {
+    font-family: 'Lato Regular';
+    font-size: 18px;
+  }
+
+  p {
+    @include paragraph-text;
+  }
+}
+
+/* TEMPLATE BANNER */
+div.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -$body-padding-big-screen;
+  width: calc(100% + 2 * #{$body-padding-big-screen});
+  height: 400px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
