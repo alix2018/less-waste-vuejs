@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="../assets/background-header.png" alt="green background">
+    <img src="../assets/background-header.png" alt="header background">
     <div>
       <h1>{{ $t('home.title') }}</h1>
       <h2>{{ $t('home.subtitle') }}</h2>
@@ -46,14 +46,14 @@
       <img src="../assets/icon-announcement.png" alt="announcement" height="70">
       <p>{{ $t('home.newsletter_coming_soon') }}</p>
       <p>{{ $t('home.newsletter_inscription') }}</p>
-      <button @click="openForm">{{ $t('home.newsletter_button_subscribe') }}</button>
+      <button aria-label="open form" @click="openForm">{{ $t('home.newsletter_button_subscribe') }}</button>
     </div>
   </section>
 
   <!-- Section 3: About us -->
   <section class="about-us">
       <div class="picture-text">
-        <img src="../assets/photo-us.png" alt="us">
+        <img src="../assets/photo-us.png" alt="picture of us">
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>
           <p>{{ $t('home.about_us_description') }}</p>

@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="left flex">
-      <p>Tu as des commentaires ou des idées? Contacte-nous!</p>
+      <p>{{ $t('footer.comment_ideas') }}</p>
       <a href="mailto:lesswastefortheplanet@gmail.com" class="mail">lesswastefortheplanet@gmail.com</a>
       <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">@lesswastefortheplanet</a>
     </div>
@@ -13,11 +13,11 @@
 
       <div class="copyright flex">
         <p class="bottom-right">{{ $t('footer.copyright') }}</p>
-        <img class="logo" src="../assets/footer-logo.png" alt="footer">
+        <img class="logo" src="../assets/footer-logo.png" alt="logo">
       </div>
     </div>
 
-    <img class="footer" src="../assets/background-footer.png" alt="footer">
+    <img class="footer" src="../assets/background-footer.png" alt="footer background">
   </footer>
 </template>
 
