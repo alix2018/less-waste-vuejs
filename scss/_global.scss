@@ -10,6 +10,7 @@ $color-light-orange: #FFE7DF;
 /* GLOBAL VARIABLES */
 $body-padding-big-screen: 150px;
 $body-padding-desktop: 100px;
+$body-padding-mobile: 40px;
 
 /* MIXINS */
 @mixin paragraph-text-light {
@@ -166,4 +167,11 @@ div.banner {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

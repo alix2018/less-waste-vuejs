@@ -46,14 +46,14 @@
       <img src="../assets/icon-announcement.png" alt="announcement" height="70">
       <p>{{ $t('home.newsletter_coming_soon') }}</p>
       <p>{{ $t('home.newsletter_inscription') }}</p>
-      <button aria-label="open form" @click="openForm">{{ $t('home.newsletter_button_subscribe') }}</button>
+      <button aria-label="{{ $t('home.newsletter_button_subscribe') }}" @click="openForm">{{ $t('home.newsletter_button_subscribe') }}</button>
     </div>
   </section>
 
   <!-- Section 3: About us -->
   <section class="about-us">
       <div class="picture-text">
-        <img src="../assets/photo-us.png" alt="us">
+        <img src="@public/photo-us.png" alt="us">
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>
           <p>{{ $t('home.about_us_description') }}</p>

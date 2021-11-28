@@ -58,4 +58,10 @@ body {
     padding: 0 $body-padding-desktop;
   }
 }
+
+@media (max-width: 1023px) {
+  body {
+    padding: 0 $body-padding-mobile;
+  }
+}
 </style>
