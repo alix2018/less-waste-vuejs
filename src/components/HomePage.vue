@@ -53,7 +53,7 @@
   <!-- Section 3: About us -->
   <section class="about-us">
       <div class="picture-text">
-        <img src="../assets/photo-us.png" alt="picture of us">
+        <img src="../assets/photo-us.png" alt="us">
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>
           <p>{{ $t('home.about_us_description') }}</p>
