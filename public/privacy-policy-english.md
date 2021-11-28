@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: October 24, 2021
+_Last updated: October 24, 2021_
 
 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
 
@@ -17,7 +17,7 @@ The words of which the initial letter is capitalized have meanings defined under
 For the purposes of this Privacy Policy:
 
 - Account means a unique account created for You to access our Service or parts of our Service.
-- Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Less Waste For the Planet, Amsterdam.
+- Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Less Waste For the Planet.
 - Cookies are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.
 - Country refers to: Netherlands
 - Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.

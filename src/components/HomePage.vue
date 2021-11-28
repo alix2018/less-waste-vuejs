@@ -93,7 +93,7 @@
     </article>
   </section>
   <Footer :privacyPolicy="showPrivacyPolicy"></Footer>
-  <NewsletterForm :show="openModal" @onClickCloseModal="closeModal"/>
+  <NewsletterForm :show="openModal" @onClickCloseModal="onClickCloseModal"/>
 </template>
 
 <script>
@@ -243,7 +243,7 @@ section.about-us {
 
       p {
         margin-top: 40px;
-        @include paragraph-text;
+        @include paragraph-text-light;
       }
     }
   }
@@ -290,7 +290,7 @@ section.social {
       height: 15px;
       width: 15px;
       margin-left: 6px;
-      vertical-align: bottom;
+      vertical-align: text-bottom;
       background-image: url(../assets/arrow-circle.png);
       @include image-before-after;
     }

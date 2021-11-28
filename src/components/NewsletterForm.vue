@@ -134,14 +134,21 @@ export default {
       this.disableSubmitButton = !event.currentTarget.checked;
     },
     onClickCloseModal() {
-      this.disableSubmitButton = true;
-      document.querySelector('#OPT_IN').checked = false;
+      this.resetForm();
       this.$emit('onClickCloseModal');
     },
     onClickSubmitButton(event) {
       console.log('clicked!', event);
+    },
+    resetForm() {
+      this.disableSubmitButton = true;
+      document.querySelector('#EMAIL').value = null;
+      document.querySelector('#OPT_IN').checked = false;
     }
   },
+  mounted() {
+    this.resetForm();
+  }
 };
 </script>
 

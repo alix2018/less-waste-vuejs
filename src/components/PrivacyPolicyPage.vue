@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getMarkdownFile() {
-      fetch('./privacy-policy.md')
+      fetch('./privacy-policy-french.md')
         .then((res) => res.text())
         .then((text) => {
           this.markdown = text;
@@ -44,7 +44,8 @@ export default {
 .markdown {
   min-height: 100vh;
   padding: 50px 0;
-  @include paragraph-text;
+  text-align: left;
+  @include paragraph-text-light;
 }
 
 .markdown h1 {

@@ -12,8 +12,14 @@ $body-padding-big-screen: 150px;
 $body-padding-desktop: 100px;
 
 /* MIXINS */
-@mixin paragraph-text {
+@mixin paragraph-text-light {
   font-family: 'Lato Light';
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin paragraph-text-regular {
+  font-family: 'Lato Regular';
   font-size: 16px;
   line-height: 24px;
 }
@@ -27,10 +33,20 @@ $body-padding-desktop: 100px;
 }
 
 @mixin text-banner {
-  font-size: 24px
+  font-family: 'Lato Regular';
+  font-size: 24px;
+}
+
+@mixin text-regular {
+  font-family: 'Lato Regular';
+  font-size: 18px;
 }
 
 /* GENERIC TAG */
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -56,11 +72,15 @@ h4 {
 
 p,
 a {
-  font-family: 'Lato Regular';
+  @include paragraph-text-regular;
 }
 
 a {
   color: $color-orange;
+}
+
+li {
+  @include paragraph-text-regular;
 }
 
 button,
@@ -129,7 +149,7 @@ article.layout {
   }
 
   p {
-    @include paragraph-text;
+    @include paragraph-text-light;
   }
 }
 
