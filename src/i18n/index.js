@@ -28,13 +28,23 @@ const messages = {
       language_fr: 'Français',
       language_nl: 'Néerlandais',
       pluralExample: 'pas d\'élément | {count} élément | {count} éléments',
-
       subtitle: 'Bientôt disponible',
       testButton: 'Faire le test',
       tipsButton: 'Voir les astuces',
-      title: 'Conseils pour réduire tes déchets'
+      title: 'Conseils pour réduire tes déchets',
+
+      newsletter_coming_soon: 'Nous serons bientôt là...',
+      newsletter_inscription: 'Inscris-toi à notre newsletter pour être averti!',
+      newsletter_button_subscribe: 'S\'abonner',
+      social_in_the_meantime: 'En attendant,',
+      social_follow_us: 'suis nous et écris nous sur les réseaux sociaux!',
+      share_title: 'Ce site web est top!',
+      share_description: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
+      about_us_who_we_are: 'Qui sommes nous ?',
+      about_us_description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\n It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.'
     },
     footer: {
+      comment_ideas: 'Tu as des commentaires ou des idées? Contacte-nous!',
       copyright: '© 2021. Tous droits réservés.',
       privacy_policy: 'Politique de confidentialité'
     }

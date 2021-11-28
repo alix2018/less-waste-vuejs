@@ -15,6 +15,7 @@ module.exports = {
       });
     config.resolve.alias
       .set('@src', path.resolve(__dirname, 'src/'))
-      .set('@public', path.resolve(__dirname, 'public/'));
+      .set('@public', path.resolve(__dirname, 'public/'))
+      .set('@scss', path.resolve(__dirname, 'scss/'));
   }
 };

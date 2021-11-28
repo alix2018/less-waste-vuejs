@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.5.0 (2021-11-28)
+* Implement home features [#55](https://github.com/alix2018/less-waste-vuejs/issues/55)
+* Setup design system
+* Implement desktops design [#57](https://github.com/alix2018/less-waste-vuejs/issues/57)
+* Privacy Policy in French
+* Connect mail newsletter to Sendingblue [#36](https://github.com/alix2018/less-waste-vuejs/issues/36)
+
 ## 0.4.0 (2021-11-10)
 * Connect GA v4 [#61](https://github.com/alix2018/less-waste-vuejs/issues/61)
 * Setup home [#6](https://github.com/alix2018/less-waste-vuejs/issues/6)
