@@ -48,7 +48,7 @@ const messages = {
       form_title: 'Newsletter',
       from_subtitle: 'Toi aussi tu as hâtes de voir la suite ? 🙂',
       form_label_email: 'Entre ton adresse e-mail pour t\'inscrire',
-      form_email_example: 'Indique ton adresse e-mail pour t\'abonner. Par exemple: abc@xyz.com',
+      form_email_input_example: 'Indique ton adresse e-mail pour t\'abonner. Par exemple: abc{\'@\'}xyz.com',
       form_accept_terms: 'J\'accepte de recevoir vos lettres d\'information et j\'accepte la déclaration de confidentialité des données.',
       form_unsubscribe: 'Tu peux te désinscrire à tout moment en utilisant le lien figurant dans notre newsletter.',
       form_sendingblue_terms: 'Nous utilisons Sendinblue comme plateforme de marketing. En cliquant ci-dessous pour soumettre ce formulaire, tu reconnais que les informations que tu as fournies seront transférées à Sendinblue pour être traitées conformément à leur ',

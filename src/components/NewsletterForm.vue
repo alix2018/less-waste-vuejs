@@ -55,7 +55,7 @@
                   <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-radius: 6px; border-color:#ff4949;">
                   </label>
                   <label class="entry__specification" style="font-size:12px; text-align:left; color:#8390A4;">
-                    {{ $t('newsletter.form_email_example') }}
+                    {{ $t('newsletter.form_email_input_example') }}
                   </label>
                 </div>
               </div>
