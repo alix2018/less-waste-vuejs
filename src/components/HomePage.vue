@@ -139,6 +139,8 @@ section:not(section.explanations, section.about-us) {
 }
 
 header {
+  height: 300px;
+
   img {
     position: absolute;
     top: 0;
@@ -174,7 +176,7 @@ header {
 
 /* Section 1: Explanations */
 h2.first-article {
-  margin-top: 250px;
+  margin: 70px 0 20px;
   text-align: center;
 }
 
@@ -220,6 +222,7 @@ section.about-us {
     position: relative;
     height: 40vw;
     max-height: 650px;
+    min-height: 450px;
 
     img[alt='us'] {
       position: absolute;
@@ -234,7 +237,7 @@ section.about-us {
       left: 0px;
       transform: translate(0, -50%);
       margin: 0;
-      max-width: calc(100% - 0px - 40vw);
+      max-width: calc(100% + 90px - 40vw);
       text-align: left;
 
       h2 {
@@ -322,5 +325,45 @@ section.share {
 
 Footer {
   margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  section:not(section.explanations) {
+    margin-top: 70px;
+  }
+
+  /* Section 3: About us */
+  section.about-us {
+    .picture-text {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      max-height: initial;
+      min-height: initial;
+
+      img[alt='us'] {
+        position: relative;
+        top: initial;
+        right: initial;
+        display: block;
+        margin: 50px auto 0;
+        height: 70vw;
+        width: 70vw;
+      }
+
+      div.text {
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: none;
+        max-width: initial;
+      }
+    }
+  }
+
+  Footer {
+    margin-top: 100px;
+  }
 }
 </style>
