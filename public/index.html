@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -27,21 +26,10 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
     <script type="text/javascript" src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <script>
-      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-      window.LOCALE = 'fr';
-      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-
-      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-
-      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-
-      window.translation = {
-        common: {
-          selectedList: '{quantity} list selected',
-          selectedLists: '{quantity} lists selected'
-        }
-      };
+    <script>      window.LOCALE = 'fr';
+      window.EMAIL_INVALID_MESSAGE = "L'information fournie n'est pas valide. Vérifie le champ et réessaie.";
+      window.REQUIRED_ERROR_MESSAGE = "Ce champ ne peut pas être laissé vide.";
+      window.GENERIC_INVALID_MESSAGE = "L'information fournie n'est pas valide. Vérifie le champ et réessaie.";
       var AUTOHIDE = Boolean(0);
     </script>
   </body>
