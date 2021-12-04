@@ -37,6 +37,8 @@ const messages = {
       newsletter_button_subscribe: 'S\'abonner',
       social_in_the_meantime: 'En attendant,',
       social_follow_us: 'suis nous et écris nous sur les réseaux sociaux!',
+      social_instagram: 'Rejoins-nous sur Instagram',
+      social_facebook: 'Suis-nous sur Facebook',
       share_title: 'Ce site web est top!',
       share_description: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
       about_us_who_we_are: 'Qui sommes nous ?',

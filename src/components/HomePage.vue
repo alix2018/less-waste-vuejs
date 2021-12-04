@@ -1,9 +1,9 @@
 <template>
   <header>
-    <img src="../assets/background-header.png" alt="header background">
+    <img src="../assets/background-header-desktop.png" alt="header background">
     <div>
       <h1>{{ $t('home.title') }}</h1>
-      <h2>{{ $t('home.subtitle') }}</h2>
+      <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>
     </div>
   </header>
 
@@ -53,7 +53,9 @@
   <!-- Section 3: About us -->
   <section class="about-us">
       <div class="picture-text">
-        <img src="@public/photo-us.png" alt="us">
+        <div class="picture">
+          <img src="@public/photo-us.png" alt="us">
+        </div>
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>
           <p>{{ $t('home.about_us_description') }}</p>
@@ -70,8 +72,8 @@
       </div>
       <p>{{ $t('home.social_in_the_meantime') }}</p>
       <p>{{ $t('home.social_follow_us') }}</p>
-      <a href="https://facebook.com/lesswastefortheplanet" class="facebook" target="_blank" rel="noopener noreferrer">facebook.com/lesswastefortheplanet</a>
-      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">@lesswastefortheplanet</a>
+      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">{{ $t('home.social_instagram') }}</a>
+      <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" class="facebook" target="_blank" rel="noopener noreferrer">{{ $t('home.social_facebook') }}</a>
     </div>
   </section>
 
@@ -150,15 +152,18 @@ header {
     z-index: -1;
   }
 
+  h1 {
+    margin-top: 100px;
+  }
+
   h1,
   h2 {
     color: $color-dark-green;
     padding: 0 40px;
   }
 
-  h2 {
+  .coming-soon {
     font-family: 'Lato Regular';
-    font-weight: 300;
     margin-top: 50px;
     font-size: 40px;
     font-style: italic;
@@ -185,6 +190,7 @@ section.explanations {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  justify-content: center;
 
   article {
     padding: 30px 0 0;
@@ -195,10 +201,6 @@ section.explanations {
 section.newsletter {
   div.banner {
     background-image: url(../assets/banner-orange.png);
-
-    p {
-      @include text-banner;
-    }
 
     p:first-of-type {
       margin: 25px 0 6px;
@@ -267,10 +269,6 @@ section.social {
       }
     }
 
-    p {
-      @include text-banner;
-    }
-
     p:first-of-type {
       margin: 25px 0 6px;
     }
@@ -328,28 +326,32 @@ Footer {
 }
 
 @media (max-width: 768px) {
-  section:not(section.explanations) {
-    margin-top: 70px;
-  }
-
   /* Section 3: About us */
   section.about-us {
     .picture-text {
       position: relative;
       display: flex;
       flex-direction: column-reverse;
+      align-items: center;
       height: auto;
       max-height: initial;
       min-height: initial;
 
-      img[alt='us'] {
+      div.picture {
         position: relative;
-        top: initial;
-        right: initial;
-        display: block;
-        margin: 50px auto 0;
         height: 70vw;
         width: 70vw;
+        margin: 50px auto 0;
+
+        img[alt='us'] {
+          position: absolute;
+          top: initial;
+          right: initial;
+          display: block;
+          margin: 0 auto;
+          height: 100%;
+          width: 100%;
+        }
       }
 
       div.text {
@@ -359,6 +361,74 @@ Footer {
         transform: none;
         max-width: initial;
       }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  section:not(section.explanations) {
+    margin-top: 40px;
+  }
+
+  header {
+    text-align: left;
+    height: 350px;
+
+    h1 {
+      margin-top: 50px;
+      padding: 0;
+    }
+
+    .coming-soon {
+      margin-top: 24px;
+      padding: 0;
+      font-size: 26px;
+    }
+
+    h2:after {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  /* Section 1: Explanations */
+  h2.first-article {
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  /* Section 3: About us */
+  section.about-us {
+    $picture-size-mobile: calc(100vw + 4 * #{$body-padding-mobile});
+
+    .picture-text {
+      div.picture {
+        position: relative;
+        height: $picture-size-mobile;
+        width: 100vw;
+        margin-top: 30px;
+        margin-left: -1 * $body-padding-mobile;
+        overflow-x: hidden;
+
+        img[alt='us'] {
+          width: $picture-size-mobile;
+          height: $picture-size-mobile;
+          left: -2 * $body-padding-mobile;
+        }
+      }
+
+      div.text {
+        p {
+          @include paragraph-text-light-mobile;
+        }
+      }
+    }
+  }
+
+  /* Section 5: Share */
+  section.share {
+    article.layout div.content {
+      max-width: 100%;
     }
   }
 

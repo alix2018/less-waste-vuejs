@@ -12,7 +12,7 @@ $body-padding-big-screen: 150px;
 $body-padding-desktop: 100px;
 $body-padding-mobile: 40px;
 
-/* MIXINS */
+/* MIXINS DESKTOP */
 @mixin paragraph-text-light {
   font-family: 'Lato Light';
   font-size: 16px;
@@ -43,6 +43,16 @@ $body-padding-mobile: 40px;
   font-size: 18px;
 }
 
+/* MIXINS MOBILE */
+@mixin paragraph-text-light-mobile {
+  font-family: 'Lato Regular';
+}
+
+@mixin text-banner-mobile {
+  font-size: 20px;
+  text-align: left;
+}
+
 /* GENERIC TAG */
 * {
   box-sizing: border-box;
@@ -57,15 +67,18 @@ p {
 }
 
 h1 {
-  font-family: 'Lato Black';
-  font-weight: 900;
-  margin-top: 100px;
-  text-transform: uppercase;
   font-size: 45px;
   line-height: 50px;
+  font-family: 'Lato Black';
+  text-transform: uppercase;
+
 }
 
-h2,
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
 h3,
 h4 {
   font-family: 'Lato Bold';
@@ -167,11 +180,52 @@ div.banner {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  p {
+    @include text-banner;
+  }
 }
 
 @media (max-width: 1023px) {
   h1 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 45px;
+    line-height: 52px;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-family: 'Lato Regular';
+  }
+
+  /* TEMPLATE LOGO + TEXT */
+  article.layout {
+    flex-direction: column;
+
+    div.content {
+      margin: 0;
+    }
+
+    p {
+      @include paragraph-text-light-mobile;
+    }
+  }
+
+  /* TEMPLATE BANNER */
+  div.banner {
+    align-items: flex-start;
+    margin-left: -$body-padding-mobile;
+    width: calc(100% + 2 * #{$body-padding-mobile});
+    padding: 0 $body-padding-mobile;
+
+    p {
+      @include text-banner-mobile;
+    }
   }
 }
