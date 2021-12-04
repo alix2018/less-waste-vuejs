@@ -1,6 +1,10 @@
 <template>
   <header>
-    <img src="../assets/background-header-desktop.png" alt="header background">
+    <picture>
+      <source srcset="../assets/background-header-desktop.png" media="(min-width: 550px)"/>
+      <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
+      <img src="../assets/background-header-desktop.png" alt="header background">
+    </picture>
     <div>
       <h1>{{ $t('home.title') }}</h1>
       <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>
@@ -54,7 +58,12 @@
   <section class="about-us">
       <div class="picture-text">
         <div class="picture">
-          <img src="@public/photo-us.png" alt="us">
+          <picture>
+            <source srcset="@public/photo-us.png" media="(min-width: 550px)"/>
+            <source srcset="@public/photo-us-mobile.png" media="(max-width: 550px)"/>
+            <img src="@public/photo-us.png" alt="us">
+          </picture>
+          <!-- <img src="@public/photo-us.png" alt="us"> -->
         </div>
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>

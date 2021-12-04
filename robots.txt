@@ -6,3 +6,4 @@ Allow: /
 
 User-agent: Googlebot-Image
 Disallow: /public/photo-us.png
+Disallow: /public/photo-us-mobile.png
