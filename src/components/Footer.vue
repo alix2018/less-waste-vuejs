@@ -8,11 +8,11 @@
 
     <div class="right" :class="[privacyPolicy ? 'space-bewteen' : 'flex-end']">
       <div v-if="privacyPolicy">
-        <router-link class="top-right content-page" to="/privacy-policy">{{ $t('footer.privacy_policy') }}</router-link>
+        <router-link class="content-page" to="/privacy-policy">{{ $t('footer.privacy_policy') }}</router-link>
       </div>
 
       <div class="copyright flex">
-        <p class="bottom-right">{{ $t('footer.copyright', { year: this.copyrightYear }) }}</p>
+        <p>{{ $t('footer.copyright', { year: this.copyrightYear }) }}</p>
         <img class="logo" src="../assets/footer-logo.png" alt="logo">
       </div>
     </div>
@@ -52,6 +52,10 @@ footer {
 a,
 .copyright {
   color: $color-black;
+
+  p {
+    min-width: 205px;
+  }
 }
 
 img.background {
@@ -114,6 +118,7 @@ img.background {
 
 .copyright {
   align-items: center;
+  justify-content: flex-end;
 
   p {
     margin: 0;
