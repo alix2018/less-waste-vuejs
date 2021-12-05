@@ -129,4 +129,12 @@ a.back::before {
     padding-left: 20px;
   }
 }
+
+@media (max-width: 550px) {
+  .markdown h1 {
+    font-size: 30px;
+    line-height: 42px;
+    margin: 20px 0;
+  }
+}
 </style>

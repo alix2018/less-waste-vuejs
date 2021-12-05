@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" :class="[show ? 'block' : 'hidden']">
+  <div class="modal" :class="[show || showRoute ? 'block' : 'hidden']">
     <div class="sib-form" style="text-align: center; background-color: #EFF2F7;">
       <div id="sib-form-container" class="sib-form-container">
         <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-radius: 6px; border-color:#ff4949;max-width:540px;">
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div></div>
-        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius: 6px;">
+        <div id="sib-container" ref="container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px;">
           <form id="sib-form" method="POST" action="https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbtNjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block flex" style="font-size:32px; text-align:left; font-weight:700; color:#272D2D; background-color:transparent;">
@@ -94,7 +94,7 @@
                     <use xlink:href="#svgIcon-sphere"></use>
                   </svg>
                 </div>
-                <p style="font-size:14px; text-align:left; color:#687484; background-color:transparent;">
+                <p class="sendingblue-text" style="font-size:14px; text-align:left; color:#687484; background-color:transparent;">
                   {{ $t('newsletter.form_sendingblue_terms') }}<a target="_blank" class="clickable_link" href="https://fr.sendinblue.com/legal/termsofuse/">{{ $t('newsletter.form_sendingblue_terms_link') }}</a>.
                 </p>
               </div>
@@ -128,7 +128,9 @@ export default {
   },
   data() {
     return {
-      disableSubmitButton: true
+      disableSubmitButton: true,
+      showRoute: window.location.pathname === '/newsletter',
+      isDesktop: window.innerWidth >= 550
     };
   },
   methods: {
@@ -137,7 +139,12 @@ export default {
     },
     onClickCloseModal() {
       this.resetForm();
-      this.$emit('onClickCloseModal');
+
+      if (this.isDesktop) {
+        this.$emit('onClickCloseModal');
+      } else {
+        this.$router.push({ name: 'Home' });
+      }
     },
     onClickSubmitButton(event) {
       console.log('clicked!', event);
@@ -156,12 +163,27 @@ export default {
 
 <style lang="scss" scoped>
 @import "@scss/_global.scss";
+div.modal.hidden {
+  display: none;
+}
+
+div.modal.block {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
 #sib-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 6px;
   padding: 28px;
 }
 
@@ -185,21 +207,6 @@ export default {
   margin-bottom: 8px;
 }
 
-div.modal.hidden {
-  display: none;
-}
-
-div.modal.block {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: block;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 img {
   cursor: pointer;
 }
@@ -218,5 +225,36 @@ p.title {
   font-family: 'Lato Black';
   font-size: 22px;
   text-transform: uppercase;
+}
+
+@media (max-width: 550px) {
+  div.modal.block {
+    background-color: $color-white;
+  }
+
+  #sib-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 24px;
+    transform: none;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .sib-form__declaration {
+    margin-top: 12px;
+    flex-direction: column;
+  }
+
+  .sendingblue-text {
+    margin-top: 12px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
 }
 </style>

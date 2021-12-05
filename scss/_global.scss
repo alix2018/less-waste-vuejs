@@ -71,7 +71,6 @@ h1 {
   line-height: 50px;
   font-family: 'Lato Black';
   text-transform: uppercase;
-
 }
 
 h2 {
@@ -97,39 +96,18 @@ li {
   @include paragraph-text-regular;
 }
 
-button,
-.btn,
-select {
-  padding: 12px;
-  text-transform: uppercase;
-  border-color: $color-black;
-  border: 2px solid $color-black;
-  border-radius: 6px;
-  font-family: 'Lato Regular';
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button.transparent,
-.btn.transparent {
-  background-color: transparent;
-  color: $color-black;
-}
-
-button.full,
-.btn.full {
-  background-color: $color-black;
-  color: $color-green;
-}
-
 button {
   padding: 12px 20px;
   background-color: $color-orange;
   color: $color-white;
+  border-radius: 6px;
   border: none;
-  font-family: 'Lato Bold';
   font-size: 16px;
+  font-family: 'Lato Bold';
   letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .flex {

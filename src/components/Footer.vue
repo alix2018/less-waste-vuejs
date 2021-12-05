@@ -202,7 +202,7 @@ img.background {
 
   .copyright {
     justify-content: flex-end;
-    margin-top: 16px;
+    margin-top: 24px;
   }
 }
 </style>

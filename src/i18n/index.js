@@ -40,7 +40,10 @@ const messages = {
       social_instagram: 'Rejoins-nous sur Instagram',
       social_facebook: 'Suis-nous sur Facebook',
       share_title: 'Ce site web est top!',
-      share_description: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
+      share_description_desktop: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
+      share_description_mobile: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!',
+      share_button_copy: 'Copier l\'URL',
+      share_button_native_share: 'Partager',
       about_us_who_we_are: 'Qui sommes nous ?',
       about_us_description: 'Bonjour à toi qui est assis bien gentillement derrière ton écran et qui se demande qui nous sommes et pourquoi nous avons fait ce site. Nous sommes Shannon & Stéphanie, respectivement Belge et Français vivant en Belgique et aux Pays-Bas (oui ca fait un sacré mix). On s\'est d\'ailleurs rencontrées lors d\'un stage aux Pays-Bas et on n\'a jamais perdu contact.\n\n L\'une des raisons c\'est qu\'on a les mêmes valeurs, les mêmes et la même vision. De là est né ce projet qui a pour but d\'aider les gens (comme nous) à avancer dans le zéro déchet. On en est tous à des niveaux différents. Certains ne savent pas ce que c\'est d\'autres ont peur de se lancer et les plus avertis qui font ça depuis longtemps. Nous on veut juste rendre ça facile en utilisant notre connaissance et notre expérience et puis atteindre le plus de gens possible car toutes seules on n\'irait pas très loin dans le réduction des déchets à l\'échelle planétaire.\n\nVoilà un petit résumé sur nous et notre projet :) Si tu as des questions \'hésite pas à nous contacter par mail ou sur les réseaux sociaux.'
     },
