@@ -1,5 +1,8 @@
 <template>
-  <div class="markdown" v-html="markdownToHtml"></div>
+  <article class="content-page">
+    <router-link class="back" to="/home">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
+    <div class="markdown" v-html="markdownToHtml"></div>
+  </article>
   <Footer></Footer>
 </template>
 
@@ -41,15 +44,40 @@ export default {
 <style lang="scss">
 @import "@scss/_global.scss";
 
+article.content-page {
+  padding: 50px 0;
+}
+
+a.back {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: $color-black;
+  font-family: 'Lato Bold';
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+a.back::before {
+  align-items: center;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  background-image: url(../assets/back-arrow.svg);
+  @include image-before-after;
+}
+
 .markdown {
   min-height: 100vh;
-  padding: 50px 0;
+  padding: 0;
   text-align: left;
   @include paragraph-text-light;
 }
 
 .markdown h1 {
-  margin-top: 0;
+  margin: 35px 0;
 }
 
 .markdown h2 {
@@ -66,5 +94,47 @@ export default {
 .markdown h4 {
   font-size: 18px;
   line-height: 25px;
+}
+
+.markdown a {
+  line-break: anywhere;
+}
+
+.markdown ul {
+  padding-left: 40px;
+}
+
+@media (max-width: 1023px) {
+  article.content-page {
+    padding-bottom: 80px;
+  }
+
+  .markdown h2 {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .markdown h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .markdown h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .markdown ul {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .markdown h1 {
+    font-size: 30px;
+    line-height: 42px;
+    margin: 20px 0;
+  }
 }
 </style>

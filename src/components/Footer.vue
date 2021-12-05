@@ -8,16 +8,20 @@
 
     <div class="right" :class="[privacyPolicy ? 'space-bewteen' : 'flex-end']">
       <div v-if="privacyPolicy">
-        <router-link class="top-right" to="/privacy-policy">{{ $t('footer.privacy_policy') }}</router-link>
+        <router-link class="content-page" to="/privacy-policy">{{ $t('footer.privacy_policy') }}</router-link>
       </div>
 
       <div class="copyright flex">
-        <p class="bottom-right">{{ $t('footer.copyright') }}</p>
+        <p>{{ $t('footer.copyright', { year: this.copyrightYear }) }}</p>
         <img class="logo" src="../assets/footer-logo.png" alt="logo">
       </div>
     </div>
 
-    <img class="footer" src="../assets/background-footer.png" alt="footer background">
+    <picture>
+      <source srcset="../assets/background-footer.png" media="(min-width: 550px)"/>
+      <source srcset="../assets/background-footer-mobile.png" media="(max-width: 550px)"/>
+      <img class="background" src="../assets/background-footer.png" alt="footer background">
+    </picture>
   </footer>
 </template>
 
@@ -29,6 +33,9 @@ export default {
       type: Boolean,
       default: () => false
     },
+  },
+  created() {
+    this.copyrightYear = new Date().getFullYear();
   }
 };
 </script>
@@ -45,9 +52,13 @@ footer {
 a,
 .copyright {
   color: $color-black;
+
+  p {
+    min-width: 205px;
+  }
 }
 
-img.footer {
+img.background {
   width: calc(100% + 2 * #{$body-padding-big-screen});
   height: 200px;
   margin-bottom: -20px;
@@ -107,6 +118,7 @@ img.footer {
 
 .copyright {
   align-items: center;
+  justify-content: flex-end;
 
   p {
     margin: 0;
@@ -125,5 +137,77 @@ img.footer {
 
 .space-between {
   justify-content: space-between;
+}
+
+@media (max-width: 1500px) {
+  img.background {
+    width: calc(100% + 2 * #{$body-padding-desktop});
+    height: 200px;
+    margin-bottom: -20px;
+    margin-left: -$body-padding-desktop;
+  }
+}
+
+@media (max-width: 1023px) {
+  footer {
+    margin: 0 -$body-padding-mobile;
+    padding: 50px 40px 30px;
+    background-image: url(../assets/background-footer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  img.background {
+    display: none;
+  }
+
+  .flex-end,
+  .space-between {
+    justify-content: unset;
+  }
+
+  .left,
+  .right {
+    position: relative;
+    z-index: 1;
+    top: initial;
+    right: initial;
+    left: initial;
+    bottom: initial;
+    height: auto;
+  }
+
+  .left {
+    margin-bottom: 22px;
+  }
+
+  .right {
+    align-items: unset;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  a:before {
+    width: 20px;
+    min-height: 15px;
+  }
+
+  a.mail {
+    margin-top: 16px;
+  }
+
+  a.content-page {
+    text-align: left;
+    margin-top: 22px;
+  }
+
+  .copyright {
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
 }
 </style>

@@ -32,20 +32,40 @@ const messages = {
       testButton: 'Faire le test',
       tipsButton: 'Voir les astuces',
       title: 'Conseils pour réduire tes déchets',
-
       newsletter_coming_soon: 'Nous serons bientôt là...',
       newsletter_inscription: 'Inscris-toi à notre newsletter pour être averti!',
       newsletter_button_subscribe: 'S\'abonner',
       social_in_the_meantime: 'En attendant,',
       social_follow_us: 'suis nous et écris nous sur les réseaux sociaux!',
+      social_instagram: 'Rejoins-nous sur Instagram',
+      social_facebook: 'Suis-nous sur Facebook',
       share_title: 'Ce site web est top!',
-      share_description: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
+      share_description_desktop: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!\nPartage sur tes réseaux sociaux préférés, sinon tu peux aussi copier l\'URL directement.',
+      share_description_mobile: 'Agis à ton échelle et partage le avec tes amis, ta famille, tes collègues, ton voisin, ton chien, ton chat... On accepte tout le monde :) Notre cause n\'a de but que si tout le monde s\'y met!',
+      share_button_copy: 'Copier l\'URL',
+      share_button_native_share: 'Partager',
       about_us_who_we_are: 'Qui sommes nous ?',
-      about_us_description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\n It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.'
+      about_us_description: 'Bonjour à toi qui est assis bien gentillement derrière ton écran et qui se demande qui nous sommes et pourquoi nous avons fait ce site. Nous sommes Shannon & Stéphanie, respectivement Belge et Français vivant en Belgique et aux Pays-Bas (oui ca fait un sacré mix). On s\'est d\'ailleurs rencontrées lors d\'un stage aux Pays-Bas et on n\'a jamais perdu contact.\n\n L\'une des raisons c\'est qu\'on a les mêmes valeurs, les mêmes et la même vision. De là est né ce projet qui a pour but d\'aider les gens (comme nous) à avancer dans le zéro déchet. On en est tous à des niveaux différents. Certains ne savent pas ce que c\'est d\'autres ont peur de se lancer et les plus avertis qui font ça depuis longtemps. Nous on veut juste rendre ça facile en utilisant notre connaissance et notre expérience et puis atteindre le plus de gens possible car toutes seules on n\'irait pas très loin dans le réduction des déchets à l\'échelle planétaire.\n\nVoilà un petit résumé sur nous et notre projet :) Si tu as des questions \'hésite pas à nous contacter par mail ou sur les réseaux sociaux.'
+    },
+    newsletter: {
+      form_error_message: 'Malheureusement ton inscription n\'a pas pu être enregistrée. Essaie de nouveau 🤞',
+      form_success_message: 'Ton inscription à bien marché, bienvenue parmis nous! 🎉',
+      form_title: 'Newsletter',
+      from_subtitle: 'Toi aussi tu as hâtes de voir la suite ? 🙂',
+      form_label_email: 'Entre ton adresse e-mail pour t\'inscrire',
+      form_email_input_example: 'Indique ton adresse e-mail pour t\'abonner. Par exemple: abc{\'@\'}xyz.com',
+      form_accept_terms: 'J\'accepte de recevoir vos lettres d\'information et j\'accepte la déclaration de confidentialité des données.',
+      form_unsubscribe: 'Tu peux te désinscrire à tout moment en utilisant le lien figurant dans notre newsletter.',
+      form_sendingblue_terms: 'Nous utilisons Sendinblue comme plateforme de marketing. En cliquant ci-dessous pour soumettre ce formulaire, tu reconnais que les informations que tu as fournies seront transférées à Sendinblue pour être traitées conformément à leur ',
+      form_sendingblue_terms_link: 'conditions d\'utilisation',
+      form_btn_submit: 'Envoyer'
+    },
+    privacyPolicy: {
+      btn_back_to_home: 'Retour à l\'accueil'
     },
     footer: {
       comment_ideas: 'Tu as des commentaires ou des idées? Contacte-nous!',
-      copyright: '© 2021. Tous droits réservés.',
+      copyright: '© {year}. Tous droits réservés.',
       privacy_policy: 'Politique de confidentialité'
     }
   },

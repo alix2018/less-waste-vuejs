@@ -1,9 +1,13 @@
 <template>
   <header>
-    <img src="../assets/background-header.png" alt="header background">
+    <picture>
+      <source srcset="../assets/background-header-desktop.png" media="(min-width: 550px)"/>
+      <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
+      <img src="../assets/background-header-desktop.png" alt="header background">
+    </picture>
     <div>
       <h1>{{ $t('home.title') }}</h1>
-      <h2>{{ $t('home.subtitle') }}</h2>
+      <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>
     </div>
   </header>
 
@@ -46,14 +50,20 @@
       <img src="../assets/icon-announcement.png" alt="announcement" height="70">
       <p>{{ $t('home.newsletter_coming_soon') }}</p>
       <p>{{ $t('home.newsletter_inscription') }}</p>
-      <button aria-label="open form" @click="openForm">{{ $t('home.newsletter_button_subscribe') }}</button>
-    </div>
+      <button aria-label="{{ $t('home.newsletter_button_subscribe') }}" @click="onClickOpenForm">{{ $t('home.newsletter_button_subscribe') }}</button>
+      </div>
   </section>
 
   <!-- Section 3: About us -->
   <section class="about-us">
       <div class="picture-text">
-        <img src="../assets/photo-us.png" alt="us">
+        <div class="picture">
+          <picture>
+            <source srcset="@public/photo-us.png" media="(min-width: 550px)"/>
+            <source srcset="@public/photo-us-mobile.png" media="(max-width: 550px)"/>
+            <img src="@public/photo-us.png" alt="us">
+          </picture>
+        </div>
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>
           <p>{{ $t('home.about_us_description') }}</p>
@@ -70,8 +80,8 @@
       </div>
       <p>{{ $t('home.social_in_the_meantime') }}</p>
       <p>{{ $t('home.social_follow_us') }}</p>
-      <a href="https://facebook.com/lesswastefortheplanet" class="facebook" target="_blank" rel="noopener noreferrer">facebook.com/lesswastefortheplanet</a>
-      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">@lesswastefortheplanet</a>
+      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">{{ $t('home.social_instagram') }}</a>
+      <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" class="facebook" target="_blank" rel="noopener noreferrer">{{ $t('home.social_facebook') }}</a>
     </div>
   </section>
 
@@ -81,14 +91,20 @@
       <img class="icon" src="../assets/icon-rock-n-roll.png" alt="rock n roll">
       <div class="content">
         <h3>{{ $t('home.share_title') }}</h3>
-        <p>{{ $t('home.share_description') }}</p>
-        <div class="channels flex">
-          <img src="../assets/icon-messenger.png" alt="messenger" height="25">
-          <img src="../assets/icon-whatsapp.png" alt="whatsapp" height="25">
-          <img src="../assets/icon-instagram.png" alt="instagram" height="25">
-          <img src="../assets/icon-mail.png" alt="mail" height="25">
-          <img src="../assets/icon-copy.png" alt="copy" height="25">
-      </div>
+          <p>{{ shareDescription }}</p>
+
+        <div class="btn flex" v-if="isDesktop">
+          <input type="text" ref="copyUrl" aria-label="link to copy" v-model="url" readonly="readonly" />
+          <button aria-label="{{ $t('home.share_button_copy') }}" @click="onClickCopyButton">{{ $t('home.share_button_copy') }}</button>
+          <div v-if="copySuccess">
+            <img src="../assets/checkmark.svg" alt="checkmark" height="12">
+          </div>
+        </div>
+
+        <div class="btn flex" v-if="showNativeShareButton">
+          <button aria-label="{{ $t('home.share_button_native_share') }}" @click="onClickShareButton">{{ $t('home.share_button_native_share') }}</button>
+        </div>
+
       </div>
     </article>
   </section>
@@ -109,16 +125,28 @@ export default {
   data() {
     return {
       showPrivacyPolicy: true,
-      openModal: false
+      openModal: false,
+      isDesktop: window.innerWidth >= 550,
+      copySuccess: false,
+      showNativeShareButton: false,
+      shareDescription: '',
+      url: window.location.origin
     };
   },
   mounted() {
     this.$gtag.event('Home page');
+    this.showNativeShareButton = !this.isDesktop && navigator.share;
+    const shareDescriptionKey = this.isDesktop ? 'desktop' : 'mobile';
+    this.shareDescription = this.$t(`home.share_description_${shareDescriptionKey}`);
   },
   methods: {
-    openForm() {
-      this.openModal = true;
-      document.body.setAttribute('style', 'overflow-y: hidden;');
+    onClickOpenForm() {
+      if (this.isDesktop) {
+        this.openModal = true;
+        document.body.setAttribute('style', 'overflow-y: hidden;');
+      } else {
+        this.$router.push({ name: 'Newsletter' });
+      }
     },
     onClickCloseModal() {
       this.openModal = false;
@@ -126,6 +154,35 @@ export default {
     },
     closeModal() {
       this.openModal = false;
+    },
+    onClickCopyButton() {
+      const linkToCopy = this.$refs.copyUrl;
+      linkToCopy.select();
+      linkToCopy.setSelectionRange(0, 99999);
+
+      try {
+        const successCopy = document.execCommand('copy');
+        if (successCopy) {
+          this.copySuccess = true;
+
+          setTimeout(() => {
+            this.copySuccess = false;
+          }, 4000);
+        }
+      } catch (err) {
+        console.warn('copy error');
+      }
+    },
+    onClickShareButton() {
+      if (navigator.share) {
+        const { title } = document;
+        const description = document.querySelector('meta[name=\'Description\']');
+        navigator.share({
+          title,
+          description,
+          url: this.url
+        });
+      }
     }
   },
 };
@@ -139,6 +196,8 @@ section:not(section.explanations, section.about-us) {
 }
 
 header {
+  height: 300px;
+
   img {
     position: absolute;
     top: 0;
@@ -148,15 +207,18 @@ header {
     z-index: -1;
   }
 
+  h1 {
+    margin-top: 100px;
+  }
+
   h1,
   h2 {
     color: $color-dark-green;
     padding: 0 40px;
   }
 
-  h2 {
+  .coming-soon {
     font-family: 'Lato Regular';
-    font-weight: 300;
     margin-top: 50px;
     font-size: 40px;
     font-style: italic;
@@ -174,7 +236,7 @@ header {
 
 /* Section 1: Explanations */
 h2.first-article {
-  margin-top: 250px;
+  margin: 70px 0 20px;
   text-align: center;
 }
 
@@ -183,6 +245,7 @@ section.explanations {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  // TODO: big screens justify-content: center?
 
   article {
     padding: 30px 0 0;
@@ -193,10 +256,6 @@ section.explanations {
 section.newsletter {
   div.banner {
     background-image: url(../assets/banner-orange.png);
-
-    p {
-      @include text-banner;
-    }
 
     p:first-of-type {
       margin: 25px 0 6px;
@@ -220,6 +279,7 @@ section.about-us {
     position: relative;
     height: 40vw;
     max-height: 650px;
+    min-height: 450px;
 
     img[alt='us'] {
       position: absolute;
@@ -234,7 +294,7 @@ section.about-us {
       left: 0px;
       transform: translate(0, -50%);
       margin: 0;
-      max-width: calc(100% - 0px - 40vw);
+      max-width: calc(100% + 90px - 40vw);
       text-align: left;
 
       h2 {
@@ -262,10 +322,6 @@ section.social {
       img:last-of-type {
         margin-left: 15px;
       }
-    }
-
-    p {
-      @include text-banner;
     }
 
     p:first-of-type {
@@ -306,21 +362,140 @@ section.share {
     max-width: 50%;
   }
 
-  div.channels {
+  .btn {
+    align-items: center;
     justify-content: flex-start;
-  }
 
-  div.channels img {
-    margin: 0 12px;
-    cursor: pointer;
-  }
+    button {
+      margin-top: 4px;
+    }
 
-  div.channels img:first-of-type {
-    margin-left: 0;
+    input {
+      opacity: 0;
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    img {
+      margin-left: 16px;
+    }
   }
 }
 
 Footer {
   margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  /* Section 3: About us */
+  section.about-us {
+    .picture-text {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      height: auto;
+      max-height: initial;
+      min-height: initial;
+
+      div.picture {
+        position: relative;
+        height: 70vw;
+        width: 70vw;
+        margin: 50px auto 0;
+
+        img[alt='us'] {
+          position: absolute;
+          top: initial;
+          right: initial;
+          display: block;
+          margin: 0 auto;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      div.text {
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: none;
+        max-width: initial;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  section:not(section.explanations) {
+    margin-top: 40px;
+  }
+
+  header {
+    text-align: left;
+    height: 350px;
+
+    h1 {
+      margin-top: 50px;
+      padding: 0;
+    }
+
+    .coming-soon {
+      margin-top: 24px;
+      padding: 0;
+      font-size: 26px;
+    }
+
+    h2:after {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  /* Section 1: Explanations */
+  h2.first-article {
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  /* Section 3: About us */
+  section.about-us {
+    $picture-size-mobile: calc(100vw + 4 * #{$body-padding-mobile});
+
+    .picture-text {
+      div.picture {
+        position: relative;
+        height: $picture-size-mobile;
+        width: 100vw;
+        margin-top: 30px;
+        margin-left: -1 * $body-padding-mobile;
+        overflow-x: hidden;
+
+        img[alt='us'] {
+          width: $picture-size-mobile;
+          height: $picture-size-mobile;
+          left: -2 * $body-padding-mobile;
+        }
+      }
+
+      div.text {
+        p {
+          @include paragraph-text-light-mobile;
+        }
+      }
+    }
+  }
+
+  /* Section 5: Share */
+  section.share {
+    article.layout div.content {
+      max-width: 100%;
+    }
+  }
+
+  Footer {
+    margin-top: 100px;
+  }
 }
 </style>

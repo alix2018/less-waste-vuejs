@@ -30,7 +30,7 @@ export default {
 
 @font-face {
   font-family: 'Lato Italic';
-  src: url(./assets/fonts/Lato-Italic.ttf) format('ttf');
+  src: url(./assets/fonts/Lato-Italic.woff) format('woff');
 }
 
 @font-face {
@@ -56,6 +56,12 @@ body {
 @media (max-width: 1500px) {
   body {
     padding: 0 $body-padding-desktop;
+  }
+}
+
+@media (max-width: 1023px) {
+  body {
+    padding: 0 $body-padding-mobile;
   }
 }
 </style>
