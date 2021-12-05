@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.6.0 (2021-12-05)
+* Home page mobile responsive [#57](https://github.com/alix2018/less-waste-vuejs/issues/57)
+* Privacy policy mobile responsive [#58](https://github.com/alix2018/less-waste-vuejs/issues/58)
+* Newsletter desktop/mobile [#36](https://github.com/alix2018/less-waste-vuejs/issues/36)
+* Social sharing [#59](https://github.com/alix2018/less-waste-vuejs/issues/59)
+* Add robots.txt [#53](https://github.com/alix2018/less-waste-vuejs/issues/53)
+* Rassembler toutes les traductions dans le fichier
+
 ## 0.5.0 (2021-11-28)
 * Implement home features [#55](https://github.com/alix2018/less-waste-vuejs/issues/55)
 * Setup design system
