@@ -163,7 +163,6 @@ export default {
       try {
         const successCopy = document.execCommand('copy');
         if (successCopy) {
-          console.log('Success!');
           this.copySuccess = true;
 
           setTimeout(() => {
