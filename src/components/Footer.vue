@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="left flex">
-      <p>{{ $t('footer.comment_ideas') }}</p>
+      <p v-html="$t('footer.comment_ideas')"></p>
       <a href="mailto:lesswastefortheplanet@gmail.com" class="mail">lesswastefortheplanet@gmail.com</a>
       <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">@lesswastefortheplanet</a>
     </div>

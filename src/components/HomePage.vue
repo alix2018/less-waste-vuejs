@@ -12,7 +12,7 @@
   </header>
 
   <!-- Section 1: Explanations -->
-  <h2 class="first-article">{{ $t('home.h2_firs_section_title') }}</h2>
+  <h2 class="first-article">{{ $t('home.h2_first_section_title') }}</h2>
   <section class="explanations">
     <article class="layout">
       <img class="icon" src="../assets/icon-time.png" alt="clock">
@@ -48,7 +48,7 @@
   <section class="newsletter">
     <div class="banner">
       <img src="../assets/icon-announcement.png" alt="announcement" height="70">
-      <p>{{ $t('home.newsletter_coming_soon') }}</p>
+      <p v-html="$t('home.newsletter_coming_soon')"></p>
       <p>{{ $t('home.newsletter_inscription') }}</p>
       <button aria-label="{{ $t('home.newsletter_button_subscribe') }}" @click="onClickOpenForm">{{ $t('home.newsletter_button_subscribe') }}</button>
       </div>
@@ -79,9 +79,11 @@
         <img src="../assets/facebook-color.png" alt="facebook" height="50">
       </div>
       <p>{{ $t('home.social_in_the_meantime') }}</p>
-      <p>{{ $t('home.social_follow_us') }}</p>
-      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">{{ $t('home.social_instagram') }}</a>
-      <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" class="facebook" target="_blank" rel="noopener noreferrer">{{ $t('home.social_facebook') }}</a>
+      <p v-html="$t('home.social_follow_us')"></p>
+      <div class="flex">
+        <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">{{ $t('home.social_instagram') }}</a>
+        <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" class="facebook" target="_blank" rel="noopener noreferrer">{{ $t('home.social_facebook') }}</a>
+      </div>
     </div>
   </section>
 
@@ -91,7 +93,7 @@
       <img class="icon" src="../assets/icon-rock-n-roll.png" alt="rock n roll">
       <div class="content">
         <h3>{{ $t('home.share_title') }}</h3>
-          <p>{{ shareDescription }}</p>
+          <p>{{ $t('home.share_description') }}</p>
 
         <div class="btn flex" v-if="isDesktop">
           <input type="text" ref="copyUrl" aria-label="link to copy" v-model="url" readonly="readonly" />
@@ -129,15 +131,12 @@ export default {
       isDesktop: window.innerWidth >= 550,
       copySuccess: false,
       showNativeShareButton: false,
-      shareDescription: '',
       url: window.location.origin
     };
   },
   mounted() {
     this.$gtag.event('Home page');
     this.showNativeShareButton = !this.isDesktop && navigator.share;
-    const shareDescriptionKey = this.isDesktop ? 'desktop' : 'mobile';
-    this.shareDescription = this.$t(`home.share_description_${shareDescriptionKey}`);
   },
   methods: {
     onClickOpenForm() {
@@ -337,8 +336,8 @@ section.social {
       font-size: 16px;
     }
 
-    a:last-of-type {
-      margin-top: 8px;
+    a.facebook {
+      margin-left: 15px;
     }
 
     a.facebook::after,
@@ -434,7 +433,11 @@ Footer {
 
   header {
     text-align: left;
-    height: 350px;
+    height: 380px;
+
+    img {
+      height: 430px;
+    }
 
     h1 {
       margin-top: 50px;
