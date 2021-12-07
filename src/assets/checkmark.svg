@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="100%" height="100%" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1.09375,0,0,1.09375,-6.67188,-7.69254)">
-        <path d="M7.636,11.83C7.285,11.478 6.715,11.478 6.364,11.83C6.012,12.181 6.012,12.751 6.364,13.103L9.63,16.37C9.982,16.721 10.552,16.721 10.903,16.37L18.636,8.636C18.988,8.285 18.988,7.715 18.636,7.364C18.285,7.012 17.715,7.012 17.364,7.364L10.267,14.46L7.636,11.83Z" style="fill:rgb(252,151,116);fill-rule:nonzero;"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xmlns:v="https://vecta.io/nano"><path d="M1.68 5.247c-.384-.385-1.007-.385-1.391 0s-.385 1.007 0 1.392l3.572 3.573c.385.384 1.008.384 1.392 0l8.458-8.459c.385-.384.385-1.007 0-1.391s-1.007-.385-1.391 0L4.558 8.123 1.68 5.247z" fill="#fc9774" fill-rule="nonzero"/></svg>

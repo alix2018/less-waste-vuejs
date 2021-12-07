@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-7,-7)">
-        <path d="M10.671,12L7.275,8.604C6.908,8.237 6.908,7.642 7.275,7.275C7.642,6.908 8.237,6.908 8.604,7.275L12,10.671L15.396,7.275C15.763,6.908 16.358,6.908 16.725,7.275C17.092,7.642 17.092,8.237 16.725,8.604L13.329,12L16.725,15.396C17.092,15.763 17.092,16.358 16.725,16.725C16.358,17.092 15.763,17.092 15.396,16.725L12,13.329L8.604,16.725C8.237,17.092 7.642,17.092 7.275,16.725C6.908,16.358 6.908,15.763 7.275,15.396L10.671,12L10.671,12Z" style="fill:rgb(39,45,45);fill-rule:nonzero;"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xmlns:v="https://vecta.io/nano"><path d="M3.671 5L.275 1.604A.94.94 0 0 1 1.604.275L5 3.671 8.396.275a.94.94 0 0 1 1.329 1.329L6.329 5l3.396 3.396a.94.94 0 0 1-1.329 1.329L5 6.329 1.604 9.725A.94.94 0 0 1 .275 8.396L3.671 5h0z" fill="#272d2d" fill-rule="nonzero"/></svg>
