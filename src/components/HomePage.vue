@@ -66,7 +66,7 @@
         </div>
         <div class="text">
           <h2>{{ $t('home.about_us_who_we_are') }}</h2>
-          <p>{{ $t('home.about_us_description') }}</p>
+          <p v-html="$t('home.about_us_description')"></p>
         </div>
       </div>
   </section>
