@@ -449,7 +449,7 @@ Footer {
     }
 
     h1 {
-      margin-top: 50px;
+      margin-top: 35px;
       padding: 0;
     }
 

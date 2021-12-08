@@ -135,6 +135,10 @@ a.back::before {
 }
 
 @media (max-width: 550px) {
+  article.content-page {
+    padding: 35px 0;
+  }
+
   .markdown h1 {
     font-size: 30px;
     line-height: 42px;
