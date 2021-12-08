@@ -2,13 +2,13 @@
   <footer>
     <div class="left flex">
       <p v-html="$t('footer.comment_ideas')"></p>
-      <a href="mailto:lesswastefortheplanet@gmail.com" class="mail">lesswastefortheplanet@gmail.com</a>
-      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">@lesswastefortheplanet</a>
+      <a href="mailto:lesswastefortheplanet@gmail.com" class="mail" @click="onClickSendMail">lesswastefortheplanet@gmail.com</a>
+      <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer" @click="onClickInstagram">@lesswastefortheplanet</a>
     </div>
 
     <div class="right" :class="[privacyPolicy ? 'space-bewteen' : 'flex-end']">
       <div v-if="privacyPolicy">
-        <router-link class="content-page" to="/privacy-policy">{{ $t('footer.privacy_policy') }}</router-link>
+        <router-link class="content-page" to="/privacy-policy" @click="onClickPrivacyPolicy">{{ $t('footer.privacy_policy') }}</router-link>
       </div>
 
       <div class="copyright flex">
@@ -36,6 +36,17 @@ export default {
   },
   created() {
     this.copyrightYear = new Date().getFullYear();
+  },
+  methods: {
+    onClickSendMail() {
+      this.$gtag.event('click_send_mail', { location: window.location.pathname });
+    },
+    onClickInstagram() {
+      this.$gtag.event('click_open_instagram', { location: window.location.pathname, component: 'Footer' });
+    },
+    onClickPrivacyPolicy() {
+      this.$gtag.event('click_open_privacy_policy', { location: window.location.pathname });
+    }
   }
 };
 </script>

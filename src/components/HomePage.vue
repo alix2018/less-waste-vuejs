@@ -81,8 +81,8 @@
       <p>{{ $t('home.social_in_the_meantime') }}</p>
       <p v-html="$t('home.social_follow_us')"></p>
       <div class="flex">
-        <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer">{{ $t('home.social_instagram') }}</a>
-        <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" class="facebook" target="_blank" rel="noopener noreferrer">{{ $t('home.social_facebook') }}</a>
+        <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer" @click="onClickInstagram">{{ $t('home.social_instagram') }}</a>
+        <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" class="facebook" target="_blank" rel="noopener noreferrer" @click="onClickFacebook">{{ $t('home.social_facebook') }}</a>
       </div>
     </div>
   </section>
@@ -135,11 +135,12 @@ export default {
     };
   },
   mounted() {
-    this.$gtag.event('Home page');
+    this.$gtag.event('display_home_page');
     this.showNativeShareButton = !this.isDesktop && navigator.share;
   },
   methods: {
     onClickOpenForm() {
+      this.$gtag.event('click_subscribe_to_newsletter');
       if (this.isDesktop) {
         this.openModal = true;
         document.body.setAttribute('style', 'overflow-y: hidden;');
@@ -155,6 +156,7 @@ export default {
       this.openModal = false;
     },
     onClickCopyButton() {
+      this.$gtag.event('click_copy_url');
       const linkToCopy = this.$refs.copyUrl;
       linkToCopy.select();
       linkToCopy.setSelectionRange(0, 99999);
@@ -173,6 +175,7 @@ export default {
       }
     },
     onClickShareButton() {
+      this.$gtag.event('click_share_url');
       if (navigator.share) {
         const { title } = document;
         const description = document.querySelector('meta[name=\'Description\']');
@@ -182,8 +185,14 @@ export default {
           url: this.url
         });
       }
+    },
+    onClickInstagram() {
+      this.$gtag.event('click_open_instagram', { component: 'Home' });
+    },
+    onClickFacebook() {
+      this.$gtag.event('click_open_facebook');
     }
-  },
+  }
 };
 </script>
 
@@ -440,7 +449,7 @@ Footer {
     }
 
     h1 {
-      margin-top: 50px;
+      margin-top: 35px;
       padding: 0;
     }
 

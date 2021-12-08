@@ -138,6 +138,7 @@ export default {
       this.disableSubmitButton = !event.currentTarget.checked;
     },
     onClickCloseModal() {
+      this.$gtag.event('click_close_form_newsletter');
       this.resetForm();
 
       if (this.isDesktop) {
@@ -146,8 +147,8 @@ export default {
         this.$router.push({ name: 'Home' });
       }
     },
-    onClickSubmitButton(event) {
-      console.log('clicked!', event);
+    onClickSubmitButton() {
+      this.$gtag.event('click_subscribe_newsletter');
     },
     resetForm() {
       this.disableSubmitButton = true;

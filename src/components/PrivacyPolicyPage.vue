@@ -1,6 +1,6 @@
 <template>
   <article class="content-page">
-    <router-link class="back" to="/home">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
+    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
     <div class="markdown" v-html="markdownToHtml"></div>
   </article>
   <Footer></Footer>
@@ -21,6 +21,7 @@ export default {
     };
   },
   mounted() {
+    this.$gtag.event('display_privacy_policy');
     window.scrollTo(0, 0);
     this.getMarkdownFile();
   },
@@ -32,6 +33,9 @@ export default {
           this.markdown = text;
         });
     },
+    onClickBackHome() {
+      this.$gtag.event('click_back_to_home', { location: window.location.pathname });
+    }
   },
   computed: {
     markdownToHtml() {
@@ -131,6 +135,10 @@ a.back::before {
 }
 
 @media (max-width: 550px) {
+  article.content-page {
+    padding: 35px 0;
+  }
+
   .markdown h1 {
     font-size: 30px;
     line-height: 42px;
