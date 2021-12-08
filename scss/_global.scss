@@ -151,6 +151,7 @@ div.banner {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // TODO: also nto big screens
   margin-left: -$body-padding-big-screen;
   width: calc(100% + 2 * #{$body-padding-big-screen});
   height: 400px;

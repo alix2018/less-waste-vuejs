@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'App',
+  mounted() {
+    this.$gtag.event('start_application', { location: window.location.pathname });
+  }
 };
 </script>
 
