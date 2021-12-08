@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.6.2 (2021-12-06)
+* Reduce assets size [#65](https://github.com/alix2018/less-waste-vuejs/issues/65)
+
 ## 0.6.1 (2021-12-06)
 * Finish French copy [#25](https://github.com/alix2018/less-waste-vuejs/issues/25)
 
