@@ -151,7 +151,6 @@ div.banner {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // TODO: also nto big screens
   margin-left: -$body-padding-big-screen;
   width: calc(100% + 2 * #{$body-padding-big-screen});
   height: 400px;
@@ -173,6 +172,12 @@ div.banner {
   h1 {
     font-size: 45px;
     line-height: 52px;
+  }
+
+  // TODO: still to fix on tablet view
+  div.banner {
+    margin-left: -$body-padding-desktop;
+    width: calc(100% + 2 * #{$body-padding-desktop});
   }
 }
 
