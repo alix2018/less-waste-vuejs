@@ -31,9 +31,9 @@ export default {
     };
   },
   mounted() {
-    const confetti = new Confetti();
+    this.confetti = new Confetti();
     setTimeout(() => {
-      confetti.start({
+      this.confetti.start({
         defaultDropRate: this.isDesktop ? 9 : 7,
         windSpeedMax: 0.8,
         defaultType: 'circle',
@@ -43,8 +43,11 @@ export default {
       });
     }, 1500);
     setTimeout(() => {
-      confetti.stop();
+      this.confetti.stop();
     }, 15000);
+  },
+  beforeUnmount() {
+    this.confetti.stop();
   },
   methods: {
     onClickBackHome() {

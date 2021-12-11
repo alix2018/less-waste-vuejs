@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     onClickCopyButton() {
-      this.$gtag.event('click_copy_url');
+      this.$gtag.event('click_copy_url', { location: window.location.pathname });
       const linkToCopy = this.$refs.copyUrl;
       linkToCopy.select();
       linkToCopy.setSelectionRange(0, 99999);
@@ -48,7 +48,7 @@ export default {
       }
     },
     onClickShareButton() {
-      this.$gtag.event('click_share_url');
+      this.$gtag.event('click_share_url', { location: window.location.pathname });
       if (navigator.share) {
         const { title } = document;
         const description = document.querySelector('meta[name=\'Description\']');
