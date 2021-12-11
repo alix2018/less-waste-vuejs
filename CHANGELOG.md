@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.7.0 (2021-12-12)
+* Improve sendingblue form [#77](https://github.com/alix2018/less-waste-vuejs/issues/77)
+* Create newsletter confirmation page + confetti [#74](https://github.com/alix2018/less-waste-vuejs/issues/74)
+
 ## 0.6.3 (2021-12-08)
 * Add Google Analytics events [#30](https://github.com/alix2018/less-waste-vuejs/issues/30)
 
