@@ -37,8 +37,6 @@ const messages = {
       social_facebook: 'Facebook',
       share_title: 'Envie de partager avec tes potes ?',
       share_description: 'Envoie-leur ce lien, et n\'oublie pas ta famille, tes collègues, ton voisin, ton chat, ton chien... Pour qu\'on puisse tous agir à notre échelle !',
-      share_button_copy: 'Copier l\'URL',
-      share_button_native_share: 'Partager',
       language_en: 'Anglais',
       language_fr: 'Français',
       language_nl: 'Néerlandais',
@@ -53,9 +51,16 @@ const messages = {
       form_email_input_example: 'Indique ton adresse e-mail pour t\'abonner. Par exemple: abc{\'@\'}xyz.com',
       form_accept_terms: 'J\'accepte de recevoir votre newsletter et j\'accepte la déclaration de confidentialité des données.',
       form_unsubscribe: 'Tu peux te désinscrire à tout moment en utilisant le lien figurant dans notre newsletter.',
-      form_sendingblue_terms: 'Nous utilisons Sendinblue comme plateforme de marketing. En cliquant ci-dessous pour soumettre ce formulaire, tu reconnais que les informations que tu as fournies seront transférées à Sendinblue pour être traitées conformément à leur ',
+      form_sendingblue_terms: 'On utilise Sendinblue comme plateforme de marketing. En cliquant ci-dessous pour soumettre ce formulaire, tu reconnais que les informations que tu as fournies seront transférées à Sendinblue pour être traitées conformément à leur ',
       form_sendingblue_terms_link: 'conditions d\'utilisation',
-      form_btn_submit: 'Confirmer'
+      form_btn_submit: 'Confirmer',
+      confirmation_title: 'Félicitations !',
+      confirmation_text1: 'Tu es abonné à notre newsletter, on te contactera quand notre site sera prêt 🙂',
+      confirmation_text2: 'En attendant d\'avoir de nos nouvelles, partage avec tes amis&#8239;!'
+    },
+    share: {
+      button_copy: 'Copier l\'URL',
+      button_native_share: 'Partager',
     },
     privacyPolicy: {
       btn_back_to_home: 'Retour à l\'accueil'
