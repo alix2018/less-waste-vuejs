@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import Confetti from 'vue-confetti/src/confetti';
 import Footer from './Footer.vue';
 import ShareComponent from './ShareComponent.vue';
 
@@ -22,6 +23,28 @@ export default {
   components: {
     Footer,
     ShareComponent
+  },
+  data() {
+    return {
+      confetti: null,
+      isDesktop: window.innerWidth >= 550
+    };
+  },
+  mounted() {
+    const confetti = new Confetti();
+    setTimeout(() => {
+      confetti.start({
+        defaultDropRate: this.isDesktop ? 9 : 7,
+        windSpeedMax: 0.8,
+        defaultType: 'circle',
+        defaultSize: this.isDesktop ? 7 : 5,
+        particlesPerFrame: this.isDesktop ? 1.5 : 1,
+        defaultColors: ['#8DEAD9', '#FEF1BB', '#FC9774', '#FFE7DF']
+      });
+    }, 1500);
+    setTimeout(() => {
+      confetti.stop();
+    }, 15000);
   },
   methods: {
     onClickBackHome() {
