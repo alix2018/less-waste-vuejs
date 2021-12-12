@@ -21,7 +21,7 @@ export default createRouter({
       name: 'Newsletter',
       component: NewsletterForm,
     }, {
-      path: '/confirmation',
+      path: '/newsletter-confirmation',
       name: 'NewsletterConfirmation',
       component: NewsletterConfirmation,
     }, {

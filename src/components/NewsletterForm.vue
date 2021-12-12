@@ -48,7 +48,7 @@
                     </label>
 
                     <div class="entry__field">
-                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                      <input v-model="emailInput" class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
                     </div>
                   </div>
 
@@ -66,7 +66,7 @@
                   <div class="form__label-row ">
                     <div class="entry__choice">
                       <label>
-                        <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" @click="onClickCheckbox"/>
+                        <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" v-model="termsAndConditionsChecked"/>
                         <span class="checkbox checkbox_tick_positive"></span><span style="font-size:14px; text-align:left; color:#272D2D; background-color:transparent;">
                           <p>{{ $t('newsletter.form_accept_terms') }}</p>
                         </span></label>
@@ -102,7 +102,7 @@
             </div>
             <div style="padding: 8px 0;">
               <div class="sib-form-block" style="text-align: left">
-                <button class="sib-form-block__button sib-form-block__button-with-loader" ariab-label="Subscribe" style="font-size:16px; text-align:left; font-weight:700; color:#FFFFFF; background-color:#3E4857; border-radius: 6px; border-width:0px;" form="sib-form" type="submit" :disabled="disableSubmitButton" @click="onClickSubmitButton">
+                <button class="sib-form-block__button sib-form-block__button-with-loader" ariab-label="Subscribe" style="font-size:16px; text-align:left; font-weight:700; color:#FFFFFF; background-color:#3E4857; border-radius: 6px; border-width:0px;" form="sib-form" type="submit" :disabled="!enableSubmitButton" @click="onClickSubmitButton">
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
@@ -128,15 +128,13 @@ export default {
   },
   data() {
     return {
-      disableSubmitButton: true,
+      emailInput: '',
+      termsAndConditionsChecked: false,
       showRoute: window.location.pathname === '/newsletter',
       isDesktop: window.innerWidth >= 550
     };
   },
   methods: {
-    onClickCheckbox(event) {
-      this.disableSubmitButton = !event.currentTarget.checked;
-    },
     onClickCloseModal() {
       this.$gtag.event('click_close_form_newsletter');
       this.resetForm();
@@ -151,13 +149,18 @@ export default {
       this.$gtag.event('click_subscribe_newsletter');
     },
     resetForm() {
-      this.disableSubmitButton = true;
-      document.querySelector('#EMAIL').value = null;
-      document.querySelector('#OPT_IN').checked = false;
+      this.emailInput = '';
+      this.termsAndConditionsChecked = false;
     }
   },
   mounted() {
     this.resetForm();
+  },
+  computed: {
+    enableSubmitButton() {
+      const emailRegex = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+      return emailRegex.test(this.emailInput) && this.termsAndConditionsChecked;
+    }
   }
 };
 </script>

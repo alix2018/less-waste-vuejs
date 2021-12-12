@@ -52,25 +52,8 @@ article.content-page {
   padding: 50px 0;
 }
 
-a.back {
-  display: block;
-  margin: 0;
-  padding: 0;
-  color: $color-black;
-  font-family: 'Lato Bold';
-  text-decoration: none;
-  text-align: left;
-  cursor: pointer;
-}
-
 a.back::before {
-  align-items: center;
-  vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
   background-image: url(../assets/back-arrow.svg);
-  @include image-before-after;
 }
 
 .markdown {

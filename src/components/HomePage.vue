@@ -17,28 +17,28 @@
     <article class="layout">
       <img class="icon" src="../assets/icon-time.png" alt="clock">
       <div class="content">
-        <h3>{{ $t('home.article_title_time') }}</h3>
+        <h3 v-html="$t('home.article_title_time')"></h3>
         <p>{{ $t('home.article_text_time') }}</p>
       </div>
     </article>
     <article class="layout">
       <img class="icon" src="../assets/icon-info.png" alt="information">
       <div class="content">
-        <h3>{{ $t('home.article_title_info') }}</h3>
+        <h3 v-html="$t('home.article_title_info')"></h3>
         <p>{{ $t('home.article_text_info') }}</p>
       </div>
     </article>
     <article class="layout">
       <img class="icon" src="../assets/icon-environment.png" alt="planet">
       <div class="content">
-        <h3>{{ $t('home.article_title_environment') }}</h3>
+        <h3 v-html="$t('home.article_title_environment')"></h3>
         <p>{{ $t('home.article_text_environment') }}</p>
       </div>
     </article>
     <article class="layout">
       <img class="icon" src="../assets/icon-money.png" alt="euros">
       <div class="content">
-        <h3>{{ $t('home.article_title_money') }}</h3>
+        <h3 v-html="$t('home.article_title_money')"></h3>
         <p>{{ $t('home.article_text_money') }}</p>
       </div>
     </article>
@@ -94,49 +94,35 @@
       <div class="content">
         <h3>{{ $t('home.share_title') }}</h3>
           <p>{{ $t('home.share_description') }}</p>
-
-        <div class="btn flex" v-if="isDesktop">
-          <input type="text" ref="copyUrl" aria-label="link to copy" v-model="url" readonly="readonly" />
-          <button aria-label="{{ $t('home.share_button_copy') }}" @click="onClickCopyButton">{{ $t('home.share_button_copy') }}</button>
-          <div v-if="copySuccess">
-            <img src="../assets/checkmark.svg" alt="checkmark" height="12">
-          </div>
-        </div>
-
-        <div class="btn flex" v-if="showNativeShareButton">
-          <button aria-label="{{ $t('home.share_button_native_share') }}" @click="onClickShareButton">{{ $t('home.share_button_native_share') }}</button>
-        </div>
+          <ShareComponent></ShareComponent>
 
       </div>
     </article>
   </section>
-  <Footer :privacyPolicy="showPrivacyPolicy"></Footer>
+  <Footer privacyPolicy></Footer>
   <NewsletterForm :show="openModal" @onClickCloseModal="onClickCloseModal"/>
 </template>
 
 <script>
 import Footer from './Footer.vue';
 import NewsletterForm from './NewsletterForm.vue';
+import ShareComponent from './ShareComponent.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Footer,
-    NewsletterForm
+    NewsletterForm,
+    ShareComponent
   },
   data() {
     return {
-      showPrivacyPolicy: true,
       openModal: false,
-      isDesktop: window.innerWidth >= 550,
-      copySuccess: false,
-      showNativeShareButton: false,
-      url: window.location.origin
+      isDesktop: window.innerWidth >= 550
     };
   },
   mounted() {
     this.$gtag.event('display_home_page');
-    this.showNativeShareButton = !this.isDesktop && navigator.share;
   },
   methods: {
     onClickOpenForm() {
@@ -154,37 +140,6 @@ export default {
     },
     closeModal() {
       this.openModal = false;
-    },
-    onClickCopyButton() {
-      this.$gtag.event('click_copy_url');
-      const linkToCopy = this.$refs.copyUrl;
-      linkToCopy.select();
-      linkToCopy.setSelectionRange(0, 99999);
-
-      try {
-        const successCopy = document.execCommand('copy');
-        if (successCopy) {
-          this.copySuccess = true;
-
-          setTimeout(() => {
-            this.copySuccess = false;
-          }, 4000);
-        }
-      } catch (err) {
-        console.warn('copy error');
-      }
-    },
-    onClickShareButton() {
-      this.$gtag.event('click_share_url');
-      if (navigator.share) {
-        const { title } = document;
-        const description = document.querySelector('meta[name=\'Description\']');
-        navigator.share({
-          title,
-          description,
-          url: this.url
-        });
-      }
     },
     onClickInstagram() {
       this.$gtag.event('click_open_instagram', { component: 'Home' });
@@ -368,26 +323,6 @@ section.share {
 
   article.layout div.content {
     max-width: 50%;
-  }
-
-  .btn {
-    align-items: center;
-    justify-content: flex-start;
-
-    button {
-      margin-top: 4px;
-    }
-
-    input {
-      opacity: 0;
-      position: absolute;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    img {
-      margin-left: 16px;
-    }
   }
 }
 
