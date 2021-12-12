@@ -147,7 +147,6 @@ export default {
     },
     onClickSubmitButton() {
       this.$gtag.event('click_subscribe_newsletter');
-      this.onClickCloseModal();
     },
     resetForm() {
       this.emailInput = '';

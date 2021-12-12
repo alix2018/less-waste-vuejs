@@ -17,28 +17,28 @@
     <article class="layout">
       <img class="icon" src="../assets/icon-time.png" alt="clock">
       <div class="content">
-        <h3>{{ $t('home.article_title_time') }}</h3>
+        <h3 v-html="$t('home.article_title_time')"></h3>
         <p>{{ $t('home.article_text_time') }}</p>
       </div>
     </article>
     <article class="layout">
       <img class="icon" src="../assets/icon-info.png" alt="information">
       <div class="content">
-        <h3>{{ $t('home.article_title_info') }}</h3>
+        <h3 v-html="$t('home.article_title_info')"></h3>
         <p>{{ $t('home.article_text_info') }}</p>
       </div>
     </article>
     <article class="layout">
       <img class="icon" src="../assets/icon-environment.png" alt="planet">
       <div class="content">
-        <h3>{{ $t('home.article_title_environment') }}</h3>
+        <h3 v-html="$t('home.article_title_environment')"></h3>
         <p>{{ $t('home.article_text_environment') }}</p>
       </div>
     </article>
     <article class="layout">
       <img class="icon" src="../assets/icon-money.png" alt="euros">
       <div class="content">
-        <h3>{{ $t('home.article_title_money') }}</h3>
+        <h3 v-html="$t('home.article_title_money')"></h3>
         <p>{{ $t('home.article_text_money') }}</p>
       </div>
     </article>
