@@ -147,7 +147,7 @@ export default {
     },
     onClickSubmitButton() {
       this.$gtag.event('click_subscribe_newsletter');
-      this.$router.push({ name: 'NewsletterConfirmation' });
+      this.onClickCloseModal();
     },
     resetForm() {
       this.emailInput = '';

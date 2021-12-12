@@ -31,6 +31,7 @@ export default {
     };
   },
   mounted() {
+    window.scrollTo(0, 0);
     this.confetti = new Confetti();
     setTimeout(() => {
       this.confetti.start({
