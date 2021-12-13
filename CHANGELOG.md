@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.7.1 (2021-12-13)
+* Improve lighthouse performances [#82](https://github.com/alix2018/less-waste-vuejs/issues/82)
+* Fix robots.txt for SEO + add sitemap.xml
+* Add social network logos clickable
+
 ## 0.7.0 (2021-12-12)
 * Improve sendingblue form [#77](https://github.com/alix2018/less-waste-vuejs/issues/77)
 * Create newsletter confirmation page + confetti [#74](https://github.com/alix2018/less-waste-vuejs/issues/74)

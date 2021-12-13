@@ -75,8 +75,12 @@
   <section class="social">
     <div class="banner">
       <div class="flex">
-        <img src="../assets/instagram-color.png" alt="instagram" height="50">
-        <img src="../assets/facebook-color.png" alt="facebook" height="50">
+        <a href="https://www.instagram.com/lesswastefortheplanet/" target="_blank" rel="noopener noreferrer" @click="onClickInstagramLogo">
+          <img src="../assets/instagram-color.png" height="50" alt="instagram">
+        </a>
+        <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" target="_blank" rel="noopener noreferrer" @click="onClickFacebookLogo">
+          <img src="../assets/facebook-color.png" height="50" alt="facebook">
+        </a>
       </div>
       <p>{{ $t('home.social_in_the_meantime') }}</p>
       <p v-html="$t('home.social_follow_us')"></p>
@@ -142,10 +146,16 @@ export default {
       this.openModal = false;
     },
     onClickInstagram() {
-      this.$gtag.event('click_open_instagram', { component: 'Home' });
+      this.$gtag.event('click_open_instagram', { component: 'Home', location: 'link' });
     },
     onClickFacebook() {
-      this.$gtag.event('click_open_facebook');
+      this.$gtag.event('click_open_facebook', { location: 'link' });
+    },
+    onClickInstagramLogo() {
+      this.$gtag.event('click_open_instagram', { component: 'Home', location: 'logo' });
+    },
+    onClickFacebookLogo() {
+      this.$gtag.event('click_open_facebook', { location: 'logo' });
     }
   }
 };

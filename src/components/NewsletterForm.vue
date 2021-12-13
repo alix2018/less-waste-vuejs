@@ -24,7 +24,7 @@
           </div>
         </div>
         <div></div>
-        <div id="sib-container" ref="container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px;">
+        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px;">
           <form id="sib-form" method="POST" action="https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbtNjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block flex" style="font-size:32px; text-align:left; font-weight:700; color:#272D2D; background-color:transparent;">
@@ -95,7 +95,7 @@
                   </svg>
                 </div>
                 <p class="sendingblue-text" style="font-size:14px; text-align:left; color:#687484; background-color:transparent;">
-                  {{ $t('newsletter.form_sendingblue_terms') }}<a target="_blank" class="clickable_link" href="https://fr.sendinblue.com/legal/termsofuse/">{{ $t('newsletter.form_sendingblue_terms_link') }}</a>.
+                  {{ $t('newsletter.form_sendingblue_terms') }}<a target="_blank"  rel="noopener noreferrer" class="clickable_link" href="https://fr.sendinblue.com/legal/termsofuse/">{{ $t('newsletter.form_sendingblue_terms_link') }}</a>.
                 </p>
               </div>
 
