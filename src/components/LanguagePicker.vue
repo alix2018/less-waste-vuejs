@@ -1,5 +1,4 @@
 <template>
-  Language Picker:
   <select v-model="$i18n.locale">
     <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
       {{ $t(`home.language_${locale}`) }}
@@ -16,7 +15,9 @@ export default {
 
 <style lang="scss" scoped>
   select {
-    margin-left: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     background-color: transparent;
     text-transform: capitalize;
   }

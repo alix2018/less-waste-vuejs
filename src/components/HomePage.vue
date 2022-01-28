@@ -5,6 +5,7 @@
       <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
       <img src="../assets/background-header-desktop.png" alt="header background">
     </picture>
+    <language-picker/>
     <div>
       <h1>{{ $t('home.title') }}</h1>
       <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>
@@ -111,13 +112,15 @@
 import Footer from './Footer.vue';
 import NewsletterForm from './NewsletterForm.vue';
 import ShareComponent from './ShareComponent.vue';
+import LanguagePicker from './LanguagePicker.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Footer,
     NewsletterForm,
-    ShareComponent
+    ShareComponent,
+    LanguagePicker
   },
   data() {
     return {
