@@ -5,7 +5,7 @@
       <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
       <img src="../assets/background-header-desktop.png" alt="header background">
     </picture>
-    <language-picker/>
+    <LanguagePicker></LanguagePicker>
     <div>
       <h1>{{ $t('home.title') }}</h1>
       <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>

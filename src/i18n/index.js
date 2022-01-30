@@ -4,25 +4,29 @@ import messages from './translations';
 const determineDefaultLanguage = () => {
   let defaultLanguage = 'en';
   const userLanguages = navigator.languages;
-  const websiteAvailableLanguages = [];
 
   // Get all the supported languages
+  const websiteAvailableLanguages = [];
   Object.keys(messages).forEach((lang) => {
     websiteAvailableLanguages.push(lang);
   });
 
-  // Determine the highest language supported
-  // Ex: en-nl will select English language
-  userLanguages.every((userLanguage) => {
-    const [languageCode] = userLanguage.split('-');
-    if (websiteAvailableLanguages.includes(languageCode)) {
-      defaultLanguage = languageCode;
-      // Stop the loop when language matches
-      return false;
-    }
+  const urlParams = new URL(document.location).searchParams;
+  const urlLanguage = urlParams.get('hl');
+  if (websiteAvailableLanguages.includes(urlLanguage)) {
+    defaultLanguage = urlLanguage;
+  } else {
+    userLanguages.every((userLanguage) => { // Determine the highest language supported. Ex: en-nl will select English language
+      const [languageCode] = userLanguage.split('-');
+      if (websiteAvailableLanguages.includes(languageCode)) {
+        defaultLanguage = languageCode;
+        // Stop the loop when language matches
+        return false;
+      }
 
-    return true;
-  });
+      return true;
+    });
+  }
 
   return defaultLanguage;
 };
