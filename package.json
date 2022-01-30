@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
     "marked": "^0.7.0",
     "vue": "^3.0.0",
     "vue-confetti": "^2.2.2",
