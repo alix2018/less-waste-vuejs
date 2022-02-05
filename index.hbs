@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{language}}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,26 +14,18 @@
 
     {{!-- Dynamic values depending on the language --}}
     <title>{{title}}</title>
-    <meta name="Description" content="Tu veux commencer à réduire tes déchets? Ou tu es déjà actif dans le zero waste et tu veux avoir des conseils et astuces facilement? Nous avons la solution!">
-    <meta property="og:title" content="Des conseils faciles pour réduire tes déchets">
-    <meta property="og:description" content="Tu veux commencer à réduire tes déchets? Ou tu es déjà actif dans le zero waste et tu veux avoir des conseils et astuces facilement? Nous avons la solution!">
-    <meta property="og:locale" content="en_US"/>
+    <meta name="Description" content="{{description}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:locale" content="{{languageCode}}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://stephaniealix.com"/>
-    <meta property="og:image" content="https://lesswastefortheplanet.com/logo-social-network.png">
+    <meta property="og:url" content="https://lesswastefortheplanet.com"/>
+    <meta property="og:image" content="public/assets/logo-social-network.png">
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>Please enable JavaScript to view this website.</strong>
     </noscript>
     <div id="app"></div>
-    <script>
-      window.LOCALE = 'fr';
-      window.EMAIL_INVALID_MESSAGE = "L'information fournie n'est pas valide. Vérifie le champ et réessaie.";
-      window.REQUIRED_ERROR_MESSAGE = "Ce champ ne peut pas être laissé vide.";
-      window.GENERIC_INVALID_MESSAGE = "L'information fournie n'est pas valide. Vérifie le champ et réessaie.";
-      var AUTOHIDE = Boolean(0);
-    </script>
-    Hello {{{name}}}
   </body>
 </html>
