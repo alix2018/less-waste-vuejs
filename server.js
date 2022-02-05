@@ -4,12 +4,19 @@ const fs = require('fs');
 const Handlebars = require('handlebars');
 
 // Import Handlebars file
-const indexHbs = fs.readFileSync(path.resolve(__dirname, 'public/index.hbs'));
+const indexHbs = fs.readFileSync(path.resolve(__dirname, 'dist/index.hbs'));
 const indexTemplate = Handlebars.compile(indexHbs.toString());
 
 // Set up the app
 const app = express();
-const port = process.env.PORT || 3000;
+app.use('/assets', express.static('dist/assets'));
+app.use('/css', express.static('dist/css'));
+app.use('/fonts', express.static('dist/fonts'));
+app.use('/img', express.static('dist/img'));
+app.use('/js', express.static('dist/js'));
+app.use('/markdowns', express.static('dist/markdowns'));
+
+const port = process.env.PORT || 8080;
 
 // Metadata translations
 const metadata = {
@@ -30,8 +37,8 @@ const metadata = {
   }
 };
 
-app.get('/*', (req, res) => {
-  const language = req.query.hl;
+app.get('/', (req, res) => {
+  const language = ['en', 'nl', 'fr'].includes(req.query.hl) ? req.query.hl : 'en';
   const languageTranslations = metadata[language];
 
   let languageCode;
@@ -53,6 +60,7 @@ app.get('/*', (req, res) => {
     title: languageTranslations.title,
     description: languageTranslations.description
   };
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.send(indexTemplate(data));
 });
 

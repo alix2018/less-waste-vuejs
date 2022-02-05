@@ -1,6 +1,9 @@
 <template>
   <div class="selector">
-    <p class="current-language" @click="onClickSeeAvailableLanguages">{{ $t(`home.language_${$i18n.locale}`) }}</p>
+    <div class="flex" @click="onClickSeeAvailableLanguages">
+      <img src="../assets/internet.png" alt="languages">
+      <p class="current-language">{{ $t(`home.language_${$i18n.locale}`) }}</p>
+    </div>
     <div class="dropdown" :class="[showLanguagesList ? 'show' : 'hide']">
       <p v-for="locale in getAvailableLanguages" :key="`locale-${locale}`" :value="locale" @click="onClickSelectNewLanguage(locale)">
         {{ $t(`home.language_${locale}`) }}
@@ -27,16 +30,22 @@ export default {
       return this.$i18n.availableLocales.filter((lang) => lang !== this.$i18n.locale);
     }
   },
+  mounted() {
+    this.addLanguageToUrl();
+  },
+  updated() {
+    this.addLanguageToUrl();
+  },
   methods: {
+    addLanguageToUrl() {
+      this.$router.push({ path: this.$route.path, query: { ...this.$route.query, hl: this.$i18n.locale } });
+    },
     onClickSeeAvailableLanguages() {
       this.showLanguagesList = !this.showLanguagesList;
     },
     onClickSelectNewLanguage(locale) {
-      console.log('locale', locale);
       this.$i18n.locale = locale;
-      console.log(this.$route.path);
-      this.$router.push({ path: this.$route.path, query: { ...this.$route.query, hl: locale } });
-
+      // TODO: Update document.title
       this.showLanguagesList = false;
     }
   }
@@ -49,13 +58,39 @@ export default {
   .selector {
     width: 100px;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 50px;
     text-align: left;
   }
 
+  .flex {
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      margin-right: 5px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
   p {
     cursor: pointer;
+  }
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .dropdown p {
+    margin-left: 27px;
+  }
+
+  p:hover {
+    text-decoration: underline;
   }
 
   select {
