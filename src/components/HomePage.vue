@@ -60,9 +60,9 @@
       <div class="picture-text">
         <div class="picture">
           <picture>
-            <source srcset="@public/photo-us.png" media="(min-width: 550px)"/>
-            <source srcset="@public/photo-us-mobile.png" media="(max-width: 550px)"/>
-            <img src="@public/photo-us.png" alt="us">
+            <source srcset="@public/assets/photo-us.png" media="(min-width: 550px)"/>
+            <source srcset="@public/assets/photo-us-mobile.png" media="(max-width: 550px)"/>
+            <img src="@public/assets/photo-us.png" alt="us">
           </picture>
         </div>
         <div class="text">
