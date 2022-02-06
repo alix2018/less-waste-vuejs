@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     getMarkdownFile() {
-      fetch('./markdowns/privacy-policy-french.md')
+      fetch(`./markdowns/privacy-policy-${this.$i18n.locale}.md`)
         .then((res) => res.text())
         .then((text) => {
           this.markdown = text;
