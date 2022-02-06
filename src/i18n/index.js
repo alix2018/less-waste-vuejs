@@ -12,9 +12,9 @@ const determineDefaultLanguage = () => {
   });
 
   const urlParams = new URL(document.location).searchParams;
-  const urlLanguage = urlParams.get('hl');
-  if (websiteAvailableLanguages.includes(urlLanguage)) {
-    defaultLanguage = urlLanguage;
+  const savedLanguage = urlParams.get('hl') || localStorage.getItem('language');
+  if (websiteAvailableLanguages.includes(savedLanguage)) {
+    defaultLanguage = savedLanguage;
   } else {
     userLanguages.every((userLanguage) => { // Determine the highest language supported. Ex: en-nl will select English language
       const [languageCode] = userLanguage.split('-');

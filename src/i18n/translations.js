@@ -142,7 +142,7 @@ export default {
       language_en: 'Engels',
       language_fr: 'Frans',
       language_nl: 'Nederlands',
-      meervoudVoorbeeld: 'geen element | {tel} element | {tel} elementen'
+      meervoudVoorbeeld: 'geen element | {count} element | {count} elementen'
     },
     newsletter: {
       form_error_message: 'Helaas kon uw registratie niet worden opgeslagen. Probeer het opnieuw 🤞',
@@ -169,7 +169,7 @@ export default {
     },
     footer: {
       comment_ideas: 'Heeft u opmerkingen of ideeën? Neem contact met ons op&#8239;!',
-      copyright: '© {jaar}. Alle rechten voorbehouden.',
+      copyright: '© {year}. Alle rechten voorbehouden.',
       privacy_policy: 'Privacybeleid'
     }
   }

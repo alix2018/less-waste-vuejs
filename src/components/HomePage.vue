@@ -390,14 +390,15 @@ Footer {
 
   header {
     text-align: left;
-    height: 380px;
+    height: 400px;
 
     img {
-      height: 430px;
+      height: 450px;
     }
 
     h1 {
       margin-top: 35px;
+      margin-right: 40px;
       padding: 0;
     }
 

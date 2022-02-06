@@ -1,5 +1,5 @@
 <template>
-  <div class="selector">
+  <div class="desktop-selector">
     <div class="flex" @click="onClickSeeAvailableLanguages">
       <img src="../assets/internet.png" alt="languages">
       <p class="current-language">{{ $t(`home.language_${$i18n.locale}`) }}</p>
@@ -9,11 +9,14 @@
         {{ $t(`home.language_${locale}`) }}
       </p>
     </div>
-    <!-- <select v-model="$i18n.locale">
+  </div>
+  <div class="mobile-selector">
+    <img src="../assets/internet.png" alt="languages">
+    <select  v-model="$i18n.locale">
       <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
         {{ $t(`home.language_${locale}`) }}
       </option>
-    </select> -->
+    </select>
   </div>
 </template>
 
@@ -22,7 +25,9 @@ export default {
   name: 'LanguagePicker',
   data() {
     return {
-      showLanguagesList: false
+      isMobileTablet: window.innerWidth <= 1023,
+      showLanguagesList: false,
+      showDropdown: false
     };
   },
   computed: {
@@ -31,17 +36,19 @@ export default {
     }
   },
   mounted() {
-    this.addLanguageToUrl();
+    this.saveLanguage();
   },
   updated() {
-    this.addLanguageToUrl();
+    this.saveLanguage();
   },
   methods: {
-    addLanguageToUrl() {
+    saveLanguage() {
       this.$router.push({ path: this.$route.path, query: { ...this.$route.query, hl: this.$i18n.locale } });
+      localStorage.setItem('language', this.$i18n.locale);
     },
     onClickSeeAvailableLanguages() {
       this.showLanguagesList = !this.showLanguagesList;
+      this.showDropdown = !this.showDropdown;
     },
     onClickSelectNewLanguage(locale) {
       this.$i18n.locale = locale;
@@ -55,49 +62,78 @@ export default {
 <style lang="scss" scoped>
 @import "@scss/_global.scss";
 
-  .selector {
-    width: 100px;
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    text-align: left;
-  }
+.desktop-selector {
+  display: block;
+  position: absolute;
+  width: 100px;
+  top: 30px;
+  right: 50px;
+  text-align: left;
+}
 
-  .flex {
-    align-items: center;
-    cursor: pointer;
+.mobile-selector {
+  display: none;
+}
 
-    img {
-      margin-right: 5px;
-    }
+.flex {
+  align-items: center;
+  cursor: pointer;
 
-    p {
-      margin: 0;
-    }
+  img {
+    margin-right: 5px;
   }
 
   p {
-    cursor: pointer;
+    margin: 0;
+  }
+}
+
+p {
+  cursor: pointer;
+}
+
+img {
+  width: 22px;
+  height: 22px;
+}
+
+.dropdown p {
+  margin-left: 27px;
+}
+
+p:hover {
+  text-decoration: underline;
+}
+
+select {
+  z-index: 1;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 1023px) {
+  .desktop-selector {
+    display: none;
+  }
+
+  .mobile-selector {
+    display: block;
+  }
+
+  select,
+  img {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    cursor: pointer
   }
 
   img {
-    width: 22px;
-    height: 22px;
+    z-index: 0;
   }
-
-  .dropdown p {
-    margin-left: 27px;
-  }
-
-  p:hover {
-    text-decoration: underline;
-  }
-
-  select {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    text-transform: capitalize;
-  }
+}
 </style>
