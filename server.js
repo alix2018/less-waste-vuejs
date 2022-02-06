@@ -19,6 +19,7 @@ app.use('/markdowns', express.static('dist/markdowns'));
 const port = process.env.PORT || 8080;
 
 // Metadata translations
+// TODO: Use i18n translation file
 const metadata = {
   en: {
     title: 'Tips to easily reduce your waste',
