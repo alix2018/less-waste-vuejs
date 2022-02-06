@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'LanguagePicker',
+  name: 'LanguageSwitcher',
   data() {
     return {
       isMobileTablet: window.innerWidth <= 1023,
@@ -44,6 +44,7 @@ export default {
   methods: {
     saveLanguage() {
       this.$router.push({ path: this.$route.path, query: { ...this.$route.query, hl: this.$i18n.locale } });
+      document.title = this.$t('metadata.title');
       localStorage.setItem('language', this.$i18n.locale);
     },
     onClickSeeAvailableLanguages() {

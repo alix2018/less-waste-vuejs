@@ -1,5 +1,10 @@
 export default {
   en: {
+    metadata: {
+      title: 'Tips to easily reduce your waste',
+      description: 'You want to start reducing your waste? Or you already are active in the zero waste and want to get easy tips and tricks? We have the solution!',
+      noJavascript: 'Please enable JavaScript to view this website.'
+    },
     home: {
       title: 'Tips to reduce your waste',
       subtitle: 'Coming Soon',
@@ -58,6 +63,11 @@ export default {
     }
   },
   fr: {
+    metadata: {
+      title: 'Des conseils pour réduire tes déchets facilement',
+      description: 'Tu veux commencer à réduire tes déchets? Ou tu es déjà actif dans le zero waste et tu veux avoir des conseils et astuces facilement? Nous avons la solution !',
+      noJavascript: 'Veuillez activer JavaScript pour afficher ce site Web.'
+    },
     home: {
       title: 'Des conseils pour réduire tes déchets',
       subtitle: 'Bientôt disponible',
@@ -116,6 +126,11 @@ export default {
     }
   },
   nl: {
+    metadata: {
+      title: 'Tips om je afval gemakkelijk te verminderen',
+      description: 'Wil je beginnen met het verminderen van je afval? Of ben je al actief in de zero waste en wil je makkelijke tips en tricks? Wij hebben de oplossing!',
+      noJavascript: 'Schakel JavaScript in om deze website te bekijken.'
+    },
     home: {
       title: 'Tips om je afval te verminderen',
       subtitle: 'Binnenkort',
