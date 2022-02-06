@@ -58,6 +58,16 @@ $body-padding-mobile: 40px;
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  color: $color-white;
+  background: $color-orange;
+}
+
+::selection {
+  color: $color-white;
+  background: $color-orange;
+}
+
 h1,
 h2,
 h3,
