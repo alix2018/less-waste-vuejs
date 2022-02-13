@@ -6,6 +6,7 @@ const determineDefaultLanguage = () => {
   const userLanguages = navigator.languages;
 
   // Get all the supported languages
+  // TODO: get direct array of available languages
   const websiteAvailableLanguages = [];
   Object.keys(messages).forEach((lang) => {
     websiteAvailableLanguages.push(lang);
@@ -16,6 +17,7 @@ const determineDefaultLanguage = () => {
   if (websiteAvailableLanguages.includes(savedLanguage)) {
     defaultLanguage = savedLanguage;
   } else {
+    // TODO: improve the every function
     userLanguages.every((userLanguage) => { // Determine the highest language supported. Ex: en-nl will select English language
       const [languageCode] = userLanguage.split('-');
       if (websiteAvailableLanguages.includes(languageCode)) {
