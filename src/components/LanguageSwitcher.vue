@@ -53,7 +53,6 @@ export default {
     },
     onClickSelectNewLanguage(locale) {
       this.$i18n.locale = locale;
-      // TODO: Update document.title
       this.showLanguagesList = false;
     }
   }

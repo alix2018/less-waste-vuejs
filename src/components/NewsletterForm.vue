@@ -25,7 +25,7 @@
         </div>
         <div></div>
         <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px;">
-          <form id="sib-form" method="POST" action="https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbtNjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev" data-type="subscription">
+          <form id="sib-form" method="POST" :action="formUrl" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block flex" style="font-size:32px; text-align:left; font-weight:700; color:#272D2D; background-color:transparent;">
                 <p class="title">{{ $t('newsletter.form_title') }}</p>
@@ -131,7 +131,10 @@ export default {
       emailInput: '',
       termsAndConditionsChecked: false,
       showRoute: window.location.pathname === '/newsletter',
-      isDesktop: window.innerWidth >= 550
+      isDesktop: window.innerWidth >= 550,
+      formUrl: '',
+      englishNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAGKgk738VVKAa-p1HxUsySV-lDuPd9LBmpgkGX7bsJ8OHdXNZ9kdcbu6lv_f-DR5bFkFbfWyeM9pWJ5IklCs4jEGpNkfFvooNGSzJhk7c5RXVy6hXsU-drc8O1D69mI9me-cqWpiGouisZcmIp3ALzPnWUizNF8_QtsOQW6Nj6yTbJeh8YeErjH9dUVoOJxZthwfDVgz6ria',
+      frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbtNjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev'
     };
   },
   methods: {
@@ -155,6 +158,7 @@ export default {
   },
   mounted() {
     this.resetForm();
+    this.formUrl = this.$i18n.locale === 'fr' ? this.frenchNewsletter : this.englishNewsletter;
   },
   computed: {
     enableSubmitButton() {
