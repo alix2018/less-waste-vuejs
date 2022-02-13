@@ -4,7 +4,7 @@ const fs = require('fs');
 const Handlebars = require('handlebars');
 
 // Import Handlebars file
-const indexHbs = fs.readFileSync(path.resolve(__dirname, 'dist/index.hbs'));
+const indexHbs = fs.readFileSync(path.resolve(__dirname, 'index.hbs'));
 const indexTemplate = Handlebars.compile(indexHbs.toString());
 
 // Set up the app
@@ -39,6 +39,7 @@ const metadata = {
 };
 
 app.get('/', (req, res) => {
+  // TODO: get direct array of available languages
   const language = ['en', 'nl', 'fr'].includes(req.query.hl) ? req.query.hl : 'en';
   const languageTranslations = metadata[language];
 

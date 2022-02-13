@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n/index';
-import messages from './translations';
+import translations from './translations';
 
 const determineDefaultLanguage = () => {
   let defaultLanguage = 'en';
@@ -8,7 +8,7 @@ const determineDefaultLanguage = () => {
   // Get all the supported languages
   // TODO: get direct array of available languages
   const websiteAvailableLanguages = [];
-  Object.keys(messages).forEach((lang) => {
+  Object.keys(translations).forEach((lang) => {
     websiteAvailableLanguages.push(lang);
   });
 
@@ -37,5 +37,5 @@ export default createI18n({
   locale: determineDefaultLanguage(),
   legacy: false,
   globalInjection: true, // Inject i18n properties and function to all components for options API
-  messages
+  messages: translations
 });
