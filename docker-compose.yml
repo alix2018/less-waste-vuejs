@@ -1,6 +1,9 @@
 version: '3'
 services:
-  lwft:
-    build: .
+  less-waste:
+    # build: .
+    image: less-waste:test
+    environment:
+      - PORT=3001
     ports:
-      - 3001:8080
+      - 3001:3001
