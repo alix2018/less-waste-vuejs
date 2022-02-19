@@ -9,12 +9,7 @@ const indexTemplate = Handlebars.compile(indexHbs.toString());
 
 // Set up the app
 const app = express();
-app.use('/assets', express.static('dist/assets'));
-app.use('/css', express.static('dist/css'));
-app.use('/fonts', express.static('dist/fonts'));
-app.use('/img', express.static('dist/img'));
-app.use('/js', express.static('dist/js'));
-app.use('/markdowns', express.static('dist/markdowns'));
+app.use(express.static('dist'));
 
 const port = process.env.PORT || 8080;
 
@@ -38,7 +33,7 @@ const metadata = {
   }
 };
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
   // TODO: get direct array of available languages
   const language = ['en', 'nl', 'fr'].includes(req.query.hl) ? req.query.hl : 'en';
   const languageTranslations = metadata[language];

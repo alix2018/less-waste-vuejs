@@ -29,14 +29,11 @@ COPY --from=builder /lesswaste/package.json .
 COPY --from=builder /lesswaste/package-lock.json .
 COPY --from=builder /lesswaste/dist ./dist
 RUN npm install
-RUN npm i -g nodemon
-
-EXPOSE 3001
-ENV PORT=3001
+# RUN npm i -g nodemon
 
 RUN ls -a
 
 RUN chmod +x ./dist/server.js
 
 # start the app
-CMD [ "nodemon", "./dist/server.js" ]
+CMD [ "node", "./dist/server.js" ]
