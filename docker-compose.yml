@@ -1,8 +1,8 @@
 version: '3'
 services:
   less-waste:
-    # build: .
-    image: less-waste:test
+    build: .
+    # image: less-waste:test
     environment:
       - PORT=3001
     ports:

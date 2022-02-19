@@ -29,9 +29,6 @@ COPY --from=builder /lesswaste/package.json .
 COPY --from=builder /lesswaste/package-lock.json .
 COPY --from=builder /lesswaste/dist ./dist
 RUN npm install
-# RUN npm i -g nodemon
-
-RUN ls -a
 
 RUN chmod +x ./dist/server.js
 
