@@ -12,8 +12,8 @@
   </div>
   <div class="mobile-selector">
     <img src="../assets/internet.png" alt="languages">
-    <select  v-model="$i18n.locale">
-      <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
+    <select  v-model="$i18n.locale" @click="onClickSeeAvailableLanguages" @change="sendLanguageSwitchAnalytics($i18n.locale)">
+      <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale" >
         {{ $t(`home.language_${locale}`) }}
       </option>
     </select>
@@ -50,10 +50,15 @@ export default {
     onClickSeeAvailableLanguages() {
       this.showLanguagesList = !this.showLanguagesList;
       this.showDropdown = !this.showDropdown;
+      this.$gtag.event('click_language_switcher_logo');
     },
     onClickSelectNewLanguage(locale) {
       this.$i18n.locale = locale;
       this.showLanguagesList = false;
+      this.sendLanguageSwitchAnalytics(this.$i18n.locale);
+    },
+    sendLanguageSwitchAnalytics(locale) {
+      this.$gtag.event('click_language_switcher_language', { value: locale });
     }
   }
 };
