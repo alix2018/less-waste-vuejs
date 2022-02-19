@@ -62,7 +62,7 @@
           <picture>
             <source srcset="@public/assets/photo-us.png" media="(min-width: 550px)"/>
             <source srcset="@public/assets/photo-us-mobile.png" media="(max-width: 550px)"/>
-            <img src="@public/assets/photo-us.png" alt="{{ $t('home.alt_us') }}">
+            <img src="@public/assets/photo-us.png" class="us" alt="{{ $t('home.alt_us') }}">
           </picture>
         </div>
         <div class="text">
@@ -259,7 +259,7 @@ section.about-us {
     max-height: 650px;
     min-height: 450px;
 
-    img[alt='us'] {
+    img.us {
       position: absolute;
       top: 0;
       right: -200px;
@@ -350,7 +350,7 @@ Footer {
     width: calc(100% + #{$body-padding-desktop});
 
     .picture-text {
-      img[alt='us'] {
+      img.us {
         right: -150px;
       }
 
@@ -388,7 +388,7 @@ Footer {
         width: 70vw;
         margin: 50px auto 0;
 
-        img[alt='us'] {
+        img.us {
           position: absolute;
           top: initial;
           right: initial;
@@ -461,7 +461,7 @@ Footer {
         margin-left: -1 * $body-padding-mobile;
         overflow-x: hidden;
 
-        img[alt='us'] {
+        img.us {
           width: $picture-size-mobile;
           height: $picture-size-mobile;
           left: -2 * $body-padding-mobile;

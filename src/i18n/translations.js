@@ -6,7 +6,7 @@ export default {
       noJavascript: 'Please enable JavaScript to view this website.'
     },
     home: {
-      alt_header_background: 'background header',
+      alt_header_background: 'header background',
       title: 'Tips to reduce your waste',
       subtitle: 'Coming Soon',
       h2_first_section_title: 'Easy, simple and effective information',
