@@ -95,7 +95,7 @@
   <!-- Section 5: Share -->
   <section class="share">
     <article class="layout">
-      <img class="icon" src="../assets/icon-rock-n-roll.png" alt="rock n roll">
+      <img class="icon" src="../assets/icon-share.png" alt="share">
       <div class="content">
         <h3>{{ $t('home.share_title') }}</h3>
           <p>{{ $t('home.share_description') }}</p>
@@ -245,7 +245,9 @@ section.newsletter {
 
 /* Section 3: About us */
 section.about-us {
-  margin-top: 50px;
+  padding-top: 50px;
+  overflow-x: hidden;
+  width: calc(100% + #{$body-padding-big-screen});
 
   h2 {
     margin: 12px 0;
@@ -343,9 +345,34 @@ Footer {
   margin-top: 150px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
+  section.about-us {
+    width: calc(100% + #{$body-padding-desktop});
+
+    .picture-text {
+      img[alt='us'] {
+        right: -150px;
+      }
+
+      div.text {
+        max-width: calc(100% + 25px - 40vw);
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  section.about-us {
+    width: calc(100% + #{$body-padding-mobile});
+  }
+}
+
+@media (max-width: 767px) {
   /* Section 3: About us */
   section.about-us {
+    overflow: initial;
+    width: 100%;
+
     .picture-text {
       position: relative;
       display: flex;
@@ -384,7 +411,7 @@ Footer {
 }
 
 @media (max-width: 550px) {
-  section:not(section.explanations) {
+  section:not(section.explanations, section.about-us) {
     margin-top: 40px;
   }
 
@@ -423,6 +450,7 @@ Footer {
   /* Section 3: About us */
   section.about-us {
     $picture-size-mobile: calc(100vw + 4 * #{$body-padding-mobile});
+    margin-top: 0;
 
     .picture-text {
       div.picture {
@@ -437,12 +465,6 @@ Footer {
           width: $picture-size-mobile;
           height: $picture-size-mobile;
           left: -2 * $body-padding-mobile;
-        }
-      }
-
-      div.text {
-        p {
-          @include paragraph-text-light-mobile;
         }
       }
     }

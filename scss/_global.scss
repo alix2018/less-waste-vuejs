@@ -44,10 +44,6 @@ $body-padding-mobile: 40px;
 }
 
 /* MIXINS MOBILE */
-@mixin paragraph-text-light-mobile {
-  font-family: 'Lato Regular';
-}
-
 @mixin text-banner-mobile {
   font-size: 20px;
   text-align: left;
@@ -186,6 +182,7 @@ div.banner {
   margin-left: -$body-padding-big-screen;
   width: calc(100% + 2 * #{$body-padding-big-screen});
   height: 400px;
+  padding: 0 $body-padding-big-screen;
   z-index: -1;
   background-repeat: no-repeat;
   background-position: center;
@@ -213,11 +210,21 @@ div.banner {
     font-size: 45px;
     line-height: 52px;
   }
+}
 
-  // TODO: still to fix on tablet view
+@media (max-width: 1500px) {
   div.banner {
     margin-left: -$body-padding-desktop;
     width: calc(100% + 2 * #{$body-padding-desktop});
+    padding: 0 $body-padding-desktop;
+  }
+}
+
+@media (max-width: 1023px) {
+  div.banner {
+    margin-left: -$body-padding-mobile;
+    width: calc(100% + 2 * #{$body-padding-mobile});
+    padding: 0 $body-padding-mobile;
   }
 }
 
@@ -238,10 +245,6 @@ div.banner {
 
     div.content {
       margin: 0;
-    }
-
-    p {
-      @include paragraph-text-light-mobile;
     }
   }
 

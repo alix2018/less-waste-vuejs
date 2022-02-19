@@ -13,7 +13,7 @@
 
       <div class="copyright flex">
         <p>{{ $t('footer.copyright', { year: this.copyrightYear }) }}</p>
-        <img class="logo" src="../assets/footer-logo.png" alt="logo">
+        <img class="logo" src="../assets/footer-logo-lesswastefortheplanet.png" alt="logo lesswastefortheplanet">
       </div>
     </div>
 
