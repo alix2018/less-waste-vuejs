@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'ShareComponent',
+  name: 'Share',
 
   data() {
     return {

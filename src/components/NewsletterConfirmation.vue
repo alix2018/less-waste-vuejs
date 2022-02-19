@@ -6,7 +6,7 @@
         <h2>{{ $t('newsletter.confirmation_title') }}</h2>
         <p>{{ $t('newsletter.confirmation_text1') }}</p>
         <p v-html="$t('newsletter.confirmation_text2')"></p>
-        <ShareComponent></ShareComponent>
+        <Share></Share>
       </div>
     </section>
   </article>
@@ -16,13 +16,13 @@
 <script>
 import Confetti from 'vue-confetti/src/confetti';
 import Footer from './Footer.vue';
-import ShareComponent from './ShareComponent.vue';
+import Share from './Share.vue';
 
 export default {
   name: 'NewsletterConfirmation',
   components: {
     Footer,
-    ShareComponent
+    Share
   },
   data() {
     return {

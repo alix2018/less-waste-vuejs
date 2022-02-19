@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HomePage from '../components/HomePage.vue';
-import PrivacyPolicyPage from '../components/PrivacyPolicyPage.vue';
+import PageHome from '../components/PageHome.vue';
+import PagePrivacyPolicy from '../components/PagePrivacyPolicy.vue';
 import NewsletterForm from '../components/NewsletterForm.vue';
 import NewsletterConfirmation from '../components/NewsletterConfirmation.vue';
 
@@ -11,11 +11,11 @@ export default createRouter({
     {
       path: '/',
       name: 'Home',
-      component: HomePage,
+      component: PageHome,
     }, {
       path: '/privacy-policy',
       name: 'Privacy Policy',
-      component: PrivacyPolicyPage,
+      component: PagePrivacyPolicy,
     }, {
       path: '/newsletter',
       name: 'Newsletter',

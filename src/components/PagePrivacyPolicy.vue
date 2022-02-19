@@ -11,7 +11,7 @@ import marked from 'marked';
 import Footer from './Footer.vue';
 
 export default {
-  name: 'PrivacyPolicyPage',
+  name: 'PagePrivacyPolicy',
   components: {
     Footer,
   },

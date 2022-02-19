@@ -99,7 +99,7 @@
       <div class="content">
         <h3>{{ $t('home.share_title') }}</h3>
           <p>{{ $t('home.share_description') }}</p>
-          <ShareComponent></ShareComponent>
+          <Share></Share>
 
       </div>
     </article>
@@ -111,15 +111,15 @@
 <script>
 import Footer from './Footer.vue';
 import NewsletterForm from './NewsletterForm.vue';
-import ShareComponent from './ShareComponent.vue';
+import Share from './Share.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'PageHome',
   components: {
     Footer,
     NewsletterForm,
-    ShareComponent,
+    Share,
     LanguageSwitcher
   },
   data() {
