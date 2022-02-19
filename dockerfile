@@ -1,5 +1,5 @@
 # BUILD DIST FOLER
-FROM node:14.17.0 AS builder
+FROM node:16.14.0 AS builder
 
 # create destination directory
 RUN mkdir -p /lesswaste
@@ -12,14 +12,13 @@ RUN apt-get update -y && \
 # copy the app, note .dockerignore
 COPY . /lesswaste
 RUN npm install
-RUN npm rebuild node-sass
 
 # build necessary, even if no static files are needed,
 # since it builds the server as well
 RUN npm run build
 
 # FINAL IMAGE
-FROM node:14.17.0
+FROM node:16.14.0
 
 # create destination directory
 RUN mkdir -p /lesswaste
