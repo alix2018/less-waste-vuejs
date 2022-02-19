@@ -3,7 +3,7 @@
     <picture>
       <source srcset="../assets/background-header-desktop.png" media="(min-width: 550px)"/>
       <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
-      <img src="../assets/background-header-desktop.png" alt="header background">
+      <img src="../assets/background-header-desktop.png" alt="{{ $t('home.alt_header_background') }}">
     </picture>
     <LanguageSwitcher></LanguageSwitcher>
     <div>
@@ -16,28 +16,28 @@
   <h2 class="first-article">{{ $t('home.h2_first_section_title') }}</h2>
   <section class="explanations">
     <article class="layout">
-      <img class="icon" src="../assets/icon-time.png" alt="clock">
+      <img class="icon" src="../assets/icon-time.png" alt="{{ $t('home.alt_clock') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_time')"></h3>
         <p>{{ $t('home.article_text_time') }}</p>
       </div>
     </article>
     <article class="layout">
-      <img class="icon" src="../assets/icon-info.png" alt="information">
+      <img class="icon" src="../assets/icon-info.png" alt="{{ $t('home.alt_information') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_info')"></h3>
         <p>{{ $t('home.article_text_info') }}</p>
       </div>
     </article>
     <article class="layout">
-      <img class="icon" src="../assets/icon-environment.png" alt="planet">
+      <img class="icon" src="../assets/icon-environment.png" alt="{{ $t('home.alt_planet') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_environment')"></h3>
         <p>{{ $t('home.article_text_environment') }}</p>
       </div>
     </article>
     <article class="layout">
-      <img class="icon" src="../assets/icon-money.png" alt="euros">
+      <img class="icon" src="../assets/icon-money.png" alt="{{ $t('home.alt_euros') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_money')"></h3>
         <p>{{ $t('home.article_text_money') }}</p>
@@ -48,7 +48,7 @@
   <!-- Section 2: Banner Newletter -->
   <section class="newsletter">
     <div class="banner">
-      <img src="../assets/icon-announcement.png" alt="announcement" height="70">
+      <img src="../assets/icon-announcement.png" alt="{{ $t('home.alt_announcement') }}" height="70">
       <p v-html="$t('home.newsletter_coming_soon')"></p>
       <p>{{ $t('home.newsletter_inscription') }}</p>
       <button aria-label="{{ $t('home.newsletter_button_subscribe') }}" @click="onClickOpenForm">{{ $t('home.newsletter_button_subscribe') }}</button>
@@ -62,7 +62,7 @@
           <picture>
             <source srcset="@public/assets/photo-us.png" media="(min-width: 550px)"/>
             <source srcset="@public/assets/photo-us-mobile.png" media="(max-width: 550px)"/>
-            <img src="@public/assets/photo-us.png" alt="us">
+            <img src="@public/assets/photo-us.png" alt="{{ $t('home.alt_us') }}">
           </picture>
         </div>
         <div class="text">
@@ -77,10 +77,10 @@
     <div class="banner">
       <div class="flex">
         <a href="https://www.instagram.com/lesswastefortheplanet/" target="_blank" rel="noopener noreferrer" @click="onClickInstagramLogo">
-          <img src="../assets/instagram-color.png" height="50" alt="instagram">
+          <img src="../assets/instagram-color.png" height="50" alt="{{ $t('home.alt_instagram') }}">
         </a>
         <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" target="_blank" rel="noopener noreferrer" @click="onClickFacebookLogo">
-          <img src="../assets/facebook-color.png" height="50" alt="facebook">
+          <img src="../assets/facebook-color.png" height="50" alt="{{ $t('home.alt_facebook') }}">
         </a>
       </div>
       <p>{{ $t('home.social_in_the_meantime') }}</p>
@@ -95,7 +95,7 @@
   <!-- Section 5: Share -->
   <section class="share">
     <article class="layout">
-      <img class="icon" src="../assets/icon-share.png" alt="share">
+      <img class="icon" src="../assets/icon-share.png" alt="{{ $t('home.alt_share') }}">
       <div class="content">
         <h3>{{ $t('home.share_title') }}</h3>
           <p>{{ $t('home.share_description') }}</p>

@@ -1,6 +1,6 @@
 <template>
   <article>
-    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
+    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.button_back_to_home') }}</router-link>
     <section>
       <div class="flex">
         <h2>{{ $t('newsletter.confirmation_title') }}</h2>

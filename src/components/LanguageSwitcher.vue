@@ -1,7 +1,7 @@
 <template>
   <div class="desktop-selector">
     <div class="flex" @click="onClickSeeAvailableLanguages">
-      <img src="../assets/internet.png" alt="languages">
+      <img src="../assets/internet.png" alt="{{ $t('languageSwitcher.alt_languages') }}">
       <p class="current-language">{{ $t(`home.language_${$i18n.locale}`) }}</p>
     </div>
     <div class="dropdown" :class="[showLanguagesList ? 'show' : 'hide']">
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="mobile-selector">
-    <img src="../assets/internet.png" alt="languages">
+    <img src="../assets/internet.png" alt="{{ $t('languageSwitcher.alt_languages') }}">
     <select  v-model="$i18n.locale" @click="onClickSeeAvailableLanguages" @change="sendLanguageSwitchAnalytics($i18n.locale)">
       <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale" >
         {{ $t(`home.language_${locale}`) }}

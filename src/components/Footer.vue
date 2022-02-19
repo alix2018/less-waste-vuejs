@@ -20,7 +20,7 @@
     <picture>
       <source srcset="../assets/background-footer.png" media="(min-width: 550px)"/>
       <source srcset="../assets/background-footer-mobile.png" media="(max-width: 550px)"/>
-      <img class="background" src="../assets/background-footer.png" alt="footer background">
+      <img class="background" src="../assets/background-footer.png" alt="{{ $t('footer.alt_background') }}">
     </picture>
   </footer>
 </template>

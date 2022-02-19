@@ -1,6 +1,6 @@
 <template>
   <article class="content-page">
-    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
+    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.button_back_to_home') }}</router-link>
     <div class="markdown" v-html="markdownToHtml"></div>
   </article>
   <Footer></Footer>
