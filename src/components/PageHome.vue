@@ -128,7 +128,13 @@ export default {
       // TODO: make is generic value (helper)
       isDesktop: window.innerWidth >= 550,
       headerHeight: 0,
-      headerBackgroundHeight: 0
+      headerBackgroundHeight: 0,
+      constants: {
+        DESKTOP_HEADER_SPACING: 130,
+        DESKTOP_BACKGROUND_SPACING: 25,
+        MOBILE_HEADER_SPACING: 50,
+        MOBILE_BACKGROUND_SPACING: 15,
+      }
     };
   },
   created() {
@@ -143,9 +149,12 @@ export default {
   },
   methods: {
     setHeaderSize() {
+      this.isDesktop = window.innerWidth >= 550;
       const header = this.$refs.headerContent;
-      this.headerHeight = this.isDesktop ? 0 : header.offsetHeight + 50;
-      this.headerBackgroundHeight = this.headerHeight + 50;
+      const headerSpacing = this.isDesktop ? this.constants.DESKTOP_HEADER_SPACING : this.constants.MOBILE_HEADER_SPACING;
+      this.headerHeight = header.offsetHeight + headerSpacing;
+      const backgroundSpacing = this.isDesktop ? this.constants.DESKTOP_BACKGROUND_SPACING : this.constants.MOBILE_BACKGROUND_SPACING;
+      this.headerBackgroundHeight = this.headerHeight + headerSpacing - backgroundSpacing;
     },
     onClickOpenForm() {
       this.$gtag.event('click_subscribe_to_newsletter');
@@ -187,14 +196,11 @@ section:not(section.explanations, section.about-us) {
 }
 
 header {
-  height: 300px;
-
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 400px;
     z-index: -1;
   }
 
