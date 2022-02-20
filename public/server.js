@@ -15,7 +15,6 @@ app.use(express.static('dist'));
 const port = process.env.PORT || 8080;
 
 app.get('/*', (req, res) => {
-  // TODO: get direct array of available languages
   const websiteAvailableLanguages = availableLanguages();
   const language = websiteAvailableLanguages.includes(req.query.hl) ? req.query.hl : defaultLanguage;
   const languageTranslations = translations[language].metadata;

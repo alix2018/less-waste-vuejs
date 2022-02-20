@@ -249,7 +249,6 @@ const availableLanguages = () => {
   return websiteAvailableLanguages;
 };
 
-
 module.exports = {
   translations,
   defaultLanguage,

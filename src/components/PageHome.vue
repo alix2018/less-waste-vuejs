@@ -125,6 +125,7 @@ export default {
   data() {
     return {
       openModal: false,
+      // TODO: make is generic value (helper)
       isDesktop: window.innerWidth >= 550
     };
   },
@@ -445,6 +446,14 @@ Footer {
   h2.first-article {
     margin-top: 40px;
     text-align: left;
+  }
+
+  section.explanations {
+    article {
+      div.content {
+        max-width: none;
+      }
+    }
   }
 
   /* Section 3: About us */

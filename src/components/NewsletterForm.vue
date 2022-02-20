@@ -133,6 +133,7 @@ export default {
       showRoute: window.location.pathname === '/newsletter',
       isDesktop: window.innerWidth >= 550,
       formUrl: '',
+      // TODO: create config file
       englishNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAGKgk738VVKAa-p1HxUsySV-lDuPd9LBmpgkGX7bsJ8OHdXNZ9kdcbu6lv_f-DR5bFkFbfWyeM9pWJ5IklCs4jEGpNkfFvooNGSzJhk7c5RXVy6hXsU-drc8O1D69mI9me-cqWpiGouisZcmIp3ALzPnWUizNF8_QtsOQW6Nj6yTbJeh8YeErjH9dUVoOJxZthwfDVgz6ria',
       frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbuttonjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev'
     };
