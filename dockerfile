@@ -6,8 +6,7 @@ RUN mkdir -p /lesswaste
 WORKDIR /lesswaste
 
 # update and install dependency
-RUN apt-get update -y && \
-    apt-get upgrade -y
+RUN apt-get update -y
 
 # copy the app, note .dockerignore
 COPY . /lesswaste
