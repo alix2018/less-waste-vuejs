@@ -1,27 +1,21 @@
 import { createI18n } from 'vue-i18n/index';
-import translations from './translations';
+import { translations, defaultLanguage, availableLanguages } from '@public/translations';
 
 const determineDefaultLanguage = () => {
-  let defaultLanguage = 'en';
+  let currentDefaultLanguage = defaultLanguage;
   const userLanguages = navigator.languages;
-
-  // Get all the supported languages
-  // TODO: get direct array of available languages
-  const websiteAvailableLanguages = [];
-  Object.keys(translations).forEach((lang) => {
-    websiteAvailableLanguages.push(lang);
-  });
+  const websiteAvailableLanguages = availableLanguages();
 
   const urlParams = new URL(document.location).searchParams;
   const savedLanguage = urlParams.get('hl') || localStorage.getItem('language');
   if (websiteAvailableLanguages.includes(savedLanguage)) {
-    defaultLanguage = savedLanguage;
+    currentDefaultLanguage = savedLanguage;
   } else {
     // TODO: improve the every function
     userLanguages.every((userLanguage) => { // Determine the highest language supported. Ex: en-nl will select English language
       const [languageCode] = userLanguage.split('-');
       if (websiteAvailableLanguages.includes(languageCode)) {
-        defaultLanguage = languageCode;
+        currentDefaultLanguage = languageCode;
         // Stop the loop when language matches
         return false;
       }
@@ -30,7 +24,7 @@ const determineDefaultLanguage = () => {
     });
   }
 
-  return defaultLanguage;
+  return currentDefaultLanguage;
 };
 
 export default createI18n({

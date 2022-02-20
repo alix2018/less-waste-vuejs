@@ -1,4 +1,4 @@
-export default {
+const translations = {
   en: {
     metadata: {
       title: 'Tips to easily reduce your waste',
@@ -236,4 +236,22 @@ export default {
       privacy_policy: 'Privacybeleid'
     }
   }
+};
+
+const defaultLanguage = 'en';
+
+const availableLanguages = () => {
+  const websiteAvailableLanguages = [];
+  Object.keys(translations).forEach((lang) => {
+    websiteAvailableLanguages.push(lang);
+  });
+
+  return websiteAvailableLanguages;
+};
+
+
+module.exports = {
+  translations,
+  defaultLanguage,
+  availableLanguages
 };
