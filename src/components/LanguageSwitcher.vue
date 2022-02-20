@@ -58,6 +58,7 @@ export default {
       this.sendLanguageSwitchAnalytics(this.$i18n.locale);
     },
     sendLanguageSwitchAnalytics(locale) {
+      this.$emit('newLanguageSet');
       this.$gtag.event('click_language_switcher_language', { value: locale });
     }
   }

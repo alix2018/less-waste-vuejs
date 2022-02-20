@@ -1,12 +1,12 @@
 <template>
-  <header>
+  <header :style="{ height: headerHeight + 'px' }">
     <picture>
       <source srcset="../assets/background-header-desktop.png" media="(min-width: 550px)"/>
       <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
-      <img src="../assets/background-header-desktop.png" alt="{{ $t('home.alt_header_background') }}">
+      <img src="../assets/background-header-desktop.png" alt="{{ $t('home.alt_header_background') }}" :style="{ height: headerBackgroundHeight + 'px' }">
     </picture>
-    <LanguageSwitcher></LanguageSwitcher>
-    <div>
+    <LanguageSwitcher @newLanguageSet="setHeaderSize"></LanguageSwitcher>
+    <div ref="headerContent">
       <h1>{{ $t('home.title') }}</h1>
       <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>
     </div>
@@ -100,10 +100,10 @@
         <h3>{{ $t('home.share_title') }}</h3>
           <p>{{ $t('home.share_description') }}</p>
           <Share></Share>
-
       </div>
     </article>
   </section>
+
   <Footer privacyPolicy></Footer>
   <NewsletterForm :show="openModal" @onClickCloseModal="onClickCloseModal"/>
 </template>
@@ -126,13 +126,27 @@ export default {
     return {
       openModal: false,
       // TODO: make is generic value (helper)
-      isDesktop: window.innerWidth >= 550
+      isDesktop: window.innerWidth >= 550,
+      headerHeight: 0,
+      headerBackgroundHeight: 0
     };
+  },
+  created() {
+    window.addEventListener('resize', this.setHeaderSize);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.setHeaderSize);
   },
   mounted() {
     this.$gtag.event('display_home_page');
+    this.setHeaderSize();
   },
   methods: {
+    setHeaderSize() {
+      const header = this.$refs.headerContent;
+      this.headerHeight = this.isDesktop ? 0 : header.offsetHeight + 50;
+      this.headerBackgroundHeight = this.headerHeight + 50;
+    },
     onClickOpenForm() {
       this.$gtag.event('click_subscribe_to_newsletter');
       if (this.isDesktop) {
@@ -418,11 +432,6 @@ Footer {
 
   header {
     text-align: left;
-    height: 400px;
-
-    img {
-      height: 450px;
-    }
 
     h1 {
       margin-top: 35px;
