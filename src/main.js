@@ -4,14 +4,14 @@ import i18n from './i18n';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import config from '../config';
+// import config from '../config';
 
 createApp(App)
   .use(router)
   .use(store)
   .use(VueGtag, {
     config: {
-      id: process.env.NODE_ENV === 'production' ? config.googleAnalyticsId : '',
+      id: '',
       params: {
         anonymize_ip: true,
         allow_google_signals: false,
