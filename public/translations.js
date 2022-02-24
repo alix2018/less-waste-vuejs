@@ -1,34 +1,35 @@
 const translations = {
   en: {
     metadata: {
-      title: 'Tips to easily reduce your waste',
-      description: 'You want to start reducing your waste? Or you already are active in the zero waste and want to get easy tips and tricks? We have the solution!',
+      title: 'Reduce your waste today!',
+      description_old: 'You want to start reducing your waste or you are already active in the zero waste movement and want to get easy tips and tricks? We have the solution!',
+      description: "Want to reduce your waste? We've got some easy tips and trick for you!",
       noJavascript: 'Please enable JavaScript to view this website.'
     },
     home: {
       alt_header_background: 'header background',
       title: 'Tips to reduce your waste',
       subtitle: 'Coming Soon',
-      h2_first_section_title: 'Easy, simple and effective information',
+      h2_first_section_title: 'Easy and simple',
       alt_clock: 'clock',
       article_title_time: 'Do you want to save time?',
-      article_text_time: 'There\'s no too much talking here, we provide you with the key points so that you can progress at your own pace.',
+      article_text_time: 'No blabla here, we provide you with the key points so that you can progress at your own pace.',
       alt_information: 'information',
       article_title_info: 'You don\'t know where to look?',
       article_text_info: 'Don\'t worry. We will help you reduce your waste for each room in your house.',
       alt_planet: 'planet',
       article_title_environment: 'Do you want to preserve your health?',
-      article_text_environment: '... And the one from the planet. We give you the behaviors to avoid in order to take care of yourself and the environment.',
+      article_text_environment: '... And preserve the planet. We give you the tools to take care of yourself and the environment.',
       alt_euros: 'euros',
       article_title_money: 'You want to save money?',
-      article_text_money: 'We give you tips to relieve your wallet while reducing your impact.',
+      article_text_money: 'We help you saving money while reducing your impact.',
       alt_announcement: 'announcement',
       newsletter_coming_soon: 'Have you answered <span class="highlight">"yes"</span> to all the previous questions?',
-      newsletter_inscription: 'Then subscribe to our newsletter to be informed about what\'s next!',
+      newsletter_inscription: 'Then subscribe to our newsletter to be informed about what\'s next!', // TODO: info about whats next
       newsletter_button_subscribe: 'Subscribe',
       alt_us: 'us',
       about_us_who_we_are: 'Who are we?',
-      about_us_description: 'Hello to you who is sitting quietly in front of your screen. We are <span class="highlight">Shannon & Stéphanie</span>, respectively Belgian and French living in Belgium and the Netherlands. Yes, it\'s quite a mix.\n\nYou\'re probably wondering why we made this website? We actually both work to <span class="highlight">reducing our waste</span> and we quickly had the same frustrations and the same crappy experiences, I promise we\'ll tell you!\n\n So we would like to take you on <span class="highlight">our zero waste adventure</span> and help you develop yours (whether you are just starting out or already have experience). \'experience). What we want is to make your experience as pleasant as possible by providing you with the information you need <span class="highlight">easily</span>. And then why not get your friends on board too because alone we wouldn\'t go very far to save our beautiful planet. 🌍',
+      about_us_description: 'Hello to you who is sitting in front of the screen. We are <span class="highlight">Shannon & Stéphanie</span>, respectively Belgian and French living in Belgium and the Netherlands. Yes, it\'s quite unusual.\n\nYou\'re probably wondering why we made this website? We actually both work to <span class="highlight">reducing our waste</span> and we quickly had the same frustrations and the same crappy experiences, I promise we\'ll tell you!\n\n So we would like to take you on <span class="highlight">our zero waste adventure</span> and help you develop yours (whether you are just starting out or already have experience). \'experience). What we want is to make your experience as pleasant as possible by providing you with the information you need <span class="highlight">easily</span>. And then why not get your friends on board too because alone we wouldn\'t go very far to save our beautiful planet. 🌍', // TODO: better adjective for mix
       social_in_the_meantime: 'You want to know more?',
       social_follow_us: 'Follow us on social media!',
       alt_instagram: 'instagram',
@@ -159,8 +160,8 @@ const translations = {
   },
   nl: {
     metadata: {
-      title: 'Tips om je afval gemakkelijk te verminderen',
-      description: 'Wil je beginnen met het verminderen van je afval? Of ben je al actief in de zero waste en wil je makkelijke tips en tricks? Wij hebben de oplossing!',
+      title: 'Verminder je afval vandaag!',
+      description: 'Wil je verminderen in het afval wat je produceert? Wij hebben makkelijke tips en tricks die je kunnen helpen!', // TODO: send to evan
       noJavascript: 'Schakel JavaScript in om deze website te bekijken.'
     },
     home: {
