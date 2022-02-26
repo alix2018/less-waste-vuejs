@@ -1,6 +1,6 @@
 # Privacybeleid
 
-_Laatst bijgewerkt: 24 oktober 2021_
+_Laatst bijgewerkt: 26 februari 2022_
 
 Dit privacybeleid beschrijft ons beleid en onze procedures voor het verzamelen, gebruiken en openbaar maken van uw informatie wanneer u de service gebruikt en vertelt u over uw privacyrechten en hoe de wet u beschermt.
 
