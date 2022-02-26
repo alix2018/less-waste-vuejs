@@ -16,6 +16,13 @@
   <h2 class="first-article">{{ $t('home.h2_first_section_title') }}</h2>
   <section class="explanations">
     <article class="layout">
+      <img class="icon" src="../assets/icon-money.png" alt="{{ $t('home.alt_euros') }}">
+      <div class="content">
+        <h3 v-html="$t('home.article_title_money')"></h3>
+        <p>{{ $t('home.article_text_money') }}</p>
+      </div>
+    </article>
+    <article class="layout">
       <img class="icon" src="../assets/icon-time.png" alt="{{ $t('home.alt_clock') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_time')"></h3>
@@ -34,13 +41,6 @@
       <div class="content">
         <h3 v-html="$t('home.article_title_environment')"></h3>
         <p>{{ $t('home.article_text_environment') }}</p>
-      </div>
-    </article>
-    <article class="layout">
-      <img class="icon" src="../assets/icon-money.png" alt="{{ $t('home.alt_euros') }}">
-      <div class="content">
-        <h3 v-html="$t('home.article_title_money')"></h3>
-        <p>{{ $t('home.article_text_money') }}</p>
       </div>
     </article>
   </section>
