@@ -50,7 +50,7 @@
     <div class="banner">
       <img src="../assets/icon-announcement.png" alt="{{ $t('home.alt_announcement') }}" height="70">
       <p v-html="$t('home.newsletter_coming_soon')"></p>
-      <p>{{ $t('home.newsletter_inscription') }}</p>
+      <p v-html="$t('home.newsletter_inscription')"></p>
       <button aria-label="{{ $t('home.newsletter_button_subscribe') }}" @click="onClickOpenForm">{{ $t('home.newsletter_button_subscribe') }}</button>
       </div>
   </section>
@@ -66,7 +66,7 @@
           </picture>
         </div>
         <div class="text">
-          <h2>{{ $t('home.about_us_who_we_are') }}</h2>
+          <h2 v-html="$t('home.about_us_who_we_are')"></h2>
           <p v-html="$t('home.about_us_description')"></p>
         </div>
       </div>
@@ -83,7 +83,7 @@
           <img src="../assets/facebook-color.png" height="50" alt="{{ $t('home.alt_facebook') }}">
         </a>
       </div>
-      <p>{{ $t('home.social_in_the_meantime') }}</p>
+      <p v-html="$t('home.social_in_the_meantime')"></p>
       <p v-html="$t('home.social_follow_us')"></p>
       <div class="flex">
         <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer" @click="onClickInstagram">{{ $t('home.social_instagram') }}</a>
@@ -97,8 +97,8 @@
     <article class="layout">
       <img class="icon" src="../assets/icon-share.png" alt="{{ $t('home.alt_share') }}">
       <div class="content">
-        <h3>{{ $t('home.share_title') }}</h3>
-          <p>{{ $t('home.share_description') }}</p>
+        <h3 v-html="$t('home.share_title')"></h3>
+          <p v-html="$t('home.share_description')"></p>
           <Share></Share>
       </div>
     </article>

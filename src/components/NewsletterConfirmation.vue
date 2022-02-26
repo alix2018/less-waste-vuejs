@@ -3,7 +3,7 @@
     <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.button_back_to_home') }}</router-link>
     <section>
       <div class="flex">
-        <h2>{{ $t('newsletter.confirmation_title') }}</h2>
+        <h2 v-html="$t('newsletter.confirmation_title')"></h2>
         <p>{{ $t('newsletter.confirmation_text1') }}</p>
         <p v-html="$t('newsletter.confirmation_text2')"></p>
         <Share></Share>

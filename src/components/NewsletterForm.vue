@@ -35,7 +35,7 @@
             <div style="padding: 8px 0;">
               <div class="sib-form-block" style="font-size:16px; text-align:left; color:#272D2D; background-color:transparent;">
                 <div class="sib-text-form-block">
-                  <p>{{ $t('newsletter.from_subtitle') }}</p>
+                  <p v-html="$t('newsletter.from_subtitle')"></p>
                 </div>
               </div>
             </div>

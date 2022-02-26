@@ -81,8 +81,8 @@ const translations = {
   },
   fr: {
     metadata: {
-      title: "Réduis-tes déchets aujourd'hui&#8239;!",
-      description: "Tu veux réduire tes déchets ? On a des conseils et des astuces pour toi&#8239;!",
+      title: "Réduis-tes déchets aujourd'hui !",
+      description: "Tu veux réduire tes déchets ? On a des conseils et des astuces pour toi !",
       noJavascript: "Veuillez activer JavaScript pour afficher ce site Web."
     },
     home: {
@@ -104,7 +104,7 @@ const translations = {
       article_text_money: "On te donne des astuces pour soulager ton porte-monnaie tout en réduisant ton impact.",
       alt_announcement: "annonce",
       newsletter_coming_soon: "Tu as répondu <span class=\"highlight\">« oui »</span> à toutes les questions précédentes&#8239;?",
-      newsletter_inscription: "Alors inscris-toi à notre newsletter pour être informé quand le site web final est prêt !",
+      newsletter_inscription: "Alors inscris-toi à notre newsletter pour être informé quand le site web final est prêt &#8239;!",
       newsletter_button_subscribe: "S'abonner",
       alt_us: "nous",
       about_us_who_we_are: "Qui sommes-nous&#8239;?",
@@ -129,7 +129,7 @@ const translations = {
     newsletter: {
       alt_close: "fermer",
       form_error_message: "Malheureusement ton inscription n'a pas pu être enregistrée. Essaie de nouveau 🤞",
-      form_success_message: "Ton inscription à bien marché, bienvenue parmis nous&#8239;! 🎉",
+      form_success_message: "Ton inscription à bien marché, bienvenue parmis nous ! 🎉",
       form_title: "Newsletter",
       from_subtitle: "Toi aussi tu as hâte de connaître la prochaine étape&#8239;? 🙂",
       form_label_email: "Entre ton adresse e-mail pour t'inscrire",
@@ -200,7 +200,7 @@ const translations = {
       language_en: "Engels",
       language_fr: "Frans",
       language_nl: "Nederlands",
-      meervoudVoorbeeld: "geen element | {count} element | {count} elementen"
+      pluralExample: "geen element | {count} element | {count} elementen"
     },
     languageSwitcher: {
       languages: "talen"
@@ -218,9 +218,9 @@ const translations = {
       form_sendingblue_terms: "Wij gebruiken Sendinblue als marketingplatform. Door hieronder te klikken om dit formulier te verzenden, erken je dat de informatie die jij hebt verstrekt zal worden overgedragen aan Sendinblue voor verwerking in overeenstemming met hun ",
       form_sendingblue_terms_link: "gebruiksvoorwaarden",
       form_button_submit: "Sturen",
-      confirm_title: "Gefeliciteerd!",
-      confirm_text1: "Je bent ingeschreven voor onze newsletter, wij nemen contact met jij op als onze website klaar is 🙂",
-      confirm_text2: "Tot je van ons hoort, deel het met jouw vrienden!"
+      confirmation_title: "Gefeliciteerd!",
+      confirmation_text1: "Je bent ingeschreven voor onze newsletter, wij nemen contact met jij op als onze website klaar is 🙂",
+      confirmation_text2: "Tot je van ons hoort, deel het met jouw vrienden!"
     },
     share: {
       alt_checkmark: "vinkje",
