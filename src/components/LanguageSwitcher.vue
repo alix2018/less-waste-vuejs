@@ -116,6 +116,7 @@ select {
   color: transparent;
   background-color: transparent;
   border: none;
+  -webkit-appearance: none;
 }
 
 @media (max-width: 1023px) {

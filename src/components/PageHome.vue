@@ -152,8 +152,8 @@ export default {
       this.isDesktop = window.innerWidth >= 550;
       const header = this.$refs.headerContent;
       const headerSpacing = this.isDesktop ? this.constants.DESKTOP_HEADER_SPACING : this.constants.MOBILE_HEADER_SPACING;
-      this.headerHeight = header.offsetHeight + headerSpacing;
       const backgroundSpacing = this.isDesktop ? this.constants.DESKTOP_BACKGROUND_SPACING : this.constants.MOBILE_BACKGROUND_SPACING;
+      this.headerHeight = header.offsetHeight + headerSpacing;
       this.headerBackgroundHeight = this.headerHeight + headerSpacing - backgroundSpacing;
     },
     onClickOpenForm() {

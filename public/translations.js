@@ -81,7 +81,7 @@ const translations = {
   fr: {
     metadata: {
       title: 'Des conseils pour réduire tes déchets facilement',
-      description: 'Tu veux commencer à réduire tes déchets? Ou tu es déjà actif dans le zero waste et tu veux avoir des conseils et astuces facilement? Nous avons la solution !',
+      description: 'Tu veux commencer à réduire tes déchets ? Ou tu es déjà actif dans le zero waste et tu veux avoir des conseils et astuces facilement? Nous avons la solution !',
       noJavascript: 'Veuillez activer JavaScript pour afficher ce site Web.'
     },
     home: {
@@ -182,7 +182,7 @@ const translations = {
       article_text_money: 'We geven je tips om je portemonnee te ontlasten en tegelijkertijd je impact te verkleinen.',
       alt_announcement: 'aankondiging',
       newsletter_coming_soon: 'Heb je <span class="highlight">"ja"</span> beantwoord op alle voorgaande vragen?',
-      nieuwsbrief_inscription: 'Abonneer je dus op onze nieuwsbrief om op de hoogte te blijven van wat er gaat komen!',
+      newsletter_inscription: 'Abonneer je dus op onze nieuwsbrief om op de hoogte te blijven van wat er gaat komen!',
       newsletter_button_subscribe: 'Abonneren',
       alt_us: 'ons',
       about_us_who_we_are: 'Wie zijn wij?',
