@@ -135,7 +135,8 @@ export default {
       formUrl: '',
       // TODO: create config file
       englishNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAGKgk738VVKAa-p1HxUsySV-lDuPd9LBmpgkGX7bsJ8OHdXNZ9kdcbu6lv_f-DR5bFkFbfWyeM9pWJ5IklCs4jEGpNkfFvooNGSzJhk7c5RXVy6hXsU-drc8O1D69mI9me-cqWpiGouisZcmIp3ALzPnWUizNF8_QtsOQW6Nj6yTbJeh8YeErjH9dUVoOJxZthwfDVgz6ria',
-      frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbuttonjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev'
+      frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbuttonjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev',
+      dutchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEALwJbcTYRY6zvTH_17Tm0shxWvKvIrwaR_qAYBc-4jrhRrSLhvrB5GikVxl7pww-1qHzherR2FCH028K1RJKs7eLHfR_643sMFUmhPrMmt3IEFuA7ROMZw1RsDdq5nKYS4FhuG9usOYDb_unrOMmzWd3HXJxwtTlys9ErgsYThhJgLWok7-Dg5ZGiaV5INIKnF4BAYjr3bg9'
     };
   },
   methods: {
@@ -159,7 +160,16 @@ export default {
   },
   mounted() {
     this.resetForm();
-    this.formUrl = this.$i18n.locale === 'fr' ? this.frenchNewsletter : this.englishNewsletter;
+    switch (this.$i18n.locale) {
+      case 'fr':
+        this.formUrl = this.frenchNewsletter;
+        break;
+      case 'nl':
+        this.formUrl = this.dutchNewsletter;
+        break;
+      default:
+        this.formUrl = this.englishNewsletter;
+    }
   },
   computed: {
     enableSubmitButton() {
