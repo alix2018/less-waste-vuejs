@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable */
 const translations = {
   en: {
     metadata: {
@@ -161,7 +161,7 @@ const translations = {
   nl: {
     metadata: {
       title: "Verminder je afval vandaag!",
-      description: "Wil jij verminderen in het afval wat je produceert? Wij hebben makkelijke tips en tricks die je kunnen helpen!",
+      description: "Wil jij het afval dat je produceert verminderen? Wij hebben makkelijke tips en tricks die je kunnen helpen!",
       noJavascript: "Schakel JavaScript in om deze website te bekijken."
     },
     home: {
@@ -170,24 +170,24 @@ const translations = {
       subtitle: "Binnenkort",
       h2_first_section_title: "Makkelijke en eenvoudige informatie",
       alt_clock: "klok",
-      article_title_time: "Wil jij tijd besparen?",
+      article_title_time: "Wil je tijd besparen?",
       article_text_time: "Geen blabla hier, we geven je de belangrijkste punten zodat je in je eigen tempo vooruitgang kunt boeken.",
       alt_information: "informatie",
       article_title_info: "Weet je niet waar je moet kijken?",
       article_text_info: "Maak je geen zorgen. Wij helpen je om je afval te verminderen voor elke kamer in je thuis.",
       alt_planet: "planeet",
-      article_title_environment: "Wil jij je gezondheid behouden?",
+      article_title_environment: "Wil je gezond blijven?",
       article_text_environment: "... En de planeet behouden. Wij geven je de tools om voor jezelf en het milieu te zorgen.",
       alt_euros: "euro",
-      article_title_money: "Wil jij geld besparen?",
-      article_text_money: "Wij geven je tips om je budget te verlagen en tegelijkertijd je impact te verkleinen.",
+      article_title_money: "Wil je geld besparen?",
+      article_text_money: "Wij geven je tips om geld te besparen en tegelijkertijd je impact te verkleinen.",
       alt_announcement: "aankondiging",
       newsletter_coming_soon: "Heb je <span class=\"highlight\">« ja »</span> beantwoord op alle voorgaande vragen?",
       newsletter_inscription: "Dus schrijf je in voor onze newsletter om op de hoogte te blijven wanneer de definitieve website klaar is!",
       newsletter_button_subscribe: "inschrijven",
       alt_us: "ons",
       about_us_who_we_are: "Wie zijn wij?",
-      about_us_description: "Hallo aan jij die rustig voor jouw scherm zit. Wij zijn <span class=\"highlight\">Shannon & Stéphanie</span>, respectievelijk Belg en Frans woonachtig in België en Nederland. Ja, het is nogal een mix.\n\nJe vraagt je waarschijnlijk af waarom we deze site hebben gemaakt? Stel je voor dat we allebei werken aan <span class=\"highlight\">het verminderen van ons afval</span> en dat we al snel dezelfde frustraties en dezelfde waardeloze ervaringen hadden, dat beloof ik je!\n\nDus we zouden graag nemen je mee op <span class=\"highlight\">ons zero waste avontuur</span> en helpen je om het jouwe te ontwikkelen (of je nu net begint of al ervaring hebt). We willen jouw ervaring zo aangenaam mogelijk maken door jij <span class=\"highlight\">gemakkelijk</span> de informatie te verstrekken die je nodig heeft. En waarom zou je dan niet ook je vrienden aan boord krijgen, want alleen zouden we niet ver gaan om onze prachtige planeet te redden. 🌍",
+      about_us_description: "Hallo aan jij aan de andere kant van het scherm. Wij zijn <span class=\"highlight\">Shannon & Stéphanie</span>, respectievelijk Belg en Frans woonachtig in België en Nederland. Ja, het is nogal een mix.\n\nJe vraagt je waarschijnlijk af waarom we deze site hebben gemaakt? We werkten beiden aan <span class=\"highlight\">het verminderen van ons afval</span> en liepen al snel tegen dezelfde frustraties en waardeloze ervaringen aan.\n\nDus we nemen je graag mee op <span class=\"highlight\">ons zero waste avontuur</span> en helpen je om het jouwe te ontwikkelen (of je nu net begint of al ervaring hebt). We willen jouw ervaring zo aangenaam mogelijk maken door je <span class=\"highlight\">gemakkelijk</span> de informatie te verstrekken die je nodig hebt. En waarom zou je dan niet ook je vrienden aan boord krijgen, want alleen samen kunnen we onze prachtige planeet te redden. 🌍",
       social_in_the_meantime: "Wil jij meer weten?",
       social_follow_us: "Volg ons op social media!",
       alt_instagram: "instagram",
@@ -195,8 +195,8 @@ const translations = {
       alt_facebook: "facebook",
       social_facebook: "Facebook",
       alt_share: "delen",
-      share_title: "Wil jij delen met je vrienden?",
-      share_description: "Stuur hen de URL van deze website. Vergeet je familie niet, je collega's, je buurman, je kat, je hond... Zo kunnen we allemaal op ons eigen niveau handelen!",
+      share_title: "Wil je dit delen met je vrienden?",
+      share_description: "Deel de URL met familie, je collega's, je buurman, je kat, je hond... Zo kunnen we allemaal op ons eigen niveau handelen!",
       language_en: "Engels",
       language_fr: "Frans",
       language_nl: "Nederlands",
@@ -208,18 +208,18 @@ const translations = {
     newsletter: {
       alt_close: "sluiten",
       form_error_message: "Helaas kon je registratie niet worden opgeslagen. Probeer het opnieuw 🤞",
-      form_success_message: "Jouw registratie is geslaagd, welkom aan boord! 🎉",
+      form_success_message: "De registratie is geslaagd, welkom aan boord! 🎉",
       form_title: "Newsletter",
       from_subtitle: "Kijk jij ook uit naar de volgende stap 🙂",
       form_label_email: "Vul je e-mailadres in om je te registreren",
       form_email_input_example: "Voer je e-mailadres in om je in te schrijven. Bijvoorbeeld: abc{'@'}xyz.com",
-      form_accept_terms: "Ik ga akkoord met het ontvangen van jouw newsletter en ik accepteer de privacyverklaring.",
-      form_unsubscribe: "Je kunt zich op elk moment uitschrijven via de link in onze newsletter.",
+      form_accept_terms: "Ik ga akkoord met het ontvangen van de newsletter en ik accepteer de privacyverklaring.",
+      form_unsubscribe: "Je kunt je op elk moment uitschrijven via de link in onze newsletter.",
       form_sendingblue_terms: "Wij gebruiken Sendinblue als marketingplatform. Door hieronder te klikken om dit formulier te verzenden, erken je dat de informatie die jij hebt verstrekt zal worden overgedragen aan Sendinblue voor verwerking in overeenstemming met hun ",
       form_sendingblue_terms_link: "gebruiksvoorwaarden",
       form_button_submit: "Sturen",
       confirmation_title: "Gefeliciteerd!",
-      confirmation_text1: "Je bent ingeschreven voor onze newsletter, wij nemen contact met jij op als onze website klaar is 🙂",
+      confirmation_text1: "Je bent ingeschreven voor onze newsletter, we nemen contact met je op als onze website klaar is 🙂",
       confirmation_text2: "Tot je van ons hoort, deel het met jouw vrienden!"
     },
     share: {
@@ -228,11 +228,11 @@ const translations = {
       button_native_share: "Delen",
     },
     privacyPolicy: {
-      button_back_to_home: "Terug naar huis"
+      button_back_to_home: "Terug naar het begin"
     },
     footer: {
       alt_background: "achtergrond voettekst",
-      comment_ideas: "Heef jij feedback of ideeën? Neem contact met ons op!",
+      comment_ideas: "Heb je feedback of ideeën? Neem contact met ons op!",
       copyright: "© {year}. Alle rechten voorbehouden.",
       privacy_policy: "Privacy Policy"
     }
