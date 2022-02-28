@@ -81,7 +81,7 @@ const translations = {
   },
   fr: {
     metadata: {
-      title: "Réduis-tes déchets aujourd'hui !",
+      title: "Réduis tes déchets dès aujourd'hui !",
       description: "Tu veux réduire tes déchets ? On a des conseils et des astuces pour toi !",
       noJavascript: "Veuillez activer JavaScript pour afficher ce site Web."
     },
