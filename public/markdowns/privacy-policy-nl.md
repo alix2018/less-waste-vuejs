@@ -1,10 +1,10 @@
-# Privacybeleid
+# Privacyverklaring
 
 _Laatst bijgewerkt: 26 februari 2022_
 
-Dit privacybeleid beschrijft ons beleid en onze procedures voor het verzamelen, gebruiken en openbaar maken van uw informatie wanneer u de service gebruikt en vertelt u over uw privacyrechten en hoe de wet u beschermt.
+Dit privacyverklaring beschrijft ons beleid en onze procedures voor het verzamelen, gebruiken en openbaar maken van uw informatie wanneer u de service gebruikt en vertelt u over uw privacyrechten en hoe de wet u beschermt.
 
-We gebruiken uw persoonlijke gegevens om de service te leveren en te verbeteren. Door de Service te gebruiken, gaat u akkoord met het verzamelen en gebruiken van informatie in overeenstemming met dit privacybeleid. Dit privacybeleid is tot stand gekomen met behulp van de privacybeleidgenerator.
+We gebruiken uw persoonlijke gegevens om de service te leveren en te verbeteren. Door de Service te gebruiken, gaat u akkoord met het verzamelen en gebruiken van informatie in overeenstemming met dit privacyverklaring. Dit privacyverklaring is tot stand gekomen met behulp van de privacyverklaringgenerator.
 
 ## Interpretatie en definities
 
@@ -14,7 +14,7 @@ De woorden waarvan de beginletter met een hoofdletter wordt geschreven, hebben e
 
 ### Definities
 
-Voor de doeleinden van dit privacybeleid:
+Voor de doeleinden van dit privacyverklaring:
 
 - Account betekent een uniek account dat voor U is aangemaakt om toegang te krijgen tot onze Service of delen van onze Service.
 - Bedrijf (in deze Overeenkomst "het bedrijf", "wij", "ons" of "onze" genoemd) verwijst naar Less Waste For the Planet.
@@ -76,7 +76,7 @@ We gebruiken zowel sessie- als permanente cookies voor de onderstaande doeleinde
   - Beheerd door: Ons
   - Doel: Deze cookies stellen ons in staat keuzes te onthouden die u maakt wanneer u de website gebruikt, zoals het onthouden van uw inloggegevens of taalvoorkeur. Het doel van deze cookies is om u een persoonlijkere ervaring te bieden en te voorkomen dat u uw voorkeuren telkens wanneer u de website gebruikt opnieuw moet invoeren.
 
-Ga voor meer informatie over de cookies die we gebruiken en uw keuzes met betrekking tot cookies naar ons Cookiebeleid of het gedeelte Cookies van ons Privacybeleid.
+Ga voor meer informatie over de cookies die we gebruiken en uw keuzes met betrekking tot cookies naar ons Cookiebeleid of het gedeelte Cookies van ons Privacyverklaring.
 
 ### Gebruik van uw persoonlijke gegevens
 
@@ -95,14 +95,14 @@ We kunnen uw persoonlijke gegevens delen in de volgende situaties:
 
 - Met serviceproviders: we kunnen uw persoonlijke gegevens delen met serviceproviders om het gebruik van onze service te controleren en te analyseren, om contact met u op te nemen.
 Voor bedrijfsoverdrachten: we kunnen uw persoonlijke informatie delen of overdragen in verband met, of tijdens onderhandelingen over, een fusie, verkoop van bedrijfsactiva, financiering of overname van alle of een deel van ons bedrijf aan een ander bedrijf.
-- Met gelieerde ondernemingen: we kunnen uw informatie delen met onze gelieerde ondernemingen, in welk geval we van die gelieerde ondernemingen zullen eisen dat ze dit privacybeleid respecteren. Gelieerde ondernemingen zijn onder meer Ons moederbedrijf en alle andere dochterondernemingen, joint venture-partners of andere bedrijven waarover wij zeggenschap hebben of die onder gezamenlijke controle van ons staan.
+- Met gelieerde ondernemingen: we kunnen uw informatie delen met onze gelieerde ondernemingen, in welk geval we van die gelieerde ondernemingen zullen eisen dat ze dit privacyverklaring respecteren. Gelieerde ondernemingen zijn onder meer Ons moederbedrijf en alle andere dochterondernemingen, joint venture-partners of andere bedrijven waarover wij zeggenschap hebben of die onder gezamenlijke controle van ons staan.
 - Met zakenpartners: we kunnen uw informatie delen met onze zakenpartners om u bepaalde producten, diensten of promoties aan te bieden.
 - Met andere gebruikers: wanneer u persoonlijke informatie deelt of op een andere manier in de openbare ruimtes communiceert met andere gebruikers, kan dergelijke informatie door alle gebruikers worden bekeken en openbaar buiten worden verspreid.
 Met uw toestemming: wij kan uw persoonlijke gegevens met uw toestemming voor andere doeleinden bekendmaken.
 
 ### Bewaring van uw persoonlijke gegevens
 
-Het bedrijf bewaart uw persoonlijke gegevens alleen zolang als nodig is voor de doeleinden die in dit privacybeleid worden uiteengezet. We zullen uw persoonlijke gegevens bewaren en gebruiken voor zover dat nodig is om te voldoen aan onze wettelijke verplichtingen (bijvoorbeeld als we uw gegevens moeten bewaren om te voldoen aan toepasselijke wetgeving), geschillen op te lossen en onze juridische overeenkomsten en beleid af te dwingen.
+Het bedrijf bewaart uw persoonlijke gegevens alleen zolang als nodig is voor de doeleinden die in dit privacyverklaring worden uiteengezet. We zullen uw persoonlijke gegevens bewaren en gebruiken voor zover dat nodig is om te voldoen aan onze wettelijke verplichtingen (bijvoorbeeld als we uw gegevens moeten bewaren om te voldoen aan toepasselijke wetgeving), geschillen op te lossen en onze juridische overeenkomsten en beleid af te dwingen.
 
 Het bedrijf bewaart ook gebruiksgegevens voor interne analysedoeleinden. Gebruiksgegevens worden over het algemeen voor een kortere periode bewaard, behalve wanneer deze gegevens worden gebruikt om de beveiliging te versterken of om de functionaliteit van Onze Dienst te verbeteren, of als We wettelijk verplicht zijn om deze gegevens voor langere perioden te bewaren.
 
@@ -110,15 +110,15 @@ Het bedrijf bewaart ook gebruiksgegevens voor interne analysedoeleinden. Gebruik
 
 Uw informatie, inclusief Persoonsgegevens, wordt verwerkt in de kantoren van het Bedrijf en op alle andere plaatsen waar de bij de verwerking betrokken partijen zich bevinden. Dit betekent dat deze informatie kan worden overgedragen naar - en onderhouden op - computers die zich buiten uw staat, provincie, land of ander overheidsrechtsgebied bevinden waar de wetten inzake gegevensbescherming kunnen verschillen van die van uw rechtsgebied.
 
-Uw toestemming voor dit privacybeleid, gevolgd door uw indiening van dergelijke informatie, vertegenwoordigt uw instemming met die overdracht.
+Uw toestemming voor dit privacyverklaring, gevolgd door uw indiening van dergelijke informatie, vertegenwoordigt uw instemming met die overdracht.
 
-Het bedrijf zal alle redelijkerwijs noodzakelijke stappen ondernemen om ervoor te zorgen dat uw gegevens veilig en in overeenstemming met dit privacybeleid worden behandeld en dat uw persoonlijke gegevens niet worden overgedragen aan een organisatie of een land, tenzij er voldoende controles zijn, waaronder de beveiliging van Uw gegevens en andere persoonlijke informatie.
+Het bedrijf zal alle redelijkerwijs noodzakelijke stappen ondernemen om ervoor te zorgen dat uw gegevens veilig en in overeenstemming met dit privacyverklaring worden behandeld en dat uw persoonlijke gegevens niet worden overgedragen aan een organisatie of een land, tenzij er voldoende controles zijn, waaronder de beveiliging van Uw gegevens en andere persoonlijke informatie.
 
 ### Openbaarmaking van uw persoonlijke gegevens
 
 #### Zakelijke transacties
 
-Als het bedrijf betrokken is bij een fusie, overname of verkoop van activa, kunnen uw persoonsgegevens worden overgedragen. We zullen u op de hoogte stellen voordat uw persoonlijke gegevens worden overgedragen en onderworpen worden aan een ander privacybeleid.
+Als het bedrijf betrokken is bij een fusie, overname of verkoop van activa, kunnen uw persoonsgegevens worden overgedragen. We zullen u op de hoogte stellen voordat uw persoonlijke gegevens worden overgedragen en onderworpen worden aan een ander privacyverklaring.
 
 #### Politie
 
@@ -146,20 +146,20 @@ Als we moeten vertrouwen op toestemming als rechtsgrondslag voor het verwerken v
 
 ## Links naar andere websites
 
-Onze Service kan links bevatten naar andere websites die niet door Ons worden beheerd. Als u op een link van een derde partij klikt, wordt u naar de site van die derde partij geleid. We raden u ten zeerste aan om het privacybeleid van elke site die u bezoekt te lezen.
+Onze Service kan links bevatten naar andere websites die niet door Ons worden beheerd. Als u op een link van een derde partij klikt, wordt u naar de site van die derde partij geleid. We raden u ten zeerste aan om het privacyverklaring van elke site die u bezoekt te lezen.
 
-We hebben geen controle over en aanvaarden geen verantwoordelijkheid voor de inhoud, het privacybeleid of de praktijken van sites of diensten van derden.
+We hebben geen controle over en aanvaarden geen verantwoordelijkheid voor de inhoud, het privacyverklaring of de praktijken van sites of diensten van derden.
 
-## Wijzigingen in dit privacybeleid
+## Wijzigingen in dit privacyverklaring
 
-We kunnen ons privacybeleid van tijd tot tijd bijwerken. We zullen u op de hoogte stellen van eventuele wijzigingen door het nieuwe privacybeleid op deze pagina te plaatsen.
+We kunnen ons privacyverklaring van tijd tot tijd bijwerken. We zullen u op de hoogte stellen van eventuele wijzigingen door het nieuwe privacyverklaring op deze pagina te plaatsen.
 
-We zullen u hiervan op de hoogte stellen via e-mail en/of een prominente kennisgeving op Onze Service, voordat de wijziging van kracht wordt, en de datum "Laatst bijgewerkt" bovenaan dit Privacybeleid bijwerken.
+We zullen u hiervan op de hoogte stellen via e-mail en/of een prominente kennisgeving op Onze Service, voordat de wijziging van kracht wordt, en de datum "Laatst bijgewerkt" bovenaan dit Privacyverklaring bijwerken.
 
-U wordt geadviseerd om dit privacybeleid regelmatig te controleren op eventuele wijzigingen. Wijzigingen in dit privacybeleid zijn van kracht wanneer ze op deze pagina worden geplaatst.
+U wordt geadviseerd om dit privacyverklaring regelmatig te controleren op eventuele wijzigingen. Wijzigingen in dit privacyverklaring zijn van kracht wanneer ze op deze pagina worden geplaatst.
 
 ## Neem contact met ons op
 
-Als u vragen heeft over dit privacybeleid, kunt u contact met ons opnemen:
+Als u vragen heeft over dit privacyverklaring, kunt u contact met ons opnemen:
 
 - Per e-mail: lesswastefortheplanet@gmail.com
