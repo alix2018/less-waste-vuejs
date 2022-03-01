@@ -134,9 +134,9 @@ export default {
       isDesktop: window.innerWidth >= 550,
       formUrl: '',
       // TODO: create config file
-      englishNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAGKgk738VVKAa-p1HxUsySV-lDuPd9LBmpgkGX7bsJ8OHdXNZ9kdcbu6lv_f-DR5bFkFbfWyeM9pWJ5IklCs4jEGpNkfFvooNGSzJhk7c5RXVy6hXsU-drc8O1D69mI9me-cqWpiGouisZcmIp3ALzPnWUizNF8_QtsOQW6Nj6yTbJeh8YeErjH9dUVoOJxZthwfDVgz6ria',
-      frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbuttonjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev',
-      dutchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEADWWtVSkj4Bvf69hdrAmZhtSvgzKmzCH1DFTzGexXOu7_Fr0DC3Z5MHpZOUT5k7Y4tIOO2DZByHDTqRAPE5et16NzrGeW717OmkLZlO2OHzTCyE7YVwuzYkpP8TNmL1-cF-WwWGYUhcYAAfkhVHuCCM5SpKTdXI6-TvpuV7doHaKLRZhlWC7wMpEC7O-4twTxSOovF0br9pt'
+      englishNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEALQq_7rXNWxQyG-9u5HVlETotxoQmuCfb5CNKjUiXiHjRcnXmhSu1yDxN_WaDnEbwBrU1rjM3t9CkYCsjjPBfxWHOQwG59bjPwgPH6ONAW_pyYLhCMBKTUVGqxCu-fTNRYO-m5pQ3Yp8yH1qrh0hPURK1jntWblpeKsM84RKrOzcXFbFAlH6huAUxKHBvlyZ5NFguCdqJTHr',
+      frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAPH_kfHHamfC0AZr581ZOjefQBYV21sR0ZQ37fv3d2X9It4tCl08lhvI42AMJJ_w6Nt9BNJTcUzArXujaS-D8-7xxXGkYatOfgAziFRyjK1oJq7CPhRFpqmCu_vJvLgCsjmRsxaSWD_xvWPKR6HzXWBP_r8rwe4CVrx4BOzw5I8gmta71TI1aPjAz5D4t82wyFe0AC26VjKM',
+      dutchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEALbMR5pf415SfrqK11zE0CwZPP5_TFZcxQdDvyQm1owCPbXn4c84HwLoMARqamcZ6QfIy0GOPE8oCHLSIMilkIcqPOt9eb3gApom_eZ9vx20JdzFYc1ellrVTBZj8P1vvCV9nzkheZe968QmyoNr_sKxsBbxDp2o7gviYE6Utg4yWQg45ShVtppfpW6xVhqMezNRmsjrI_Cn'
     };
   },
   methods: {
@@ -151,6 +151,16 @@ export default {
       }
     },
     onClickSubmitButton() {
+      switch (this.$i18n.locale) {
+        case 'fr':
+          this.formUrl = this.frenchNewsletter;
+          break;
+        case 'nl':
+          this.formUrl = this.dutchNewsletter;
+          break;
+        default:
+          this.formUrl = this.englishNewsletter;
+      }
       this.$gtag.event('click_subscribe_newsletter');
     },
     resetForm() {
@@ -160,16 +170,6 @@ export default {
   },
   mounted() {
     this.resetForm();
-    switch (this.$i18n.locale) {
-      case 'fr':
-        this.formUrl = this.frenchNewsletter;
-        break;
-      case 'nl':
-        this.formUrl = this.dutchNewsletter;
-        break;
-      default:
-        this.formUrl = this.englishNewsletter;
-    }
   },
   computed: {
     enableSubmitButton() {
