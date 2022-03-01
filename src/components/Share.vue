@@ -1,20 +1,20 @@
 <template>
-  <div class="btn-share flex" v-if="isDesktop">
+  <div class="button-share flex" v-if="isDesktop">
     <input type="text" ref="copyUrl" aria-label="link to copy" v-model="url" readonly="readonly" />
     <button aria-label="{{ $t('share.button_copy') }}" @click="onClickCopyButton">{{ $t('share.button_copy') }}</button>
     <div v-if="copySuccess">
-      <img src="../assets/checkmark.svg" alt="checkmark" height="12">
+      <img src="../assets/checkmark.svg" alt="{{ $t('home.alt_checkmark') }}" height="12">
     </div>
   </div>
 
-  <div class="btn-share flex" v-if="showNativeShareButton">
+  <div class="button-share flex" v-if="showNativeShareButton">
     <button aria-label="{{ $t('share.button_native_share') }}" @click="onClickShareButton">{{ $t('share.button_native_share') }}</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ShareComponent',
+  name: 'Share',
 
   data() {
     return {
@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 @import "@scss/_global.scss";
 
-.btn-share {
+.button-share {
   align-items: center;
   justify-content: flex-start;
 

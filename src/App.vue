@@ -53,7 +53,6 @@ body {
   margin: 0;
   padding: 0 $body-padding-big-screen;
   font-size: 20px;
-  overflow-x: hidden;
 }
 
 @media (max-width: 1500px) {

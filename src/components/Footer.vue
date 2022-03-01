@@ -13,14 +13,14 @@
 
       <div class="copyright flex">
         <p>{{ $t('footer.copyright', { year: this.copyrightYear }) }}</p>
-        <img class="logo" src="../assets/footer-logo.png" alt="logo">
+        <img class="logo" src="../assets/footer-logo-lesswastefortheplanet.png" alt="logo lesswastefortheplanet">
       </div>
     </div>
 
     <picture>
       <source srcset="../assets/background-footer.png" media="(min-width: 550px)"/>
       <source srcset="../assets/background-footer-mobile.png" media="(max-width: 550px)"/>
-      <img class="background" src="../assets/background-footer.png" alt="footer background">
+      <img class="background" src="../assets/background-footer.png" alt="{{ $t('footer.alt_background') }}">
     </picture>
   </footer>
 </template>

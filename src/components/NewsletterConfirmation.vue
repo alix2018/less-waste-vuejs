@@ -1,12 +1,12 @@
 <template>
   <article>
-    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
+    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.button_back_to_home') }}</router-link>
     <section>
       <div class="flex">
-        <h2>{{ $t('newsletter.confirmation_title') }}</h2>
+        <h2 v-html="$t('newsletter.confirmation_title')"></h2>
         <p>{{ $t('newsletter.confirmation_text1') }}</p>
         <p v-html="$t('newsletter.confirmation_text2')"></p>
-        <ShareComponent></ShareComponent>
+        <Share></Share>
       </div>
     </section>
   </article>
@@ -16,13 +16,13 @@
 <script>
 import Confetti from 'vue-confetti/src/confetti';
 import Footer from './Footer.vue';
-import ShareComponent from './ShareComponent.vue';
+import Share from './Share.vue';
 
 export default {
   name: 'NewsletterConfirmation',
   components: {
     Footer,
-    ShareComponent
+    Share
   },
   data() {
     return {

@@ -44,10 +44,6 @@ $body-padding-mobile: 40px;
 }
 
 /* MIXINS MOBILE */
-@mixin paragraph-text-light-mobile {
-  font-family: 'Lato Regular';
-}
-
 @mixin text-banner-mobile {
   font-size: 20px;
   text-align: left;
@@ -56,6 +52,16 @@ $body-padding-mobile: 40px;
 /* GENERIC TAG */
 * {
   box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: $color-white;
+  background: $color-orange;
+}
+
+::selection {
+  color: $color-white;
+  background: $color-orange;
 }
 
 h1,
@@ -176,6 +182,7 @@ div.banner {
   margin-left: -$body-padding-big-screen;
   width: calc(100% + 2 * #{$body-padding-big-screen});
   height: 400px;
+  padding: 0 $body-padding-big-screen;
   z-index: -1;
   background-repeat: no-repeat;
   background-position: center;
@@ -190,22 +197,40 @@ div.banner {
   font-family: 'Lato Bold';
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media (max-width: 1023px) {
   h1 {
     font-size: 45px;
     line-height: 52px;
   }
+}
 
-  // TODO: still to fix on tablet view
+@media (max-width: 1500px) {
   div.banner {
     margin-left: -$body-padding-desktop;
     width: calc(100% + 2 * #{$body-padding-desktop});
+    padding: 0 $body-padding-desktop;
+  }
+}
+
+@media (max-width: 1023px) {
+  div.banner {
+    margin-left: -$body-padding-mobile;
+    width: calc(100% + 2 * #{$body-padding-mobile});
+    padding: 0 $body-padding-mobile;
   }
 }
 
 @media (max-width: 550px) {
   h1 {
-    font-size: 45px;
+    font-size: 42px;
     line-height: 52px;
   }
 
@@ -220,10 +245,6 @@ div.banner {
 
     div.content {
       margin: 0;
-    }
-
-    p {
-      @include paragraph-text-light-mobile;
     }
   }
 

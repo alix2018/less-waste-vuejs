@@ -25,17 +25,17 @@
         </div>
         <div></div>
         <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px;">
-          <form id="sib-form" method="POST" action="https://3cf400b4.sibforms.com/serve/MUIEAD1g6kLimFaRptXe3hq5EUXQbXxypoIL-zygjWzg17ngee6xnzUTRpoA99V8LlXtOgcLUq2cUCfhtLERRJvGWJZCtU7aMP9Pi5d8P0Lkzp-WuyC4_1-wMav755fvyzyb4D2opIKwGU3_nahFB_mAr_ALVS36TZCbtNjQXRTZUaKDqEoai7_KqMPcDIbye9MWXI1F_tn-C2Ev" data-type="subscription">
+          <form id="sib-form" method="POST" :action="formUrl" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block flex" style="font-size:32px; text-align:left; font-weight:700; color:#272D2D; background-color:transparent;">
                 <p class="title">{{ $t('newsletter.form_title') }}</p>
-                <img src="../assets/cross.svg" height="18" @click="onClickCloseModal" alt="cross">
+                <img src="../assets/cross.svg" height="18" @click="onClickCloseModal" alt="{{ $t('newsletter.alt_close') }}">
               </div>
             </div>
             <div style="padding: 8px 0;">
               <div class="sib-form-block" style="font-size:16px; text-align:left; color:#272D2D; background-color:transparent;">
                 <div class="sib-text-form-block">
-                  <p>{{ $t('newsletter.from_subtitle') }}</p>
+                  <p v-html="$t('newsletter.from_subtitle')"></p>
                 </div>
               </div>
             </div>
@@ -102,11 +102,11 @@
             </div>
             <div style="padding: 8px 0;">
               <div class="sib-form-block" style="text-align: left">
-                <button class="sib-form-block__button sib-form-block__button-with-loader" ariab-label="Subscribe" style="font-size:16px; text-align:left; font-weight:700; color:#FFFFFF; background-color:#3E4857; border-radius: 6px; border-width:0px;" form="sib-form" type="submit" :disabled="!enableSubmitButton" @click="onClickSubmitButton">
+                <button class="sib-form-block__button sib-form-block__button-with-loader" ariab-label="{{ $t('newsletter.form_button_submit') }}" style="font-size:16px; text-align:left; font-weight:700; color:#FFFFFF; background-color:#3E4857; border-radius: 6px; border-width:0px;" form="sib-form" type="submit" :disabled="!enableSubmitButton" @click="onClickSubmitButton">
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  {{ $t('newsletter.form_btn_submit') }}
+                  {{ $t('newsletter.form_button_submit') }}
                 </button>
               </div>
             </div>
@@ -131,7 +131,12 @@ export default {
       emailInput: '',
       termsAndConditionsChecked: false,
       showRoute: window.location.pathname === '/newsletter',
-      isDesktop: window.innerWidth >= 550
+      isDesktop: window.innerWidth >= 550,
+      formUrl: '',
+      // TODO: create config file
+      englishNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEALQq_7rXNWxQyG-9u5HVlETotxoQmuCfb5CNKjUiXiHjRcnXmhSu1yDxN_WaDnEbwBrU1rjM3t9CkYCsjjPBfxWHOQwG59bjPwgPH6ONAW_pyYLhCMBKTUVGqxCu-fTNRYO-m5pQ3Yp8yH1qrh0hPURK1jntWblpeKsM84RKrOzcXFbFAlH6huAUxKHBvlyZ5NFguCdqJTHr',
+      frenchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEAPH_kfHHamfC0AZr581ZOjefQBYV21sR0ZQ37fv3d2X9It4tCl08lhvI42AMJJ_w6Nt9BNJTcUzArXujaS-D8-7xxXGkYatOfgAziFRyjK1oJq7CPhRFpqmCu_vJvLgCsjmRsxaSWD_xvWPKR6HzXWBP_r8rwe4CVrx4BOzw5I8gmta71TI1aPjAz5D4t82wyFe0AC26VjKM',
+      dutchNewsletter: 'https://3cf400b4.sibforms.com/serve/MUIEALbMR5pf415SfrqK11zE0CwZPP5_TFZcxQdDvyQm1owCPbXn4c84HwLoMARqamcZ6QfIy0GOPE8oCHLSIMilkIcqPOt9eb3gApom_eZ9vx20JdzFYc1ellrVTBZj8P1vvCV9nzkheZe968QmyoNr_sKxsBbxDp2o7gviYE6Utg4yWQg45ShVtppfpW6xVhqMezNRmsjrI_Cn'
     };
   },
   methods: {
@@ -146,6 +151,16 @@ export default {
       }
     },
     onClickSubmitButton() {
+      switch (this.$i18n.locale) {
+        case 'fr':
+          this.formUrl = this.frenchNewsletter;
+          break;
+        case 'nl':
+          this.formUrl = this.dutchNewsletter;
+          break;
+        default:
+          this.formUrl = this.englishNewsletter;
+      }
       this.$gtag.event('click_subscribe_newsletter');
     },
     resetForm() {

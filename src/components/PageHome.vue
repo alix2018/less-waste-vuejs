@@ -1,11 +1,12 @@
 <template>
-  <header>
+  <header :style="{ height: headerHeight + 'px' }">
     <picture>
       <source srcset="../assets/background-header-desktop.png" media="(min-width: 550px)"/>
       <source srcset="../assets/background-header-mobile.png" media="(max-width: 550px)"/>
-      <img src="../assets/background-header-desktop.png" alt="header background">
+      <img src="../assets/background-header-desktop.png" alt="{{ $t('home.alt_header_background') }}" :style="{ height: headerBackgroundHeight + 'px' }">
     </picture>
-    <div>
+    <LanguageSwitcher @newLanguageSet="setHeaderSize"></LanguageSwitcher>
+    <div ref="headerContent">
       <h1>{{ $t('home.title') }}</h1>
       <h2 class="coming-soon">{{ $t('home.subtitle') }}</h2>
     </div>
@@ -15,31 +16,31 @@
   <h2 class="first-article">{{ $t('home.h2_first_section_title') }}</h2>
   <section class="explanations">
     <article class="layout">
-      <img class="icon" src="../assets/icon-time.png" alt="clock">
+      <img class="icon" src="../assets/icon-money.png" alt="{{ $t('home.alt_euros') }}">
+      <div class="content">
+        <h3 v-html="$t('home.article_title_money')"></h3>
+        <p>{{ $t('home.article_text_money') }}</p>
+      </div>
+    </article>
+    <article class="layout">
+      <img class="icon" src="../assets/icon-time.png" alt="{{ $t('home.alt_clock') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_time')"></h3>
         <p>{{ $t('home.article_text_time') }}</p>
       </div>
     </article>
     <article class="layout">
-      <img class="icon" src="../assets/icon-info.png" alt="information">
+      <img class="icon" src="../assets/icon-info.png" alt="{{ $t('home.alt_information') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_info')"></h3>
         <p>{{ $t('home.article_text_info') }}</p>
       </div>
     </article>
     <article class="layout">
-      <img class="icon" src="../assets/icon-environment.png" alt="planet">
+      <img class="icon" src="../assets/icon-environment.png" alt="{{ $t('home.alt_planet') }}">
       <div class="content">
         <h3 v-html="$t('home.article_title_environment')"></h3>
         <p>{{ $t('home.article_text_environment') }}</p>
-      </div>
-    </article>
-    <article class="layout">
-      <img class="icon" src="../assets/icon-money.png" alt="euros">
-      <div class="content">
-        <h3 v-html="$t('home.article_title_money')"></h3>
-        <p>{{ $t('home.article_text_money') }}</p>
       </div>
     </article>
   </section>
@@ -47,9 +48,9 @@
   <!-- Section 2: Banner Newletter -->
   <section class="newsletter">
     <div class="banner">
-      <img src="../assets/icon-announcement.png" alt="announcement" height="70">
+      <img src="../assets/icon-announcement.png" alt="{{ $t('home.alt_announcement') }}" height="70">
       <p v-html="$t('home.newsletter_coming_soon')"></p>
-      <p>{{ $t('home.newsletter_inscription') }}</p>
+      <p v-html="$t('home.newsletter_inscription')"></p>
       <button aria-label="{{ $t('home.newsletter_button_subscribe') }}" @click="onClickOpenForm">{{ $t('home.newsletter_button_subscribe') }}</button>
       </div>
   </section>
@@ -59,13 +60,13 @@
       <div class="picture-text">
         <div class="picture">
           <picture>
-            <source srcset="@public/photo-us.png" media="(min-width: 550px)"/>
-            <source srcset="@public/photo-us-mobile.png" media="(max-width: 550px)"/>
-            <img src="@public/photo-us.png" alt="us">
+            <source srcset="@public/assets/photo-us.png" media="(min-width: 550px)"/>
+            <source srcset="@public/assets/photo-us-mobile.png" media="(max-width: 550px)"/>
+            <img src="@public/assets/photo-us.png" class="us" alt="{{ $t('home.alt_us') }}">
           </picture>
         </div>
         <div class="text">
-          <h2>{{ $t('home.about_us_who_we_are') }}</h2>
+          <h2 v-html="$t('home.about_us_who_we_are')"></h2>
           <p v-html="$t('home.about_us_description')"></p>
         </div>
       </div>
@@ -76,13 +77,13 @@
     <div class="banner">
       <div class="flex">
         <a href="https://www.instagram.com/lesswastefortheplanet/" target="_blank" rel="noopener noreferrer" @click="onClickInstagramLogo">
-          <img src="../assets/instagram-color.png" height="50" alt="instagram">
+          <img src="../assets/instagram-color.png" height="50" alt="{{ $t('home.alt_instagram') }}">
         </a>
         <a href="https://www.facebook.com/Less-waste-for-the-planet-107529881767168" target="_blank" rel="noopener noreferrer" @click="onClickFacebookLogo">
-          <img src="../assets/facebook-color.png" height="50" alt="facebook">
+          <img src="../assets/facebook-color.png" height="50" alt="{{ $t('home.alt_facebook') }}">
         </a>
       </div>
-      <p>{{ $t('home.social_in_the_meantime') }}</p>
+      <p v-html="$t('home.social_in_the_meantime')"></p>
       <p v-html="$t('home.social_follow_us')"></p>
       <div class="flex">
         <a href="https://www.instagram.com/lesswastefortheplanet/" class="instagram" target="_blank" rel="noopener noreferrer" @click="onClickInstagram">{{ $t('home.social_instagram') }}</a>
@@ -94,15 +95,15 @@
   <!-- Section 5: Share -->
   <section class="share">
     <article class="layout">
-      <img class="icon" src="../assets/icon-rock-n-roll.png" alt="rock n roll">
+      <img class="icon" src="../assets/icon-share.png" alt="{{ $t('home.alt_share') }}">
       <div class="content">
-        <h3>{{ $t('home.share_title') }}</h3>
-          <p>{{ $t('home.share_description') }}</p>
-          <ShareComponent></ShareComponent>
-
+        <h3 v-html="$t('home.share_title')"></h3>
+          <p v-html="$t('home.share_description')"></p>
+          <Share></Share>
       </div>
     </article>
   </section>
+
   <Footer privacyPolicy></Footer>
   <NewsletterForm :show="openModal" @onClickCloseModal="onClickCloseModal"/>
 </template>
@@ -110,25 +111,51 @@
 <script>
 import Footer from './Footer.vue';
 import NewsletterForm from './NewsletterForm.vue';
-import ShareComponent from './ShareComponent.vue';
+import Share from './Share.vue';
+import LanguageSwitcher from './LanguageSwitcher.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'PageHome',
   components: {
     Footer,
     NewsletterForm,
-    ShareComponent
+    Share,
+    LanguageSwitcher
   },
   data() {
     return {
       openModal: false,
-      isDesktop: window.innerWidth >= 550
+      // TODO: make is generic value (helper)
+      isDesktop: window.innerWidth >= 550,
+      headerHeight: 0,
+      headerBackgroundHeight: 0,
+      constants: {
+        DESKTOP_HEADER_SPACING: 130,
+        DESKTOP_BACKGROUND_SPACING: 25,
+        MOBILE_HEADER_SPACING: 50,
+        MOBILE_BACKGROUND_SPACING: 15,
+      }
     };
+  },
+  created() {
+    window.addEventListener('resize', this.setHeaderSize);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.setHeaderSize);
   },
   mounted() {
     this.$gtag.event('display_home_page');
+    this.setHeaderSize();
   },
   methods: {
+    setHeaderSize() {
+      this.isDesktop = window.innerWidth >= 550;
+      const header = this.$refs.headerContent;
+      const headerSpacing = this.isDesktop ? this.constants.DESKTOP_HEADER_SPACING : this.constants.MOBILE_HEADER_SPACING;
+      const backgroundSpacing = this.isDesktop ? this.constants.DESKTOP_BACKGROUND_SPACING : this.constants.MOBILE_BACKGROUND_SPACING;
+      this.headerHeight = header.offsetHeight + headerSpacing;
+      this.headerBackgroundHeight = this.headerHeight + headerSpacing - backgroundSpacing;
+    },
     onClickOpenForm() {
       this.$gtag.event('click_subscribe_to_newsletter');
       if (this.isDesktop) {
@@ -169,14 +196,11 @@ section:not(section.explanations, section.about-us) {
 }
 
 header {
-  height: 300px;
-
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 400px;
     z-index: -1;
   }
 
@@ -242,7 +266,9 @@ section.newsletter {
 
 /* Section 3: About us */
 section.about-us {
-  margin-top: 50px;
+  padding-top: 50px;
+  overflow-x: hidden;
+  width: calc(100% + #{$body-padding-big-screen});
 
   h2 {
     margin: 12px 0;
@@ -254,7 +280,7 @@ section.about-us {
     max-height: 650px;
     min-height: 450px;
 
-    img[alt='us'] {
+    img.us {
       position: absolute;
       top: 0;
       right: -200px;
@@ -340,9 +366,34 @@ Footer {
   margin-top: 150px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
+  section.about-us {
+    width: calc(100% + #{$body-padding-desktop});
+
+    .picture-text {
+      img.us {
+        right: -150px;
+      }
+
+      div.text {
+        max-width: calc(100% + 25px - 40vw);
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  section.about-us {
+    width: calc(100% + #{$body-padding-mobile});
+  }
+}
+
+@media (max-width: 767px) {
   /* Section 3: About us */
   section.about-us {
+    overflow: initial;
+    width: 100%;
+
     .picture-text {
       position: relative;
       display: flex;
@@ -358,7 +409,7 @@ Footer {
         width: 70vw;
         margin: 50px auto 0;
 
-        img[alt='us'] {
+        img.us {
           position: absolute;
           top: initial;
           right: initial;
@@ -381,20 +432,16 @@ Footer {
 }
 
 @media (max-width: 550px) {
-  section:not(section.explanations) {
+  section:not(section.explanations, section.about-us) {
     margin-top: 40px;
   }
 
   header {
     text-align: left;
-    height: 380px;
-
-    img {
-      height: 430px;
-    }
 
     h1 {
       margin-top: 35px;
+      margin-right: 40px;
       padding: 0;
     }
 
@@ -416,9 +463,18 @@ Footer {
     text-align: left;
   }
 
+  section.explanations {
+    article {
+      div.content {
+        max-width: none;
+      }
+    }
+  }
+
   /* Section 3: About us */
   section.about-us {
     $picture-size-mobile: calc(100vw + 4 * #{$body-padding-mobile});
+    margin-top: 0;
 
     .picture-text {
       div.picture {
@@ -429,16 +485,10 @@ Footer {
         margin-left: -1 * $body-padding-mobile;
         overflow-x: hidden;
 
-        img[alt='us'] {
+        img.us {
           width: $picture-size-mobile;
           height: $picture-size-mobile;
           left: -2 * $body-padding-mobile;
-        }
-      }
-
-      div.text {
-        p {
-          @include paragraph-text-light-mobile;
         }
       }
     }

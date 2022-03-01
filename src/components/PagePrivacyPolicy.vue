@@ -1,6 +1,6 @@
 <template>
   <article class="content-page">
-    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.btn_back_to_home') }}</router-link>
+    <router-link class="back" to="/home" @click="onClickBackHome">{{ $t('privacyPolicy.button_back_to_home') }}</router-link>
     <div class="markdown" v-html="markdownToHtml"></div>
   </article>
   <Footer></Footer>
@@ -11,7 +11,7 @@ import marked from 'marked';
 import Footer from './Footer.vue';
 
 export default {
-  name: 'PrivacyPolicyPage',
+  name: 'PagePrivacyPolicy',
   components: {
     Footer,
   },
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     getMarkdownFile() {
-      fetch('./privacy-policy-french.md')
+      fetch(`./markdowns/privacy-policy-${this.$i18n.locale}.md`)
         .then((res) => res.text())
         .then((text) => {
           this.markdown = text;

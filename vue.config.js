@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  indexPath: 'index.hbs',
   chainWebpack: (config) => {
     config.module
       .rule('md')

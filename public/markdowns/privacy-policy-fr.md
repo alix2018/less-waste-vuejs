@@ -1,6 +1,6 @@
 # Politique de confidentialité
 
-_Dernière mise à jour : 28 novembre 2021_
+_Dernière mise à jour : 26 February 2022_
 
 La présente Politique de confidentialité décrit Nos politiques et procédures en matière de collecte, d'utilisation et de divulgation de Vos informations lorsque Vous utilisez le Service et Vous informe de Vos droits en matière de confidentialité et de la manière dont la loi Vous protège.
 

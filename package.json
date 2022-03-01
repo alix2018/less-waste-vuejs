@@ -1,6 +1,6 @@
 {
   "name": "less-waste-vuejs",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
     "marked": "^0.7.0",
     "vue": "^3.0.0",
     "vue-confetti": "^2.2.2",

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.8.0 (2022-02-28)
+* Set up default user language [#86](https://github.com/alix2018/less-waste-vuejs/issues/86)
+* Implement language switcher [#90](https://github.com/alix2018/less-waste-vuejs/issues/90)
+* Handle URL parameter with the language [#88](https://github.com/alix2018/less-waste-vuejs/issues/88)
+* Handle privacy policy in 3 languages [#93](https://github.com/alix2018/less-waste-vuejs/issues/93)
+* Sendblue newsletter in 3 languages [#92](https://github.com/alix2018/less-waste-vuejs/issues/92)
+* Handle open graph preview for all languages [#89](https://github.com/alix2018/less-waste-vuejs/issues/89)
+* Add GA events [#102](https://github.com/alix2018/less-waste-vuejs/issues/102)
+* Fix design [#95](https://github.com/alix2018/less-waste-vuejs/issues/95)
+* Add English and Dutch translations
+* Migrate to node 16
+
 ## 0.7.1 (2021-12-13)
 * Improve lighthouse performances [#82](https://github.com/alix2018/less-waste-vuejs/issues/82)
 * Fix robots.txt for SEO + add sitemap.xml
