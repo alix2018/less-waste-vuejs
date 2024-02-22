@@ -10,6 +10,23 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/:catchAll(.*)',
+      redirect: '/'
+    },
+    // {
+    //   path: '/privacy-policy',
+    //   name: 'Privacy Policy',
+    //   component: PagePrivacyPolicy,
+    // }, {
+    //   path: '/newsletter',
+    //   name: 'Newsletter',
+    //   component: NewsletterForm,
+    // }, {
+    //   path: '/newsletter-confirmation',
+    //   name: 'NewsletterConfirmation',
+    //   component: NewsletterConfirmation,
+    // }
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
